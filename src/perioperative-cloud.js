@@ -18,14 +18,15 @@ function message(error){
  if(/RATE_LIMIT/.test(value))return '짧은 시간에 변경이 많아 잠시 저장을 제한했습니다. 입력은 유지됩니다. 잠시 후 다시 저장해 주세요.';
  if(/BOARD_LIMIT/.test(value))return '과정 수가 한도에 도달했습니다. 기존 과정을 수정하거나 삭제한 과정을 복원해 주세요.';
  if(/EDITING_PAUSED/.test(value))return '공동 편집이 잠시 중지되었습니다. 입력한 내용은 유지됩니다.';
- if(/INVALID_/.test(value))return '글자 수와 내용을 확인해 주세요. 촬영 메모는 4,000자까지, HTML이나 실행 코드 없이 일반 글로 입력해 주세요.';
+ if(/CLIENT_UPDATE_REQUIRED/.test(value))return '새 씬 기능이 적용되었습니다. 입력을 복사해 두고 페이지를 새로고침해 주세요.';
+ if(/INVALID_/.test(value))return '글자 수와 내용을 확인해 주세요. 씬은 카드당 20개·총 4,000자까지, HTML 없이 일반 글로 입력해 주세요.';
  return '서버에 저장하지 못했습니다. 입력 내용은 유지됩니다. 인터넷 연결을 확인한 뒤 다시 저장해 주세요.';
 }
 async function rpc(name,args={}){const {data,error}=await client.rpc('highst_filming_public_'+name,args);if(error)throw error;return data;}
 async function read(){return snapshot(await rpc('read')||[]);}
 async function refresh(){const n=++sequence;lastRefresh=Date.now();try{const data=await read();if(n!==sequence)return;app.replace(data);app.connection(subscribed?'누구나 편집 · 실시간 연결됨':'누구나 편집 · 공동 저장 연결됨','과정과 촬영 메모를 저장하면 다른 화면에도 반영됩니다.',true);}catch(e){if(n===sequence)app.connection('공동 기록 연결을 확인해 주세요',message(e),false);}}
 function scheduleRefresh(){if(refreshTimer)return;refreshTimer=setTimeout(()=>{refreshTimer=null;refresh();},Math.max(200,1500-(Date.now()-lastRefresh)));}
-function payload(kind,p){return kind==='phase'?{id:p.id,name:p.name,order:p.order,deleted:!!p.deleted}:{id:p.id,phaseId:p.phaseId,title:p.title,order:p.order,status:p.status,fields:{evidence:p.fields.evidence||''},deleted:!!p.deleted};}
+function payload(kind,p){return kind==='phase'?{id:p.id,name:p.name,order:p.order,deleted:!!p.deleted}:{id:p.id,phaseId:p.phaseId,title:p.title,order:p.order,status:p.status,fields:{evidence:app.scenesOf(p).map(x=>x.text).join('\n\n')},mediaType:p.mediaType||'pending',scenes:app.scenesOf(p),deleted:!!p.deleted};}
 async function save(kind,p,expected){sequence++;try{const data=await rpc('save',{p_id:p.id,p_kind:kind,p_payload:payload(kind,p),p_expected:expected});scheduleRefresh();return rowValue(data);}catch(error){if(/EDIT_CONFLICT/.test(error.message))scheduleRefresh();throw new Error(message(error));}}
 const adapter={saveStep:(s,v)=>save('step',s,v),savePhase:(p,old)=>save('phase',p,old?.revision||0),deletePhase:p=>save('phase',{...p,deleted:true},p.revision)};
 function node(tag,text,cls){const e=document.createElement(tag);e.textContent=text;if(cls)e.className=cls;return e;}

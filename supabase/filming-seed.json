@@ -21,7 +21,7 @@
     {
       "id": "step-01",
       "phaseId": "pre",
-      "title": "환자 평가·수술 계획",
+      "title": "상담(환자 평가·수술 계획)",
       "description": "선택 기준, 상담 기록, 실제 수술 범위와 5S 구성을 정리합니다.",
       "order": 1,
       "status": "draft",
