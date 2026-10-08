@@ -47,11 +47,13 @@
     {
       "id": "step-03",
       "phaseId": "pre",
-      "title": "사전 평가·복용약 확인",
+      "title": "피검사·소변검사",
       "description": "실제 평가 항목, 복용약 확인과 담당자의 판단·연락 흐름을 정리합니다.",
       "order": 3,
       "status": "draft",
-      "fields": {},
+      "fields": {
+        "evidence": "수술실장 전달: 피검사·소변검사로 간수치, 당수치, 염증수치, 성병 관련 항목 확인.\n촬영할 장면: 채혈·소변검사 준비와 시행, 확인하는 검사 항목 설명. 개인 검사결과가 화면에 나오지 않도록 구성.\n확인할 내용: 실제 검사명과 검사 시점."
+      },
       "na": [],
       "revision": 1,
       "deleted": false,
@@ -73,11 +75,13 @@
     {
       "id": "step-05",
       "phaseId": "pre",
-      "title": "수술실 환경 준비",
+      "title": "수술실 준비·일회용 소독포 (하이스트 노하우)",
       "description": "환경 관리, 구역별 준비와 사용 전 점검 과정을 정리합니다.",
       "order": 5,
       "status": "draft",
-      "fields": {},
+      "fields": {
+        "evidence": "수술실장 전달: 소독포는 전부 일회용 사용.\n촬영할 장면: 사용할 일회용 소독포의 포장, 개봉, 펼치는 과정과 세팅된 모습."
+      },
       "na": [],
       "revision": 1,
       "deleted": false,
@@ -103,7 +107,9 @@
       "description": "원내 보유 진피 3–5 mm / 5×6, 5×8, 5×10, 6×12 cm. 수화형은 직접 홈을 만들고, 건조형은 미리 구멍이 있어 수술 준비 시 수화합니다. 세부 조건은 수술팀이 작성합니다.",
       "order": 7,
       "status": "draft",
-      "fields": {},
+      "fields": {
+        "evidence": "촬영할 장면: 진피와 MegaFill 제품 포장, 사용할 재료를 준비하는 모습.\n보유 진피: 두께 3–5 mm / 5×6, 5×8, 5×10, 6×12 cm. 수화형·건조형의 준비 차이가 보이도록 촬영."
+      },
       "na": [],
       "revision": 1,
       "deleted": false,
@@ -123,13 +129,45 @@
       "history": []
     },
     {
+      "id": "filming-shaving",
+      "phaseId": "pre",
+      "title": "쉐이빙",
+      "description": "",
+      "order": 8.2,
+      "status": "draft",
+      "fields": {
+        "evidence": "촬영할 장면: 쉐이빙 준비부터 실제 시행 과정.\n확인할 내용: 시행 시점과 범위."
+      },
+      "na": [],
+      "revision": 1,
+      "deleted": false,
+      "history": []
+    },
+    {
+      "id": "filming-bp",
+      "phaseId": "pre",
+      "title": "혈압 체크",
+      "description": "",
+      "order": 8.4,
+      "status": "draft",
+      "fields": {
+        "evidence": "촬영할 장면: 혈압 측정 준비와 실제 체크하는 모습.\n확인할 내용: 입실·마취 준비 단계 중 정확한 측정 시점."
+      },
+      "na": [],
+      "revision": 1,
+      "deleted": false,
+      "history": []
+    },
+    {
       "id": "step-09",
       "phaseId": "intra",
-      "title": "마취·체위·모니터링 준비",
+      "title": "의식하진정마취 · 정맥주사·프로포폴",
       "description": "실제 준비 순서, 각 담당자와 관찰·확인 내용을 정리합니다.",
       "order": 9,
       "status": "draft",
-      "fields": {},
+      "fields": {
+        "evidence": "수술실장 전달: 의식하진정마취, 정맥주사·프로포폴 사용.\n촬영할 장면: 정맥주사 준비와 수술팀의 실제 마취 준비 과정.\n확인할 내용: 구체적인 약물 사용·관찰 과정과 촬영 범위."
+      },
       "na": [],
       "revision": 1,
       "deleted": false,
@@ -138,11 +176,58 @@
     {
       "id": "step-10",
       "phaseId": "intra",
-      "title": "피부 준비·포장·무균 영역",
+      "title": "드랩 · 소독",
       "description": "피부 준비와 수술포 사용, 무균 영역 설정의 실제 과정을 정리합니다.",
       "order": 10,
       "status": "draft",
-      "fields": {},
+      "fields": {
+        "evidence": "수술실장 전달 표현: 드랩(소독).\n촬영할 장면: 소독 준비부터 실제 소독하는 순서.\n확인할 내용: 소독과 수술포 덮기의 정확한 구분, 사용하는 제품과 적용 범위."
+      },
+      "na": [],
+      "revision": 1,
+      "deleted": false,
+      "history": []
+    },
+    {
+      "id": "filming-tegaderm",
+      "phaseId": "intra",
+      "title": "테가덤 부착 (하이스트 노하우)",
+      "description": "",
+      "order": 10.2,
+      "status": "draft",
+      "fields": {
+        "evidence": "수술실장 전달: 스킨이 닿지 않게 테가덤 부착, 안티셉틱.\n촬영할 장면: 테가덤 부착 위치·범위와 피부 접촉을 막으려는 부위가 보이는 장면.\n확인할 내용: 무엇과 피부의 접촉을 막는지, 안티셉틱의 제품·적용 순서."
+      },
+      "na": [],
+      "revision": 1,
+      "deleted": false,
+      "history": []
+    },
+    {
+      "id": "filming-drape",
+      "phaseId": "intra",
+      "title": "수술포 덮기",
+      "description": "",
+      "order": 10.4,
+      "status": "draft",
+      "fields": {
+        "evidence": "촬영할 장면: 수술포를 펼치고 덮는 순서, 최종 세팅 모습.\n수술실장 전달: 일회용 소독포 사용."
+      },
+      "na": [],
+      "revision": 1,
+      "deleted": false,
+      "history": []
+    },
+    {
+      "id": "filming-hydration",
+      "phaseId": "intra",
+      "title": "진피 수화 · 생리식염수＋항생제 2종",
+      "description": "",
+      "order": 10.6,
+      "status": "draft",
+      "fields": {
+        "evidence": "수술실장 전달: 생리식염수와 항생제 두 종류로 진피 수화.\n촬영할 장면: 실제 사용하는 제품, 준비·혼합·수화하는 과정과 수화 후 진피 상태.\n확인할 내용: 항생제 2종의 이름·용량, 생리식염수 양, 준비·수화 시간. 정확한 시행 시점은 수술팀 확인."
+      },
       "na": [],
       "revision": 1,
       "deleted": false,
@@ -155,7 +240,9 @@
       "description": "원장님 실제 술기를 세부 과정으로 나누고 보조 역할을 정리합니다.",
       "order": 11,
       "status": "draft",
-      "fields": {},
+      "fields": {
+        "evidence": "수술실장 전달: 수술.\n촬영할 장면: 실제 수술의 주요 단계를 순서대로 촬영. 세부 술기·촬영 구도는 원장님과 추가 정리."
+      },
       "na": [],
       "revision": 1,
       "deleted": false,
@@ -168,7 +255,9 @@
       "description": "제품 선택부터 가공·전달·삽입·고정까지 실제 술기를 정리합니다.",
       "order": 12,
       "status": "draft",
-      "fields": {},
+      "fields": {
+        "evidence": "촬영할 장면: 진피를 가공하고 삽입·고정하는 실제 과정.\n원장님 전달: 수화형은 홈이 없어 직접 홈을 만들고, 건조형은 구멍이 뚫려 있어 수술 준비 시 수화하여 부드럽게 만듦."
+      },
       "na": [],
       "revision": 1,
       "deleted": false,
@@ -177,11 +266,43 @@
     {
       "id": "step-13",
       "phaseId": "intra",
-      "title": "MegaDerm·MegaFill 병용 또는 단독",
+      "title": "진피 턱짐·MegaFill (하이스트 노하우)",
       "description": "시행하는 경우와 순서, 재료 준비, 팀원 역할을 실제 사례 기준으로 정리합니다.",
       "order": 13,
       "status": "draft",
-      "fields": {},
+      "fields": {
+        "evidence": "수술실장 전달: 진피 턱짐에 MegaFill 사용.\n촬영할 장면: 턱짐 부위와 MegaFill을 적용하는 실제 과정, 적용 전·후 형태를 설명하는 장면.\n확인할 내용: 적용 기준·부위·순서와 실제 사용량."
+      },
+      "na": [],
+      "revision": 1,
+      "deleted": false,
+      "history": []
+    },
+    {
+      "id": "filming-antiadhesion",
+      "phaseId": "intra",
+      "title": "유착방지제 투여 (하이스트 노하우)",
+      "description": "",
+      "order": 13.2,
+      "status": "draft",
+      "fields": {
+        "evidence": "수술실장 전달: 유착방지제 투여.\n촬영할 장면: 사용하는 제품과 준비, 실제 적용 부위·방법.\n확인할 내용: 제품명·용량과 수술 중 정확한 투여 시점."
+      },
+      "na": [],
+      "revision": 1,
+      "deleted": false,
+      "history": []
+    },
+    {
+      "id": "filming-pdrn",
+      "phaseId": "intra",
+      "title": "PDRN 투여 (하이스트 노하우)",
+      "description": "",
+      "order": 13.4,
+      "status": "draft",
+      "fields": {
+        "evidence": "수술실장 전달: 진피 생착을 목적으로 PDRN 투여.\n촬영할 장면: 사용하는 제품과 준비, 실제 투여 부위·방법, 사용 목적에 대한 원장님 설명.\n확인할 내용: 제품명·용량·경로·시점과 발표에서 제시할 근거."
+      },
       "na": [],
       "revision": 1,
       "deleted": false,
