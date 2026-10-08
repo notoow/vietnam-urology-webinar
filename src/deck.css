@@ -1,0 +1,26 @@
+.outline-group{font-size:10px;letter-spacing:.06em;color:#9b7744;margin:19px 0 6px 12px;font-weight:600}
+#outline-list{max-height:calc(100vh - 280px);overflow:auto;scrollbar-width:thin}
+.deck-content{margin-top:3cqw}.deck-point{display:flex;gap:2.4cqw}
+.deck-number{color:#a5875d;font-size:1.05cqw;line-height:2.2cqw;min-width:1.5cqw}
+.deck-rows .deck-point{border-top:1px solid #dedfd6;padding:1.8cqw 0}
+.deck-rows h3{margin:0 0 .6cqw;font-size:2.05cqw}
+.deck-rows p{margin:0;color:#6b7265;font-size:1.6cqw;line-height:1.45;max-width:74cqw}
+.deck-roadmap,.deck-compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3cqw;margin-top:5cqw}
+.deck-compare{grid-template-columns:repeat(2,minmax(0,1fr));gap:5cqw}
+.deck-roadmap .deck-point,.deck-compare .deck-point{display:block;border-top:2px solid #b5915d;padding-top:1.7cqw}
+.deck-roadmap .deck-number,.deck-compare .deck-number{display:block;margin-bottom:2cqw}
+.deck-roadmap h3{font-size:2.3cqw;min-height:5.8cqw;margin-bottom:1.5cqw}
+.deck-compare h3{font-size:2.8cqw;min-height:7cqw;margin-bottom:2cqw}
+.deck-roadmap p,.deck-compare p{font-size:1.7cqw;color:#6b7265;line-height:1.5}
+.slide .strip-note{max-width:80%;margin:0}
+.slide-sources{border-top:1px solid #e4e4dc;margin-top:19px;padding-top:15px}
+.slide-sources h3{font-size:12px;margin:0 0 4px;color:#81633d;font-weight:600}
+.slide-source{padding:13px 0;border-bottom:1px solid #ecece6}
+.slide-source:last-child{border-bottom:0;padding-bottom:0}
+.slide-source button{text-align:left;font-size:13px;font-weight:600;padding:0;text-decoration:underline;text-underline-offset:4px}
+.slide-source small{font-size:11px;color:#8b8e81;margin-left:10px}
+.slide-source p{white-space:pre-wrap;margin:7px 0 0;font-size:12px}
+.speaker-notes .deck-coverage{font-size:11px;color:#949788}
+.peri-card:focus{outline:3px solid #b5915d;outline-offset:5px}
+.peri-slide-link{font-size:11px;color:#8b6838;text-decoration:underline;text-underline-offset:3px;margin-left:auto}
+@media(max-width:560px){.work-heading .actions{flex-wrap:wrap;justify-content:flex-end}.slide-source small{display:block;margin:5px 0 0}}

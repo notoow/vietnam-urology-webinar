@@ -35,7 +35,7 @@ function render(){
   const cards=el('div','peri-cards');
   rows.forEach(s=>{
    matches++;
-   const card=el('article','peri-card'+(/하이스트\s*노하우/.test(s.title)?' peri-knowhow':'')),top=el('div','peri-card-top'),status=el('span','peri-status',s.mediaType==='none'?'촬영 불필요':labels[s.status]);status.dataset.state=s.status;
+   const card=el('article','peri-card'+(/하이스트\s*노하우/.test(s.title)?' peri-knowhow':'')),top=el('div','peri-card-top'),status=el('span','peri-status',s.mediaType==='none'?'촬영 불필요':labels[s.status]);status.dataset.state=s.status;card.dataset.stepId=s.id;card.tabIndex=-1;
    top.append(el('span','','PROCESS '+String(alive.slice().sort((a,b)=>a.order-b.order).findIndex(x=>x.id===s.id)+1).padStart(2,'0')),status);
    card.append(top,el('h3','',s.title));
    const format=el('label','peri-card-format','촬영 종류'),select=mediaSelect(s.mediaType);select.setAttribute('aria-label',s.title+' 촬영 종류');format.append(select);card.append(format);
@@ -55,6 +55,7 @@ function render(){
    const add=button('＋ 씬 추가','peri-scene-add',()=>openStep(s.id,null,true));add.disabled=scenes.length>=20;card.append(add);
    const actions=el('div','peri-card-actions');actions.append(button('이름·씬 수정','peri-edit',()=>openStep(s.id)));
    if(s.mediaType!=='none'){const done=button(s.status==='reviewed'?'✓ 촬영 완료':'촬영 완료 표시','peri-done',()=>cardWrite(s,next=>{next.status=s.status==='reviewed'?'draft':'reviewed';},done));actions.append(done);}
+   if(window.SlideDeck?.hasStep(s.id))actions.append(button('슬라이드 보기 ↗','peri-slide-link',()=>window.SlideDeck.openForStep(s.id)));
    card.append(actions);cards.append(card);
   });
   if(!rows.length)cards.append(button('＋ 이 구간에 과정 추가','btn',()=>openStep(null,p.id)));
@@ -62,6 +63,7 @@ function render(){
  });
  if(!matches&&(term||state!=='all'))board.append(el('div','peri-empty','조건에 맞는 과정이 없습니다.'));
  const deleted=data.steps.filter(s=>s.deleted).sort((a,b)=>(b.updatedAt||'').localeCompare(a.updatedAt||''));latestDeleted=deleted[0]||null;$('peri-undo').hidden=!latestDeleted;if(latestDeleted)$('peri-undo-text').textContent='삭제한 과정: '+latestDeleted.title;
+ window.dispatchEvent(new CustomEvent('perioperative:change'));
 }
 function options(select,value){select.replaceChildren();data.phases.slice().sort((a,b)=>a.order-b.order).forEach(p=>{const o=el('option','',p.name);o.value=p.id;select.append(o);});select.value=value;}
 function sceneCounter(){const count=evidenceOf(editing.scenes).length;$('peri-scene-count').textContent=editing.scenes.length+'개 씬 · '+count.toLocaleString()+' / 4,000자';$('peri-scene-add').disabled=editing.scenes.length>=20;}
@@ -114,6 +116,11 @@ $('peri-export').onclick=()=>download({...data,exportedAt:new Date().toISOString
 $('peri-file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{if(f.size>6000000)throw new Error('파일 크기가 너무 큽니다.');const next=JSON.parse(await f.text());if(!valid(next))throw new Error('기록 파일 형식이 맞지 않습니다.');download(data,'highst-perioperative-before-import.json');data=clone(next);phase='all';persist();render();}catch(err){connection('가져오지 못했습니다',err.message,false);}e.target.value='';};
 window.addEventListener('storage',e=>{if(adapter||e.key!==key)return;try{const next=JSON.parse(e.newValue);if(valid(next))replace(next);}catch{}});
 function replace(next){if(!valid(next))throw new Error('공동 기록 형식이 올바르지 않습니다.');if(editing){const changed=next.steps.find(s=>s.id===editing.id);if(changed&&changed.revision!==editing.revision)$('peri-conflict').hidden=false;}data=clone(next);if(phase!=='all'&&!data.phases.some(p=>p.id===phase))phase='all';render();}
-window.PerioApp={initial:clone(initial),fields:fieldDefs,mediaLabels,scenesOf:s=>clone(scenesOf(s)),valid,getData:()=>clone(data),replace,connection,connect(a,next){adapter=a;replace(next);},disconnect(){adapter=null;editing=null;dirty=false;$('peri-dialog').close();render();},download};
+function focusStep(id){
+ const step=data.steps.find(s=>s.id===id&&!s.deleted);if(!step)return;
+ phase=step.phaseId;$('peri-search').value='';$('peri-filter').value='all';render();
+ requestAnimationFrame(()=>{const card=[...document.querySelectorAll('.peri-card')].find(c=>c.dataset.stepId===id);card?.scrollIntoView({block:'center'});card?.focus({preventScroll:true});});
+}
+window.PerioApp={focusStep,initial:clone(initial),fields:fieldDefs,mediaLabels,scenesOf:s=>clone(scenesOf(s)),valid,getData:()=>clone(data),replace,connection,connect(a,next){adapter=a;replace(next);},disconnect(){adapter=null;editing=null;dirty=false;$('peri-dialog').close();render();},download};
 render();
 })();

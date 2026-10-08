@@ -1,21 +1,43 @@
-const notes=[
-'제공하신 원본 로고와 동종진피1 사진을 사용했습니다. 2026-10-21 웨비나, Jinmo Koo 발표 16:00–17:00 KST를 기준으로 영어 제목을 구성했습니다.',
-'5S라는 이름만 확인되었습니다. 다섯 항목의 정확한 명칭·목적·수술 순서를 받으면 내용을 채웁니다.',
-'원내 보유 재료: 두께 3–5 mm, 사이즈 5×6 / 5×8 / 5×10 / 6×12 cm. 이는 선생님이 알려주신 보유 사양이며 제조사 전체 라인업이라는 의미는 아닙니다. 동종진피2의 촬영 상태·실제 크기는 사진만으로 단정하지 않습니다.',
-'수화형은 미리 만들어진 홈이 없어 직접 홈을 만들고, 건조형은 구멍이 뚫려 있어 수술 준비 시 수화시켜 부드럽게 만든다는 설명을 반영했습니다. “홈”은 형태를 단정하지 않는 openings로 표현했습니다. 용액·시간·온도·홈의 위치와 방법은 아직 추가하지 않았습니다.',
-'제공하신 실제 진피 포장 사진입니다. 준비 단계에서 재료의 포장과 외관을 소개할 때 사용합니다. 사진의 좌우 제품명·규격·타입은 별도 확인이 필요하며, 이 장면을 멸균 또는 무균 취급의 시범으로 설명하지 않습니다.',
-'“대학병원급” 수술실을 구체적으로 보여줄 실제 시설 사진과 기록이 필요합니다. 환경 관리, 기구 재처리, 피부 준비, 제품 무균 취급을 구분해 선생님의 실제 과정을 받습니다.',
-'대표 수술 사진·영상에 해부학적 표지, 판단, 흔한 실수와 하이스트의 세부 노하우를 연결합니다. 실제 술기는 선생님의 설명을 받은 뒤 채웁니다.',
-'대리점은 MegaDerm＋MegaFill 병용 사례를 희망하지만 필수는 아닙니다. 병용 사례가 없으면 MegaFill 단독 사례도 가능합니다. 사례와 제품별 세부 프로토콜은 아직 확인되지 않았습니다.',
-'실제 합병증 사례의 발생 시점, 최초 징후, 판단 근거, 실제 처치, 추적 경과를 연결합니다. 예방과 대응 방법은 임의로 채우지 않습니다.',
-'증례 수, 관찰 기간, 측정 방법, 추적 시점, 합병증 정의와 분모를 함께 받습니다. 제공되지 않은 결과 수치를 만들지 않습니다.',
-'환자 선택, 재료 준비, 합병증 대응을 중심으로 질의응답을 준비합니다. Q&A의 최종 시간과 통역 방식은 대리점 최종 안내가 필요합니다.'
-];
+const deck=__DECK_DATA__;
+const notes=deck.map(s=>s.note);
 let current=0,activeView='design';
 const slides=[...document.querySelectorAll('.slide')];
 const outline=document.getElementById('outline-list'),select=document.getElementById('slide-select');
-slides.forEach((s,i)=>{const b=document.createElement('button');b.innerHTML='<span>'+String(i+1).padStart(2,'0')+'</span><span>'+s.dataset.title+'</span>';b.onclick=()=>show(i);outline.appendChild(b);const opt=document.createElement('option');opt.value=i;opt.textContent=String(i+1).padStart(2,'0')+' / '+s.dataset.title;select.appendChild(opt);if(i>0)s.querySelector('.foot span:last-child').textContent=String(i+1).padStart(2,'0')});
-function show(i){current=Math.max(0,Math.min(slides.length-1,Number(i)));slides.forEach((s,j)=>s.classList.toggle('current',j===current));[...outline.children].forEach((b,j)=>b.setAttribute('aria-current',j===current));select.value=current;document.getElementById('slide-count').textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');document.getElementById('slide-status').textContent=slides[current].dataset.state;document.getElementById('slide-note').textContent=notes[current];document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===slides.length-1}
+const sectionNames={Overview:'강의 개요',Preoperative:'수술 전',Intraoperative:'수술 중',Postoperative:'수술 후',Summary:'핵심 정리',Discussion:'질의응답'};
+let lastSection='';
+slides.forEach((s,i)=>{
+ if(deck[i].section!==lastSection){lastSection=deck[i].section;const h=document.createElement('p');h.className='outline-group';h.textContent=sectionNames[lastSection];outline.append(h);}
+ const b=document.createElement('button');const n=document.createElement('span'),title=document.createElement('span');n.textContent=String(i+1).padStart(2,'0');title.textContent=s.dataset.title;b.append(n,title);b.onclick=()=>show(i);outline.append(b);
+ const opt=document.createElement('option');opt.value=i;opt.textContent=String(i+1).padStart(2,'0')+' / '+s.dataset.title;select.append(opt);
+});
+function show(i){
+ current=Math.max(0,Math.min(slides.length-1,Number(i)));slides.forEach((s,j)=>s.classList.toggle('current',j===current));
+ [...outline.querySelectorAll('button')].forEach((b,j)=>b.setAttribute('aria-current',j===current));select.value=current;
+ document.getElementById('slide-count').textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+ document.getElementById('slide-status').textContent=slides[current].dataset.state;document.getElementById('slide-note').textContent=notes[current];
+ document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===slides.length-1;renderSlideSources();
+}
+function renderSlideSources(){
+ const root=document.getElementById('slide-sources'),coverage=document.getElementById('deck-coverage');root.replaceChildren();
+ const app=window.PerioApp;if(!app){root.hidden=true;return;}
+ const data=app.getData(),alive=data.steps.filter(s=>!s.deleted),mapped=new Set(deck.flatMap(s=>s.steps));
+ const connected=alive.filter(s=>mapped.has(s.id)).length;
+ coverage.textContent='수술주기 '+alive.length+'개 중 '+connected+'개 과정이 발표에 연결됨'+(connected<alive.length?' · 새 과정은 슬라이드 연결이 필요합니다.':'');
+ root.hidden=!deck[current].steps.length;if(root.hidden)return;
+ const h=document.createElement('h3');h.textContent='연결된 촬영 과정';root.append(h);
+ for(const id of deck[current].steps){
+  const step=alive.find(s=>s.id===id),row=document.createElement('div');row.className='slide-source';
+  if(!step){const msg=document.createElement('p');msg.textContent='이 과정은 삭제되었거나 현재 기록에서 찾을 수 없습니다.';row.append(msg);root.append(row);continue;}
+  const button=document.createElement('button');button.type='button';button.textContent=step.title+' ↗';button.onclick=()=>{switchView('perioperative');app.focusStep(id);};
+  const media=document.createElement('small');media.textContent=(app.mediaLabels[step.mediaType]||'촬영 종류 미정')+(step.status==='reviewed'?' · 촬영 완료':'');row.append(button,media);
+  const scenes=app.scenesOf(step);if(step.mediaType==='none'){const p=document.createElement('p');p.textContent='촬영 불필요';row.append(p);}
+  else if(scenes.length)scenes.forEach((scene,i)=>{const p=document.createElement('p');p.textContent='씬 '+(i+1)+' · '+(scene.text||'촬영할 장면을 적어 주세요.');row.append(p);});
+  else{const p=document.createElement('p');p.textContent='촬영할 장면을 추가해 주세요.';row.append(p);}
+  root.append(row);
+ }
+}
+window.SlideDeck={hasStep:id=>deck.some(s=>s.steps.includes(id)),openForStep(id){const i=deck.findIndex(s=>s.steps.includes(id));if(i<0)return;show(i);switchView('design');document.getElementById('speaker-notes').open=true;outline.querySelector('[aria-current="true"]')?.scrollIntoView({block:'nearest'});}};
+window.addEventListener('perioperative:change',renderSlideSources);
 select.onchange=e=>show(e.target.value);document.getElementById('prev').onclick=()=>show(current-1);document.getElementById('next').onclick=()=>show(current+1);
 function switchView(view,writeHash=true){if(!['design','perioperative','program','interview','materials'].includes(view))view='design';activeView=view;document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==view);document.querySelectorAll('.main-nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.view===view));if(writeHash)history.replaceState(null,'','#'+view);window.scrollTo(0,0)}
 document.querySelectorAll('.main-nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));document.querySelector('.brand-link').onclick=e=>{e.preventDefault();switchView('design')};window.addEventListener('hashchange',()=>switchView(location.hash.slice(1).split('&')[0],false));
@@ -32,13 +54,11 @@ const eventProgram=[
 {start:1045,end:1050,title:'Closing',detail:'클로징'}
 ];
 const modules=[
-['The HIGHST 5S Approach','하이스트 5S의 정의, 강의 목표, 발표 관련 이해관계',4],
-['Patient Selection and Planning','선택·제외 기준, 상담, 수술 전 기록',5],
-['Asepsis and Surgical Preparation','수술실·기구·피부 준비·재료 취급의 실제 과정',7],
-['MegaDerm Operative Technique','실제 수술 사진·영상으로 단계별 판단과 노하우 설명',18],
-['Combined Use or a MegaFill Case','병용 사례 우선 검토. 없으면 MegaFill 단독 사례, 자료 확인 후 확정',8],
-['Complication Prevention and Management','예방 포인트와 실제 문제 발생 사례, 대처·재수술·경과',13],
-['Aftercare and Key Lessons','추적관리, 결과 해석, 핵심 요점 정리',5]
+['Overview and the HIGHST Approach','슬라이드 1–3 · 수술주기 전체 흐름과 5S',4],
+['Preoperative Preparation','슬라이드 4–11 · 상담·검사·수술환경·재료·입실 준비',15],
+['Intraoperative Practice','슬라이드 12–23 · 마취·드레이핑·절개·진피·노터치·MegaFill·보조 처치',27],
+['Postoperative Course and Cases','슬라이드 24–29 · 회복·추적·합병증·대표 증례',12],
+['Key Lessons','슬라이드 30 · 핵심 요점. 슬라이드 31 질의응답은 별도 세션',2]
 ];
 
 function renderAgenda(){const zone=document.getElementById('timezone').value;const offset=zone==='ict'?-120:0;const format=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');document.getElementById('zone-heading').textContent=zone==='ict'?'베트남시간 ICT':'한국시간 KST';document.getElementById('event-body').innerHTML=eventProgram.map(r=>'<tr class="'+(r.gap?'gap-row':r.speaker?'speaker-row':'')+'"><td>'+format(r.start+offset)+'–'+format(r.end+offset)+'</td><td>'+r.title+'</td><td>'+r.detail+'</td></tr>').join('');let elapsed=0;document.getElementById('agenda-body').innerHTML=modules.map(m=>{const start=elapsed;elapsed+=m[2];return '<tr><td>'+start+'–'+elapsed+' min</td><td>'+m[0]+'<small>'+m[2]+'분</small></td><td>'+m[1]+'</td></tr>'}).join('')}
