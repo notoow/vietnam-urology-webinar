@@ -4,781 +4,117 @@
     "ko": "표지",
     "title": "MegaDerm\nPenile\nAugmentation",
     "section": "Overview",
+    "type": "cover",
     "steps": [],
     "rows": [],
-    "note": "구진모 원장님 발표 60분을 기준으로 구성. 영어↔베트남어 통역 시간을 포함할지는 최종 프로그램에서 확인합니다.",
+    "note": "구진모 원장님 발표. 베트남 MegaDerm 웨비나, 2026년 10월 21일.",
     "state": "발표 구성",
-    "type": "cover",
-    "subtitle": "Perioperative Practice and Clinical Pearls",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "subtitle": "Operative Videos",
     "asset": "dermis-01.png"
   },
   {
-    "id": "pathway",
-    "ko": "수술주기 전체 흐름",
-    "title": "The Perioperative Pathway",
-    "section": "Overview",
+    "id": "tests",
+    "ko": "피검사·소변검사",
+    "title": "Blood and Urine Testing",
+    "section": "Preparation",
+    "type": "tests",
     "steps": [],
     "rows": [
       {
-        "head": "Before surgery",
-        "body": "Consultation, testing and preparation"
+        "head": "Liver function",
+        "body": "간수치"
       },
       {
-        "head": "During surgery",
-        "body": "Access, graft handling and adjuncts"
-      },
-      {
-        "head": "After surgery",
-        "body": "Recovery, follow-up and complications"
-      }
-    ],
-    "note": "수술 전·중·후 29개 과정의 공통 흐름. 구간의 세부 순서와 실제 시행 시점은 수술팀과 확인합니다. 이 목차는 발표 구조이며 모든 처치가 고정된 순서라는 의미는 아닙니다.",
-    "state": "29개 과정 연결",
-    "type": "roadmap"
-  },
-  {
-    "id": "five-s",
-    "ko": "하이스트 5S 복합수술",
-    "title": "The HIGHST 5S Approach",
-    "section": "Overview",
-    "steps": [
-      "step-01"
-    ],
-    "rows": [
-      {
-        "head": "Combined procedure",
-        "body": "The framework for the HIGHST operation"
-      },
-      {
-        "head": "Individual operative plan",
-        "body": "The components selected for each patient"
-      }
-    ],
-    "note": "5S 복합수술이라는 명칭만 확정. S1~S5의 정확한 한글·영문명과 각 목적을 원장님께 받아 이 장에 보완합니다. 다섯 항목을 임의로 정의하지 않습니다.",
-    "state": "S1–S5 정의 필요",
-    "type": "rows"
-  },
-  {
-    "id": "consultation",
-    "ko": "상담·수술 계획",
-    "title": "Consultation and Operative Planning",
-    "section": "Preoperative",
-    "steps": [
-      "step-01",
-      "step-02",
-      "step-04"
-    ],
-    "rows": [
-      {
-        "head": "Consultation",
-        "body": "Patient assessment and expectations"
-      },
-      {
-        "head": "Explanation and consent",
-        "body": "Scope of the procedure and preoperative documentation"
-      },
-      {
-        "head": "Patient instructions",
-        "body": "Preparation before admission"
-      }
-    ],
-    "note": "수술팀 기록의 첫 과정인 상담을 발표의 출발점으로 배치. 상담 및 설명·동의 카드는 사진으로 대체한다는 팀 메모를 연결합니다. 선택·제외 기준과 실제 안내 내용은 원장님 설명으로 확정합니다.",
-    "state": "상담 사진 연결 예정",
-    "type": "rows"
-  },
-  {
-    "id": "testing",
-    "ko": "피검사·소변검사",
-    "title": "Blood and Urine Testing",
-    "section": "Preoperative",
-    "steps": [
-      "step-03"
-    ],
-    "rows": [
-      {
-        "head": "Liver function and glucose",
-        "body": "Tests described by the HIGHST surgical team"
+        "head": "Blood glucose",
+        "body": "당수치"
       },
       {
         "head": "Inflammatory markers",
-        "body": "Review within the preoperative assessment"
+        "body": "염증수치"
       },
       {
-        "head": "Sexually transmitted infections",
-        "body": "The clinic’s screening panel"
+        "head": "STI screening",
+        "body": "성병 검사"
       }
     ],
-    "note": "수술실장 전달 항목: 간수치·당수치·염증수치·성병. 실제 검사명, 시점, 수술 연기 기준은 확인 필요. 팀 메모: 피검사는 영상, 소변검사는 사진. 개인 검사결과가 노출되지 않는 자료를 사용합니다.",
-    "state": "전달받은 검사 항목 반영",
-    "type": "rows",
-    "foot": "Testing categories reported by the HIGHST surgical team"
+    "note": "기존에 전달받은 검사 범주: 간수치, 당수치, 염증수치, 성병 검사. 혈액검사·소변검사의 정확한 검사명 목록을 받으면 원문대로 정리합니다. 개별 항목을 혈액/소변 검사로 임의 배정하지 않습니다.",
+    "state": "정확한 검사명 목록 확인 필요",
+    "foot": "Jinmo Koo · HIGHST Urology"
   },
   {
-    "id": "room",
-    "ko": "수술실 환경·설비",
-    "title": "Operating Room Infrastructure",
-    "section": "Preoperative",
-    "steps": [
-      "filming-or-environment"
-    ],
+    "id": "preparation",
+    "ko": "쉐이빙·드랩",
+    "title": "Shaving and Draping",
+    "section": "Preparation",
+    "type": "compare",
+    "steps": [],
     "rows": [
       {
-        "head": "Air and room surfaces",
-        "body": "HEPA filtration, positive pressure, antimicrobial walls and flooring"
+        "head": "Shaving",
+        "body": ""
       },
       {
-        "head": "Emergency power",
-        "body": "EMS generator: reported backup for one hour"
-      },
-      {
-        "head": "Room surveillance",
-        "body": "CCTV installed in every operating room"
+        "head": "Draping",
+        "body": ""
       }
     ],
-    "note": "원장님이 강조한 대학병원급 환경을 실제 설비 중심으로 설명합니다. 발전기·필터·양압 표시·벽과 바닥·CCTV 설치 장면을 연결. 1시간 유지 대상 장비 및 조건은 설비 자료와 대조합니다. 특정 시설 인증을 받았다고 표현하지 않습니다.",
-    "state": "시설 촬영 필요",
-    "type": "rows",
-    "knowhow": true,
-    "foot": "Facilities and backup duration reported by HIGHST"
+    "note": "쉐이빙과 드랩 장면을 짧게 소개합니다.",
+    "state": "발표 구성",
+    "foot": "Jinmo Koo · HIGHST Urology"
   },
   {
-    "id": "disposable",
-    "ko": "일회용 소독포",
-    "title": "Single-use Drapes at HIGHST",
-    "section": "Preoperative",
-    "steps": [
-      "step-05"
-    ],
-    "rows": [
-      {
-        "head": "Packaged drapes",
-        "body": "All surgical drapes are single-use, as reported by HIGHST"
-      },
-      {
-        "head": "Opening and setup",
-        "body": "Package opening and preparation of the operative field"
-      }
-    ],
-    "note": "전부 일회용 소독포라는 하이스트 노하우를 독립 장으로 강조. 포장·개봉·펼치기·세팅된 모습을 한 흐름으로 촬영합니다.",
-    "state": "하이스트 노하우 반영",
-    "type": "rows",
-    "knowhow": true
-  },
-  {
-    "id": "instruments",
-    "ko": "기구 세척·포장·멸균",
-    "title": "Instrument Reprocessing",
-    "section": "Preoperative",
-    "steps": [
-      "step-06"
-    ],
-    "rows": [
-      {
-        "head": "Cleaning",
-        "body": "The clinic’s sequence before packaging"
-      },
-      {
-        "head": "Packaging and sterilization",
-        "body": "Equipment, cycle and process checks"
-      },
-      {
-        "head": "Storage and release",
-        "body": "Preparation for use in the operating room"
-      }
-    ],
-    "note": "기구 세척·포장·멸균 카드를 연결한 설명 틀입니다. 실제 장비, 사이클, 표시·기록, 보관 및 사용 전 확인을 수술팀에게 받습니다. 온도·시간·재처리법은 미정이며 본문에 수치를 넣지 않았습니다.",
-    "state": "실제 멸균 조건 필요",
-    "type": "rows"
-  },
-  {
-    "id": "specifications",
-    "ko": "진피 두께·사이즈",
-    "title": "Dermal Graft Specifications",
-    "section": "Preoperative",
-    "steps": [
-      "step-07"
-    ],
+    "id": "circumcision-video",
+    "ko": "포경선 수술영상 · 10분",
+    "title": "Circumcision-line Incision",
+    "section": "Operative Videos",
+    "type": "video",
+    "steps": [],
     "rows": [],
-    "note": "원장님 제공 원내 보유 사양. 두께 3–5 mm / 5×6, 5×8, 5×10, 6×12 cm. 동종진피2 사진의 준비 상태나 실제 치수는 사진만으로 판정하지 않습니다.",
-    "state": "제공 사양 반영",
-    "type": "spec",
-    "asset": "dermis-02.png",
-    "foot": "Available specifications at HIGHST"
+    "note": "포경수술선 절개 수술영상 10분.",
+    "state": "영상 연결 예정",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "videoNumber": "01",
+    "minutes": 10
   },
   {
-    "id": "packaging",
-    "ko": "진피·MegaFill 준비",
-    "title": "Graft Packaging and Material Setup",
-    "section": "Preoperative",
-    "steps": [
-      "step-07"
-    ],
+    "id": "pubic-video",
+    "ko": "치골 수술영상 · 10분",
+    "title": "Pubic Incision",
+    "section": "Operative Videos",
+    "type": "video",
+    "steps": [],
     "rows": [],
-    "note": "기존에 제공받은 실제 진피 포장 사진. 좌우 제품명·규격·타입과 MegaFill 포장 자료를 확인합니다. 이 사진은 제품 외관 소개이며 멸균 취급 시범 장면으로 쓰지 않습니다.",
-    "state": "제공 사진 반영",
-    "type": "image",
-    "asset": "graft-packaging.png"
+    "note": "치골절개 수술영상 10분.",
+    "state": "영상 연결 예정",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "videoNumber": "02",
+    "minutes": 10
   },
   {
-    "id": "readiness",
-    "ko": "브리핑·쉐이빙·혈압",
-    "title": "Patient and Team Preparation",
-    "section": "Preoperative",
-    "steps": [
-      "step-08",
-      "filming-shaving",
-      "filming-bp"
-    ],
-    "rows": [
-      {
-        "head": "Team briefing and admission",
-        "body": "The operative plan and preparation checks"
-      },
-      {
-        "head": "Hair preparation",
-        "body": "Method, timing and extent of hair removal"
-      },
-      {
-        "head": "Blood pressure",
-        "body": "Measurement during preoperative preparation"
-      }
-    ],
-    "note": "기록에 있는 쉐이빙은 영문에서 방법을 단정하지 않도록 hair preparation으로 표현했습니다. 실제 장비가 클리퍼인지 면도기인지 확인이 필요합니다. WHO는 제모가 필요하면 클리퍼를 사용하고 면도는 피하도록 권고합니다. 브리핑·입실·혈압의 정확한 시행 순서는 수술팀 확인.",
-    "state": "제모 방법·순서 확인",
-    "type": "rows",
-    "sources": [
-      "https://www.who.int/news-room/questions-and-answers/item/surgical-site-infections"
-    ]
-  },
-  {
-    "id": "sedation",
-    "ko": "정맥주사·진정마취",
-    "title": "IV Access and Sedation",
-    "section": "Intraoperative",
-    "steps": [
-      "step-09"
-    ],
-    "rows": [
-      {
-        "head": "Intravenous access",
-        "body": "Preparation for the clinic’s sedation workflow"
-      },
-      {
-        "head": "Propofol",
-        "body": "Agent reported by the HIGHST surgical team"
-      },
-      {
-        "head": "Observation and handover",
-        "body": "The team’s monitoring and recovery process"
-      }
-    ],
-    "note": "수술실장 전달: 의식하진정마취, 정맥주사, 프로포폴. 용량·투여법·관찰 기준은 아직 받지 않았으므로 구체 지침을 넣지 않았습니다. 마취 단계의 실제 준비 및 모니터링 장면을 설명합니다.",
-    "state": "마취 세부 프로토콜 필요",
-    "type": "rows",
-    "foot": "Clinic-reported workflow; dosing and monitoring protocol to be specified"
-  },
-  {
-    "id": "skin-draping",
-    "ko": "소독·수술포",
-    "title": "Skin Preparation and Draping",
-    "section": "Intraoperative",
-    "steps": [
-      "step-10",
-      "filming-drape"
-    ],
-    "rows": [
-      {
-        "head": "Skin preparation",
-        "body": "The product, application area and sequence"
-      },
-      {
-        "head": "Surgical drapes",
-        "body": "Single-use drapes and the completed field"
-      },
-      {
-        "head": "Before incision",
-        "body": "The final arrangement around the operative site"
-      }
-    ],
-    "note": "드랩(소독)이라는 원내 전달 표현을 피부 소독과 수술포 덮기로 구분해 설명합니다. 실제 제품·조건·테가덤과의 순서는 수술팀 확인. 현재 슬라이드 순서는 강의 구성이며 처치 순서의 확정본이 아닙니다.",
-    "state": "실제 준비 순서 확인",
-    "type": "rows"
-  },
-  {
-    "id": "tegaderm",
-    "ko": "테가덤 부착",
-    "title": "Tegaderm Around the Operative Site",
-    "section": "Intraoperative",
-    "steps": [
-      "filming-tegaderm"
-    ],
-    "rows": [
-      {
-        "head": "Halved film",
-        "body": "Tegaderm is cut in half at HIGHST"
-      },
-      {
-        "head": "Placement",
-        "body": "The film covers skin around the operative site"
-      },
-      {
-        "head": "Purpose",
-        "body": "A barrier to direct contact with surrounding skin"
-      }
-    ],
-    "note": "원장님 추가 설명: 테가덤을 반으로 잘라 수술부위 주변에 붙입니다. 손을 무균으로 전제하지 않고 주변 피부와의 직접 접촉을 줄이려는 취지입니다. 촬영 씬: 반으로 자르기, 붙이는 위치·범위, 부착 완료 모습. 참고로만 보여주신 수술 스틸은 이 공개 페이지나 PPTX에 삽입하지 않았습니다.",
-    "state": "원장님 설명 반영",
-    "type": "rows",
-    "knowhow": true,
-    "foot": "Technique and rationale described by Jinmo Koo"
-  },
-  {
-    "id": "graft-types",
-    "ko": "수화형·건조형 준비",
-    "title": "Preparation by Graft Type",
-    "section": "Intraoperative",
-    "steps": [
-      "step-07",
-      "step-12"
-    ],
-    "rows": [
-      {
-        "head": "Hydrated type",
-        "body": "No preformed openings. Openings are created manually at HIGHST."
-      },
-      {
-        "head": "Dry type",
-        "body": "Pre-perforated graft. Hydrated during preparation until soft."
-      }
-    ],
-    "note": "수화형은 홈이 없어 직접 홈을 만들고, 건조형은 구멍이 있어 수술 준비 시 수화한다는 원장님 설명. 홈의 구체적인 형태·위치·간격과 도구는 추가 확인.",
-    "state": "타입별 준비 차이 반영",
-    "type": "compare",
-    "foot": "Material descriptions supplied by Jinmo Koo"
-  },
-  {
-    "id": "hydration",
-    "ko": "생리식염수·항생제 수화",
-    "title": "Graft Hydration at HIGHST",
-    "section": "Intraoperative",
-    "steps": [
-      "filming-hydration"
-    ],
-    "rows": [
-      {
-        "head": "Preparation solution",
-        "body": "Saline with two antibiotics, as reported by the surgical team"
-      },
-      {
-        "head": "Graft handling",
-        "body": "Hydration during surgical preparation"
-      },
-      {
-        "head": "Material assessment",
-        "body": "The condition of the graft before use"
-      }
-    ],
-    "note": "원내 경험으로 보고된 내용: 생리식염수+항생제 2종. 약물명·용량·용액 양·시간·제품 IFU 적합성은 아직 미확인입니다. 확인 전 표준 처방이나 제조사 권고로 소개하지 않습니다.",
-    "state": "항생제 2종·조건 확인 필요",
-    "type": "rows",
-    "foot": "Clinic-reported preparation; agents and conditions require confirmation"
-  },
-  {
-    "id": "incision",
-    "ko": "두 가지 절개 방식",
-    "title": "Two Incision Approaches",
-    "section": "Intraoperative",
-    "steps": [
-      "step-11"
-    ],
-    "rows": [
-      {
-        "head": "Pubic incision",
-        "body": "Incision in the pubic region"
-      },
-      {
-        "head": "Circumcision-line incision",
-        "body": "Access through the circumcision line"
-      }
-    ],
-    "note": "원장님 제공 두 방식: 치골절개와 포경수술선 절개. 각 위치·박리 과정의 영상 및 접근 선택 기준을 받습니다. 영문 pubic incision의 정확한 위치 표현은 원장님 확인 후 세부화.",
-    "state": "두 절개 방식 반영",
-    "type": "compare",
-    "caption": "Choice of approach for the individual patient"
-  },
-  {
-    "id": "dissection",
-    "ko": "박리와 수술 단계",
-    "title": "Dissection and Operative Decisions",
-    "section": "Intraoperative",
-    "steps": [
-      "step-11"
-    ],
-    "rows": [
-      {
-        "head": "Anatomical landmarks",
-        "body": "Structures identified in the actual operative view"
-      },
-      {
-        "head": "Plane and extent",
-        "body": "The surgeon’s approach to dissection"
-      },
-      {
-        "head": "Decision points",
-        "body": "Findings that change the operative plan"
-      }
-    ],
-    "note": "두 절개 방식 다음에 실제 박리를 설명하는 장. 해부학적 층, 박리 범위, 피해야 할 구조, 술기 변경 기준은 원장님이 제시할 실제 증례에 맞춰 채웁니다.",
-    "state": "실제 술기 영상·해설 필요",
-    "type": "rows"
-  },
-  {
-    "id": "placement",
-    "ko": "진피 가공·삽입·고정",
-    "title": "Graft Processing and Placement",
-    "section": "Intraoperative",
-    "steps": [
-      "step-12"
-    ],
-    "rows": [
-      {
-        "head": "Processing",
-        "body": "Graft preparation for the chosen procedure"
-      },
-      {
-        "head": "Insertion",
-        "body": "The route and handling of the graft"
-      },
-      {
-        "head": "Fixation",
-        "body": "Position and method in the actual case"
-      }
-    ],
-    "note": "진피 가공·삽입·고정 카드의 세 단계를 발표에서 구분합니다. 가공 치수·층·고정 위치·재료·장력은 아직 미확인. 실제 술기 사진·영상을 중심으로 원장님 설명을 추가합니다.",
-    "state": "세부 술기·영상 필요",
-    "type": "rows"
-  },
-  {
-    "id": "no-touch",
-    "ko": "노터치 술기",
-    "title": "The HIGHST No-touch Technique",
-    "section": "Intraoperative",
-    "steps": [
-      "filming-no-touch"
-    ],
-    "rows": [
-      {
-        "head": "Points of contact",
-        "body": "The surfaces the surgeon intends to avoid"
-      },
-      {
-        "head": "Instrument and graft handling",
-        "body": "The maneuver in the operative field"
-      },
-      {
-        "head": "Technical rationale",
-        "body": "The reason for each contact precaution"
-      }
-    ],
-    "note": "노터치 술기가 있다는 점은 원장님에게 확인했습니다. 무엇과 무엇의 접촉을 어떤 단계에서 피하는지 구체 동작은 아직 확인 중. 근접 화면에서 손·기구·진피·주변 피부의 관계를 보여줍니다.",
-    "state": "노터치 동작 설명 필요",
-    "type": "rows",
-    "knowhow": true
-  },
-  {
-    "id": "megafill",
-    "ko": "진피 턱짐·MegaFill",
-    "title": "MegaFill at the Graft Edge",
-    "section": "Intraoperative",
-    "steps": [
-      "step-13"
-    ],
-    "rows": [
-      {
-        "head": "Target at HIGHST",
-        "body": "Contour step-off at the dermal graft edge"
-      },
-      {
-        "head": "Application in the case",
-        "body": "The area and sequence selected by the surgeon"
-      },
-      {
-        "head": "Contour review",
-        "body": "The appearance before and after application"
-      }
-    ],
-    "note": "수술실장 전달: 진피 턱짐을 보완하는 MegaFill 사용. 병용 이유와 적용 전후 형태를 중심으로 설명합니다. 층·양·주입 방식·적용 기준은 확인 전이며 결과를 보장하는 문구를 넣지 않습니다. 병용 사례 영상과 추적 자료 필요.",
-    "state": "병용 사례·세부 조건 필요",
-    "type": "rows",
-    "knowhow": true
-  },
-  {
-    "id": "adjuncts",
-    "ko": "유착방지제·PDRN",
-    "title": "Adjuncts in the HIGHST Procedure",
-    "section": "Intraoperative",
-    "steps": [
-      "filming-antiadhesion",
-      "filming-pdrn"
-    ],
-    "rows": [
-      {
-        "head": "Anti-adhesion agent",
-        "body": "Use reported by the HIGHST surgical team"
-      },
-      {
-        "head": "PDRN",
-        "body": "Surgeon-reported aim: support of graft integration"
-      }
-    ],
-    "note": "두 보조제의 사용 사실과 PDRN의 진피 생착 목적은 전달받은 내용입니다. 효과가 입증되었다는 결론은 아닙니다. 정확한 제품·양·경로·시점과 발표에 제시할 근거를 확인합니다.",
-    "state": "제품·투여 조건·근거 확인",
-    "type": "compare",
-    "knowhow": true,
-    "foot": "Reported clinical practice and intended purpose; efficacy not established here"
-  },
-  {
-    "id": "closure",
-    "ko": "지혈·봉합·드레싱",
-    "title": "Hemostasis, Closure and Dressing",
-    "section": "Intraoperative",
-    "steps": [
-      "step-14"
-    ],
-    "rows": [
-      {
-        "head": "Hemostasis",
-        "body": "Findings at the end of the procedure"
-      },
-      {
-        "head": "Closure",
-        "body": "The surgeon’s closure method"
-      },
-      {
-        "head": "Dressing and final check",
-        "body": "The condition of the operative site before handover"
-      }
-    ],
-    "note": "수술 종료 카드를 연결했습니다. 실제 지혈 확인, 봉합 방식, 드레싱 제품과 압박 조건, 최종 점검을 수술팀에서 받아 추가합니다.",
-    "state": "종료 과정 촬영·내용 필요",
-    "type": "rows"
-  },
-  {
-    "id": "recovery",
-    "ko": "돌발 상황·인계·회복",
-    "title": "Handover and Recovery",
-    "section": "Postoperative",
-    "steps": [
-      "step-15",
-      "step-16"
-    ],
-    "rows": [
-      {
-        "head": "Operative handover",
-        "body": "Events during surgery and the recovery plan"
-      },
-      {
-        "head": "Observation",
-        "body": "The patient’s course after the procedure"
-      },
-      {
-        "head": "Discharge decision",
-        "body": "The team’s criteria for leaving recovery"
-      }
-    ],
-    "note": "수술 중 돌발 상황·인계와 회복 관찰·퇴실 판단 두 카드를 연결했습니다. 실제 관찰 항목·간격·퇴실 기준을 받습니다. 임의 수치나 처치 기준을 제시하지 않습니다.",
-    "state": "관찰·퇴실 기준 필요",
-    "type": "rows"
-  },
-  {
-    "id": "follow-up",
-    "ko": "퇴실 안내·추적",
-    "title": "Discharge Advice and Follow-up",
-    "section": "Postoperative",
-    "steps": [
-      "step-17",
-      "step-18"
-    ],
-    "rows": [
-      {
-        "head": "Patient education",
-        "body": "Dressing, medication and activity instructions"
-      },
-      {
-        "head": "After discharge",
-        "body": "Contact with the clinic and planned reviews"
-      },
-      {
-        "head": "Reassessment",
-        "body": "The route back to the surgical team when a concern arises"
-      }
-    ],
-    "note": "기존 공통 과정의 퇴실 안내·환자 교육, 귀가 후 연락·정기 추적을 발표에 반영. 실제 안내문과 내원 일정, 연락·재평가 흐름을 확인합니다.",
-    "state": "안내문·추적 일정 필요",
-    "type": "rows"
-  },
-  {
-    "id": "complications",
-    "ko": "부작용 인지·대응",
-    "title": "Complication Recognition and Response",
-    "section": "Postoperative",
-    "steps": [
-      "step-19"
-    ],
-    "rows": [
-      {
-        "head": "First concern",
-        "body": "Finding, onset and the patient’s presentation"
-      },
-      {
-        "head": "Clinical assessment",
-        "body": "The surgeon’s reason for observation or intervention"
-      },
-      {
-        "head": "Management",
-        "body": "What the team actually did in the case"
-      }
-    ],
-    "note": "실제 경험한 부작용 사례를 요청할 장입니다. 현재 전달받은 합병증명·발생률·처치 내용이 없으므로 특정 진단이나 치료를 넣지 않았습니다. 최초 징후부터 원장 보고·재평가·처치까지 실제 경과를 받습니다.",
-    "state": "실제 부작용 사례 필요",
-    "type": "rows"
-  },
-  {
-    "id": "case-course",
-    "ko": "부작용 경과·교훈",
-    "title": "The Course of a Complication",
-    "section": "Postoperative",
-    "steps": [
-      "step-19",
-      "step-20"
-    ],
-    "rows": [
-      {
-        "head": "At presentation",
-        "body": "Time from surgery and the initial finding"
-      },
-      {
-        "head": "After management",
-        "body": "Clinical course and subsequent decisions"
-      },
-      {
-        "head": "At follow-up",
-        "body": "Outcome and the change in future practice"
-      }
-    ],
-    "note": "합병증 관리 장에 이어 사례의 시간 흐름을 설명합니다. 발생 시점·처치일·추적 기간·재수술 여부·이후 프로토콜 변경을 실제 자료로 채웁니다. 현재는 사례 논의 틀입니다.",
-    "state": "실제 경과 자료 필요",
-    "type": "rows"
-  },
-  {
-    "id": "outcomes",
-    "ko": "결과·팀 회고",
-    "title": "Outcomes and Team Review",
-    "section": "Postoperative",
-    "steps": [
-      "step-20"
-    ],
-    "rows": [
-      {
-        "head": "Patients and follow-up",
-        "body": "Denominator, observation period and follow-up completion"
-      },
-      {
-        "head": "Outcomes",
-        "body": "Measurement method and change from baseline"
-      },
-      {
-        "head": "Adverse events and revisions",
-        "body": "Definitions, counts and clinical course"
-      }
-    ],
-    "note": "원내 증례 수·측정법·시점·추적률·합병증 정의와 분모가 있어야 결과를 제시할 수 있습니다. 현재 수치는 없으며 결과 기록·팀 회고 카드와 연결됩니다.",
-    "state": "원내 결과 수치 필요",
-    "type": "rows"
-  },
-  {
-    "id": "complete-case",
-    "ko": "한 증례의 전체 수술주기",
-    "title": "A Case Across the Perioperative Period",
-    "section": "Postoperative",
-    "steps": [
-      "step-01",
-      "step-11",
-      "step-12",
-      "step-13",
-      "step-18",
-      "step-19"
-    ],
-    "rows": [
-      {
-        "head": "Before surgery",
-        "body": "Why this patient and this operative plan?"
-      },
-      {
-        "head": "During surgery",
-        "body": "Which access, graft technique and adjuncts?"
-      },
-      {
-        "head": "After surgery",
-        "body": "What happened during recovery and follow-up?"
-      }
-    ],
-    "note": "대표 증례 한 개를 처음부터 끝까지 연결하는 요약 구조. 병용 사례를 우선 검토하며, 없으면 MegaFill 단독 사례도 가능하다는 행사 요청을 반영합니다. 아직 특정 환자 사례는 입력하지 않았습니다.",
-    "state": "대표 사례 선정 필요",
-    "type": "roadmap"
-  },
-  {
-    "id": "lessons",
-    "ko": "수술주기 핵심 정리",
-    "title": "Perioperative Lessons from HIGHST",
-    "section": "Summary",
-    "steps": [
-      "step-05",
-      "filming-tegaderm",
-      "filming-no-touch",
-      "step-13",
-      "step-19"
-    ],
-    "rows": [
-      {
-        "head": "Preparation",
-        "body": "The room, disposable drapes and skin contact barriers"
-      },
-      {
-        "head": "Technique",
-        "body": "Incision choice, graft handling and edge contour"
-      },
-      {
-        "head": "Follow-up",
-        "body": "Recognition of problems and lessons from actual cases"
-      }
-    ],
-    "note": "강의 전체의 핵심 내용을 원장님의 실제 경험으로 정리합니다. 예방 효과나 성과를 수치 없이 단정하지 않고, 앞에서 제시한 사례와 관찰에 연결합니다.",
-    "state": "핵심 내용 요약",
-    "type": "roadmap"
+    "id": "revision-video",
+    "ko": "재수술 영상 · 10분",
+    "title": "Revision Surgery",
+    "section": "Operative Videos",
+    "type": "video",
+    "steps": [],
+    "rows": [],
+    "note": "재수술 영상 10분.",
+    "state": "영상 연결 예정",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "videoNumber": "03",
+    "minutes": 10
   },
   {
     "id": "discussion",
     "ko": "Q&A",
     "title": "Discussion",
     "section": "Discussion",
+    "type": "closing",
     "steps": [],
-    "rows": [
-      {
-        "head": "Patient selection",
-        "body": "Which findings change the plan?"
-      },
-      {
-        "head": "Operative technique",
-        "body": "How does the approach change the procedure?"
-      },
-      {
-        "head": "Complications",
-        "body": "What would trigger reassessment or revision?"
-      }
-    ],
-    "note": "Q&A는 60분 발표 뒤 별도 세션입니다. 공유 프로그램의 17:00–17:20 KST와 요청 문구의 17:00–17:30 KST 차이는 대리점 최종 안내 확인.",
-    "state": "토론 주제",
-    "type": "rows"
+    "rows": [],
+    "note": "질의응답.",
+    "state": "발표 구성",
+    "foot": "Jinmo Koo · HIGHST Urology"
   }
 ]

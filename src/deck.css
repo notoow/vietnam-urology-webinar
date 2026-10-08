@@ -24,3 +24,8 @@
 .peri-card:focus{outline:3px solid #b5915d;outline-offset:5px}
 .peri-slide-link{font-size:11px;color:#8b6838;text-decoration:underline;text-underline-offset:3px;margin-left:auto}
 @media(max-width:560px){.work-heading .actions{flex-wrap:wrap;justify-content:flex-end}.slide-source small{display:block;margin:5px 0 0}}
+
+.deck-test-list{margin-top:3cqw}.deck-test-list p{font-size:2.5cqw;padding:1.05cqw 0;margin:0;border-bottom:1px solid #dedfd6}
+.deck-video{margin-top:7cqw}.deck-video-label{color:#9b7744;letter-spacing:.1em;font-size:1.25cqw!important}
+.slide .deck-duration{font-size:9cqw;line-height:1.1;margin-top:1cqw;font-weight:500}.deck-duration span{font-size:2.1cqw;margin-left:1.3cqw;color:#6b7265;font-weight:400}
+.slide .deck-closing{font-size:3cqw;margin-top:8cqw;color:#6b7265}
