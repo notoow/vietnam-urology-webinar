@@ -73,6 +73,21 @@
       "history": []
     },
     {
+      "id": "filming-or-environment",
+      "na": [],
+      "order": 4.5,
+      "title": "수술실 환경·설비 (하이스트 노하우)",
+      "fields": {
+        "evidence": "원장님 전달: 대학병원급 수술환경의 핵심 요소로 소개.\n촬영할 장면:\n• EMS 발전기 — 장비·설치 위치와 정전 시 1시간 유지에 대한 설명.\n• HEPA 필터 — 필터가 설치된 설비.\n• 양압실 — 수술실 전경과 양압 관련 설비·표시.\n• 항균 벽·항균 바닥 — 해당 마감재와 수술실 전경.\n• 모든 수술실 CCTV — 각 수술실의 카메라 설치 모습."
+      },
+      "status": "draft",
+      "deleted": false,
+      "phaseId": "pre",
+      "description": "",
+      "revision": 1,
+      "history": []
+    },
+    {
       "id": "step-05",
       "phaseId": "pre",
       "title": "수술실 준비·일회용 소독포 (하이스트 노하우)",
@@ -261,6 +276,21 @@
       "na": [],
       "revision": 1,
       "deleted": false,
+      "history": []
+    },
+    {
+      "id": "filming-no-touch",
+      "na": [],
+      "order": 12.5,
+      "title": "노터치 술기 (하이스트 노하우)",
+      "fields": {
+        "evidence": "촬영할 장면: 노터치 술기를 적용하는 실제 수술 장면. 손·기구·수술 부위의 관계가 보이는 근접 화면.\n원장님 설명: 어느 단계에서 무엇의 접촉을 피하는지와 핵심 포인트.\n일회용 포 사용·무균 영역 세팅 장면도 함께 확보. 적용 단계와 세부 촬영 순서는 수술팀과 확인."
+      },
+      "status": "draft",
+      "deleted": false,
+      "phaseId": "intra",
+      "description": "",
+      "revision": 1,
       "history": []
     },
     {
