@@ -1,0 +1,11 @@
+{
+  "name": "highst-vietnam-webinar",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@supabase/supabase-js": "2.117.3"
+  },
+  "scripts": {
+    "build": "node scripts/build.cjs"
+  }
+}
