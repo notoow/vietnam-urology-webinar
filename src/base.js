@@ -3,7 +3,7 @@ const notes=deck.map(s=>s.note);
 let current=0,activeView='design';
 const slides=[...document.querySelectorAll('.slide')];
 const outline=document.getElementById('outline-list'),select=document.getElementById('slide-select');
-const sectionNames={Overview:'표지',Preparation:'검사·수술 준비','Operative Videos':'수술영상 · 각 10분',Discussion:'질의응답'};
+const sectionNames={"Overview":"표지","Speaker":"발표자 소개","Materials":"재료 소개","Evaluation":"수술 전 검사","Preparation":"수술 준비","Clinical Cases":"증례 1–5","Complications":"합병증","Aftercare":"수술 후 관리","Discussion":"질의응답"};
 let lastSection='';
 slides.forEach((s,i)=>{
  if(deck[i].section!==lastSection){lastSection=deck[i].section;const h=document.createElement('p');h.className='outline-group';h.textContent=sectionNames[lastSection];outline.append(h);}
@@ -33,24 +33,168 @@ const eventProgram=[
 {start:1045,end:1050,title:'Closing',detail:'클로징'}
 ];
 const modules=[
-['Blood and Urine Testing','피검사·소변검사 항목 설명',null],
-['Shaving and Draping','쉐이빙·드랩',null],
-['Circumcision-line Incision','포경선 절개 수술영상',10],
-['Pubic Incision','치골절개 수술영상',10],
-['Revision Surgery','재수술 영상',10]
+  [
+    "Introduction",
+    "표지·구진모 원장님 소개",
+    null
+  ],
+  [
+    "MegaDerm & MegaFill",
+    "MegaDerm 종류와 MegaFill 소개",
+    null
+  ],
+  [
+    "Preoperative Evaluation",
+    "혈액·소변검사와 진동각 검사",
+    null
+  ],
+  [
+    "Surgical Preparation",
+    "새로 촬영할 쉐이빙·드랩 영상",
+    null
+  ],
+  [
+    "Case 1 · Pubic Incision",
+    "치골절개 수술",
+    null
+  ],
+  [
+    "Case 2 · Circumcision-line Incision",
+    "포경선 절개 수술",
+    null
+  ],
+  [
+    "Case 3 · Secondary Dermal Grafting",
+    "진피 2차 이식",
+    null
+  ],
+  [
+    "Case 4 · Revision Surgery",
+    "재수술",
+    null
+  ],
+  [
+    "Case 5 · Contour Step-off Correction",
+    "턱짐 교정",
+    null
+  ],
+  [
+    "Potential Complications",
+    "기타 합병증",
+    null
+  ],
+  [
+    "Postoperative Care & Dressing",
+    "수술 후 관리와 드레싱 방법",
+    null
+  ],
+  [
+    "Questions & Answers",
+    "Q&A·마무리",
+    null
+  ]
 ];
 
 function renderAgenda(){const zone=document.getElementById('timezone').value;const offset=zone==='ict'?-120:0;const format=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');document.getElementById('zone-heading').textContent=zone==='ict'?'베트남시간 ICT':'한국시간 KST';document.getElementById('event-body').innerHTML=eventProgram.map(r=>'<tr class="'+(r.gap?'gap-row':r.speaker?'speaker-row':'')+'"><td>'+format(r.start+offset)+'–'+format(r.end+offset)+'</td><td>'+r.title+'</td><td>'+r.detail+'</td></tr>').join('');document.getElementById('agenda-body').innerHTML=modules.map((m,i)=>'<tr><td>'+String(i+1).padStart(2,'0')+'</td><td>'+m[0]+'<small>'+(m[2]===null?'시간 미정':m[2]+'분')+'</small></td><td>'+m[1]+'</td></tr>').join('')}
 document.getElementById('timezone').onchange=()=>{renderAgenda();save()};
 const groups=[
-['검사 목록',[
-['tests','피검사·소변검사 정확한 항목','검사지의 항목명을 그대로 입력해 주세요.','간수치, 당수치, 염증수치, 성병 관련 항목. 정확한 검사명 목록 확인 필요.']]],
-['수술영상',[
-['video_circumcision','포경선 절개 영상 · 10분','사용할 영상 파일명 또는 시놀로지 공유 링크',''],
-['video_pubic','치골절개 영상 · 10분','사용할 영상 파일명 또는 시놀로지 공유 링크',''],
-['video_revision','재수술 영상 · 10분','사용할 영상 파일명 또는 시놀로지 공유 링크','']]],
-['발표 운영',[
-['interpretation','통역 방식과 시간 배분','영상 30분 외의 설명·통역 시간을 확인합니다.','영어↔베트남어 통역. 방식 확인 필요.']]]
+  [
+    "발표자 소개",
+    [
+      [
+        "speaker_bio",
+        "구진모 원장님 학력·경력",
+        "발표할 학력·경력과 프로필 사진을 정리합니다.",
+        ""
+      ]
+    ]
+  ],
+  [
+    "검사 목록",
+    [
+      [
+        "tests",
+        "혈액·소변검사 정확한 항목",
+        "검사지의 항목명을 그대로 입력해 주세요.",
+        "간수치, 당수치, 염증수치, 성병 관련 검사. 정확한 세부 검사명 추가 예정."
+      ],
+      [
+        "biothesiometry",
+        "진동각 검사",
+        "Penile biothesiometry",
+        "음경 민감도를 측정하여 조루 평가에 활용하는 검사."
+      ]
+    ]
+  ],
+  [
+    "새로 촬영할 영상",
+    [
+      [
+        "video_preparation",
+        "수술 준비 영상",
+        "쉐이빙·드랩 영상의 파일명 또는 공유 링크",
+        ""
+      ],
+      [
+        "video_pubic",
+        "Case 1 · 치골절개 수술",
+        "영상의 파일명 또는 시놀로지 공유 링크",
+        ""
+      ],
+      [
+        "video_circumcision",
+        "Case 2 · 포경선 절개 수술",
+        "영상의 파일명 또는 시놀로지 공유 링크",
+        ""
+      ],
+      [
+        "video_secondary_graft",
+        "Case 3 · 진피 2차 이식수술",
+        "영상의 파일명 또는 시놀로지 공유 링크",
+        ""
+      ],
+      [
+        "video_revision",
+        "Case 4 · 재수술",
+        "영상의 파일명 또는 시놀로지 공유 링크",
+        ""
+      ],
+      [
+        "video_contour",
+        "Case 5 · 턱짐 교정수술",
+        "영상의 파일명 또는 시놀로지 공유 링크",
+        ""
+      ]
+    ]
+  ],
+  [
+    "합병증·수술 후 관리",
+    [
+      [
+        "complications",
+        "발표할 합병증과 대처",
+        "원장님이 설명할 내용을 정리합니다.",
+        ""
+      ],
+      [
+        "aftercare",
+        "수술 후 관리·드레싱",
+        "드레싱 영상과 실제 관리 방법을 정리합니다.",
+        ""
+      ]
+    ]
+  ],
+  [
+    "발표 운영",
+    [
+      [
+        "interpretation",
+        "통역 방식과 시간 배분",
+        "60분 세션 내 영상·설명·통역 시간을 확인합니다.",
+        "영어↔베트남어 통역. 세부 배분 확인 필요."
+      ]
+    ]
+  ]
 ];
 const fields={};const qroot=document.getElementById('questionnaire');groups.forEach((g,i)=>{const d=document.createElement('details');d.className='qa-group';d.open=true;const s=document.createElement('summary');s.innerHTML='<span>'+String(i+1).padStart(2,'0')+'</span>'+g[0];d.appendChild(s);const grid=document.createElement('div');grid.className='qa-fields';g[1].forEach(f=>{const label=document.createElement('label');label.htmlFor=f[0];label.append(document.createTextNode(f[1]));const hint=document.createElement('span');hint.textContent=f[2];const input=document.createElement('textarea');input.id=f[0];input.value=f[3];input.placeholder='메모하거나 대화로 말씀해 주세요.';input.addEventListener('input',save);fields[f[0]]=input;label.append(hint,input);grid.appendChild(label)});d.appendChild(grid);qroot.appendChild(d)});
 function collect(){return{version:3,updatedAt:new Date().toISOString(),design:'HIGHST original logo / white and gold / Pretendard',timezone:document.getElementById('timezone').value,eventDate:'2026-10-21',presentationMinutes:60,webinarMinutes:150,answers:Object.fromEntries(Object.entries(fields).map(([k,v])=>[k,v.value]))}}
