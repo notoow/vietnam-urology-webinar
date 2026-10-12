@@ -209,11 +209,11 @@
       },
       {
         "head": "Blood tests",
-        "body": "Blood coagulation tests\nComplete blood count (CBC)\nProstate-specific antigen (PSA)\nBlood glucose\nHbA1c (glycated hemoglobin)"
+        "body": "Blood coagulation tests (PT/PTT)\nTTT (testosterone)\nComplete blood count (CBC)\nProstate-specific antigen (PSA)\nBlood glucose (BST/HbA1c)"
       },
       {
         "head": "Screening and other tests",
-        "body": "HPV testing\nSyphilis testing\nUrine testing\nLiver function\nInflammatory markers"
+        "body": "HIV testing\nSyphilis testing\nUrine testing\nLiver enzymes (GOT/GPT/GGT)\nInflammatory markers"
       },
       {
         "head": "Penile length measurement",
@@ -224,8 +224,8 @@
         "body": "Vibration perception threshold\nPenile sensitivity assessment"
       }
     ],
-    "note": "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰·음경 길이 측정·진동각 검사를 한 장에 정리했습니다.",
-    "speakerNote": "Preoperative assessment at HIGHST includes IIEF and PEDT questionnaires, the listed laboratory and infection tests, flaccid and stretched penile length measurement, and penile biothesiometry. HbA1c denotes glycated hemoglobin. Sources: https://pubmed.ncbi.nlm.nih.gov/9187685/ ; https://pubmed.ncbi.nlm.nih.gov/17568761/ ; https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/ ; https://pubmed.ncbi.nlm.nih.gov/28874780/",
+    "note": "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰·음경 길이 측정·진동각 검사. 혈액응고검사는 PT/PTT, 테스토스테론은 TTT로 표기합니다. 혈당 항목에 BST/HbA1c를 묶고, 수술 전 감염 검사에는 HIV를 포함합니다. 간수치는 GOT/GPT/GGT입니다.",
+    "speakerNote": "Preoperative assessment at HIGHST includes IIEF and PEDT questionnaires, flaccid and stretched penile length measurement, and penile biothesiometry.\n\nLaboratory tests\nBlood coagulation tests (PT/PTT)\nTTT (testosterone)\nComplete blood count (CBC)\nProstate-specific antigen (PSA)\nBlood glucose (BST/HbA1c)\nHIV testing\nSyphilis testing\nUrine testing\nLiver enzymes (GOT/GPT/GGT)\nInflammatory markers\n\nHbA1c denotes glycated hemoglobin and appears under the blood glucose heading.\nSources: https://pubmed.ncbi.nlm.nih.gov/9187685/ ; https://pubmed.ncbi.nlm.nih.gov/17568761/ ; https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/ ; https://pubmed.ncbi.nlm.nih.gov/28874780/",
     "sources": [],
     "speakerCues": {
       "items": [
@@ -235,11 +235,11 @@
         },
         {
           "label": "Blood tests",
-          "text": "Coagulation / CBC / PSA / blood glucose / HbA1c, glycated hemoglobin"
+          "text": "Coagulation: PT/PTT / TTT: testosterone / CBC / PSA / blood glucose: BST/HbA1c"
         },
         {
           "label": "Screening",
-          "text": "HPV / syphilis / urine testing / liver function / inflammatory markers"
+          "text": "HIV / syphilis / urine testing / liver enzymes: GOT/GPT/GGT / inflammatory markers"
         },
         {
           "label": "Physical examination",

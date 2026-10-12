@@ -111,7 +111,7 @@
       "id": "evaluation",
       "label": "수술 전 평가",
       "note": "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰과 민감도 검사를 한 장에 정리했습니다.",
-      "speakerNote": "Preoperative assessment at HIGHST includes IIEF and PEDT questionnaires, the listed laboratory and infection tests, flaccid and stretched penile length measurement, and penile biothesiometry. HbA1c denotes glycated hemoglobin. Sources: https://pubmed.ncbi.nlm.nih.gov/9187685/ ; https://pubmed.ncbi.nlm.nih.gov/17568761/ ; https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/ ; https://pubmed.ncbi.nlm.nih.gov/28874780/",
+      "speakerNote": "Preoperative assessment at HIGHST includes IIEF and PEDT questionnaires, flaccid and stretched penile length measurement, and penile biothesiometry.\n\nLaboratory tests\nBlood coagulation tests (PT/PTT)\nTTT (testosterone)\nComplete blood count (CBC)\nProstate-specific antigen (PSA)\nBlood glucose (BST/HbA1c)\nHIV testing\nSyphilis testing\nUrine testing\nLiver enzymes (GOT/GPT/GGT)\nInflammatory markers\n\nHbA1c denotes glycated hemoglobin and appears under the blood glucose heading.\nSources: https://pubmed.ncbi.nlm.nih.gov/9187685/ ; https://pubmed.ncbi.nlm.nih.gov/17568761/ ; https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/ ; https://pubmed.ncbi.nlm.nih.gov/28874780/",
       "items": [
         {
           "kind": "text",
@@ -262,7 +262,7 @@
         },
         {
           "kind": "text",
-          "text": "Blood coagulation tests",
+          "text": "Blood coagulation tests (PT/PTT)",
           "x": 666,
           "y": 235,
           "w": 542,
@@ -273,7 +273,7 @@
         },
         {
           "kind": "text",
-          "text": "Complete blood count (CBC)",
+          "text": "TTT (testosterone)",
           "x": 666,
           "y": 273,
           "w": 542,
@@ -284,7 +284,7 @@
         },
         {
           "kind": "text",
-          "text": "Prostate-specific antigen (PSA)",
+          "text": "Complete blood count (CBC)",
           "x": 666,
           "y": 311,
           "w": 542,
@@ -295,7 +295,7 @@
         },
         {
           "kind": "text",
-          "text": "Blood glucose",
+          "text": "Prostate-specific antigen (PSA)",
           "x": 666,
           "y": 349,
           "w": 542,
@@ -306,7 +306,7 @@
         },
         {
           "kind": "text",
-          "text": "HbA1c (glycated hemoglobin)",
+          "text": "Blood glucose (BST/HbA1c)",
           "x": 666,
           "y": 387,
           "w": 542,
@@ -317,7 +317,7 @@
         },
         {
           "kind": "text",
-          "text": "HPV testing",
+          "text": "HIV testing",
           "x": 666,
           "y": 425,
           "w": 542,
@@ -350,7 +350,7 @@
         },
         {
           "kind": "text",
-          "text": "Liver function",
+          "text": "Liver enzymes (GOT/GPT/GGT)",
           "x": 666,
           "y": 539,
           "w": 542,
