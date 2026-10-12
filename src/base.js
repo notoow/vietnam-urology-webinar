@@ -45,7 +45,7 @@ const modules=[
   ],
   [
     "Preoperative Evaluation",
-    "혈액·소변검사와 진동각 검사",
+    "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰·길이 측정·진동각 검사",
     null
   ],
   [
@@ -113,16 +113,28 @@ const groups=[
     "검사 목록",
     [
       [
+        "questionnaires",
+        "수술 전 설문지",
+        "사용할 설문 버전과 언어를 기록합니다.",
+        "IIEF / PEDT"
+      ],
+      [
         "tests",
         "혈액·소변검사 정확한 항목",
         "검사지의 항목명을 그대로 입력해 주세요.",
-        "간수치, 당수치, 염증수치, 성병 관련 검사. 정확한 세부 검사명 추가 예정."
+        "혈액응고검사, CBC, PSA, 혈당, HbA1c(당화혈색소), HPV, 매독. 기존 소변검사·간수치·염증수치 유지. HPV·HbA1c 명칭 최종 확인 필요."
       ],
       [
         "biothesiometry",
         "진동각 검사",
         "Penile biothesiometry",
         "음경 민감도를 측정하여 조루 평가에 활용하는 검사."
+      ],
+      [
+        "physical_examination",
+        "신체진찰·음경 길이 측정",
+        "이완·신장 상태 측정 장면과 설명을 정리합니다.",
+        "Physical examination / Penile length measurement: flaccid and stretched."
       ]
     ]
   ],
