@@ -19,6 +19,6 @@ module.exports=function renderDeck(deck){
    else body+='<div class="deck-content deck-'+esc(s.type)+'">'+s.rows.map((r,j)=>'<div class="deck-point"><span class="deck-number">'+String(j+1).padStart(2,'0')+'</span><div><h3>'+esc(r.head)+'</h3><p>'+esc(r.body)+'</p></div></div>').join('')+'</div>';
    if(s.caption)body+='<p class="strip-note">'+esc(s.caption)+'</p>';
   }
-  return '<article class="slide '+(s.type==='cover'?'cover ':'')+(i===0?'current':'')+'" data-title="'+esc(s.ko)+'" data-state="'+esc(s.state)+'">'+body+'<div class="foot"><span>'+esc(s.foot||'Jinmo Koo · HIGHST Urology')+'</span><span>'+page+'</span></div></article>';
+  return '<article class="slide '+(s.type==='cover'?'cover ':s.type==='media'?'slide-media ':'')+(i===0?'current':'')+'" data-title="'+esc(s.ko)+'" data-state="'+esc(s.state)+'">'+body+'<div class="foot"><span>'+esc(s.foot||'Jinmo Koo · HIGHST Urology')+'</span><span>'+page+'</span></div></article>';
  }).join('\n');
 };

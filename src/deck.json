@@ -60,7 +60,7 @@
     "foot": "Jinmo Koo · HIGHST Urology",
     "section": "Evaluation",
     "type": "evaluation",
-    "state": "원장님 전달 항목 반영",
+    "state": "수술 전 설문",
     "id": "questionnaires",
     "ko": "설문지 · IIEF/PEDT",
     "title": "Patient Questionnaires",
@@ -74,7 +74,7 @@
         "body": "Premature Ejaculation\nDiagnostic Tool"
       }
     ],
-    "note": "수술 전 평가의 첫 순서로 IIEF와 PEDT 설문을 소개합니다. 원장님이 전달한 명칭을 그대로 사용하며, IIEF-5 등 세부 버전이나 점수 기준은 임의로 지정하지 않았습니다.",
+    "note": "수술 전 설문: IIEF(국제발기능지수)와 PEDT(조루 진단 도구).",
     "speakerNote": "The preoperative evaluation includes the International Index of Erectile Function (IIEF) and the Premature Ejaculation Diagnostic Tool (PEDT).",
     "sources": [
       "https://pubmed.ncbi.nlm.nih.gov/9187685/",
@@ -86,7 +86,7 @@
     "foot": "Jinmo Koo · HIGHST Urology",
     "section": "Evaluation",
     "type": "evaluation",
-    "state": "HPV·HbA1c 명칭 최종 확인 필요",
+    "state": "수술 전 검사",
     "id": "tests",
     "ko": "혈액검사·감염 선별검사",
     "title": "Laboratory & Infection Screening",
@@ -100,8 +100,8 @@
         "body": "HPV testing\nSyphilis testing\nUrine testing\nLiver function\nInflammatory markers"
       }
     ],
-    "note": "추가 전달 항목: 혈액응고검사, CBC, PSA, HPV, 매독, 혈당. 기존 소변검사·간수치·염증수치도 유지했습니다. “헤모글로빈 A/C”는 HbA1c(당화혈색소)를 뜻한 것으로 해석해 우선 반영했습니다. HPV는 전달한 철자를 유지했으며 검사 방식·검체·적용 대상은 지정하지 않았습니다. 정확한 검사명 최종 확인이 필요합니다.",
-    "speakerNote": "The list reflects the preoperative tests provided by HIGHST. Blood glucose and HbA1c are listed separately. HbA1c denotes glycated hemoglobin. HPV and syphilis are separate entries. The slide does not assign a specimen type or testing method to HPV.",
+    "note": "수술 전 검사: 혈액응고검사, 일반혈액검사(CBC), 전립선특이항원(PSA), 혈당, 당화혈색소(HbA1c), HPV, 매독, 소변검사, 간기능검사, 염증수치 검사.",
+    "speakerNote": "Preoperative testing includes blood coagulation tests, complete blood count (CBC), prostate-specific antigen (PSA), blood glucose, glycated hemoglobin (HbA1c), HPV and syphilis testing, urine testing, liver function and inflammatory markers.",
     "sources": [
       "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/"
     ]
@@ -111,7 +111,7 @@
     "foot": "Jinmo Koo · HIGHST Urology",
     "section": "Evaluation",
     "type": "evaluation",
-    "state": "원장님 전달 항목 반영",
+    "state": "신체진찰",
     "id": "physical-examination",
     "ko": "신체진찰·음경 길이·진동각 검사",
     "title": "Physical Examination",
@@ -125,7 +125,7 @@
         "body": "Vibration perception threshold\nPenile sensitivity assessment"
       }
     ],
-    "note": "신체진찰에 이완 상태(flaccid)와 신장 상태(stretched)의 음경 길이 측정을 추가했습니다. “stetched”는 “stretched”로 교정했습니다. 기존 진동각 검사도 이 페이지에 유지했습니다. 측정 기준점·방법·수치·조루 판정 기준은 임의로 추가하지 않았습니다.",
+    "note": "신체진찰: 이완 상태(flaccid)와 신장 상태(stretched)의 음경 길이 측정, 진동각 검사를 통한 음경 민감도 평가.",
     "speakerNote": "Physical examination includes penile length measurement in the flaccid and stretched states. Penile biothesiometry assesses vibration perception thresholds and penile sensitivity.",
     "sources": [
       "https://pubmed.ncbi.nlm.nih.gov/28874780/"

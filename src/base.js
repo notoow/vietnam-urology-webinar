@@ -122,7 +122,7 @@ const groups=[
         "tests",
         "혈액·소변검사 정확한 항목",
         "검사지의 항목명을 그대로 입력해 주세요.",
-        "혈액응고검사, CBC, PSA, 혈당, HbA1c(당화혈색소), HPV, 매독. 기존 소변검사·간수치·염증수치 유지. HPV·HbA1c 명칭 최종 확인 필요."
+        "혈액응고검사, 일반혈액검사(CBC), 전립선특이항원(PSA), 혈당, 당화혈색소(HbA1c), HPV, 매독, 소변검사, 간기능검사, 염증수치 검사."
       ],
       [
         "biothesiometry",
@@ -211,7 +211,7 @@ const groups=[
 const fields={};const qroot=document.getElementById('questionnaire');groups.forEach((g,i)=>{const d=document.createElement('details');d.className='qa-group';d.open=true;const s=document.createElement('summary');s.innerHTML='<span>'+String(i+1).padStart(2,'0')+'</span>'+g[0];d.appendChild(s);const grid=document.createElement('div');grid.className='qa-fields';g[1].forEach(f=>{const label=document.createElement('label');label.htmlFor=f[0];label.append(document.createTextNode(f[1]));const hint=document.createElement('span');hint.textContent=f[2];const input=document.createElement('textarea');input.id=f[0];input.value=f[3];input.placeholder='메모하거나 대화로 말씀해 주세요.';input.addEventListener('input',save);fields[f[0]]=input;label.append(hint,input);grid.appendChild(label)});d.appendChild(grid);qroot.appendChild(d)});
 function collect(){return{version:3,updatedAt:new Date().toISOString(),design:'HIGHST original logo / white and gold / Pretendard',timezone:document.getElementById('timezone').value,eventDate:'2026-10-21',presentationMinutes:60,webinarMinutes:150,answers:Object.fromEntries(Object.entries(fields).map(([k,v])=>[k,v.value]))}}
 function save(){try{localStorage.setItem('highst-vietnam-review-v1',JSON.stringify(collect()));document.getElementById('save-state').textContent='현재 브라우저에 저장됨 · 파일과 채팅에는 자동 반영되지 않습니다.'}catch(e){document.getElementById('save-state').textContent='브라우저 저장이 제한됩니다. 답변 내보내기로 보관해 주세요.'}}
-try{const saved=JSON.parse(localStorage.getItem('highst-vietnam-review-v1')||'null');if(saved&&[1,2,3].includes(saved.version)){Object.entries(saved.answers||{}).forEach(([k,v])=>{if(fields[k]&&typeof v==='string'&&!(k==='event'&&v==='Jinmo Koo / 2시간 30분 / 영어 슬라이드 방향'))fields[k].value=v});if(['kst','ict'].includes(saved.timezone))document.getElementById('timezone').value=saved.timezone}}catch(e){}
+try{const saved=JSON.parse(localStorage.getItem('highst-vietnam-review-v1')||'null');if(saved&&[1,2,3].includes(saved.version)){Object.entries(saved.answers||{}).forEach(([k,v])=>{if(fields[k]&&typeof v==='string'&&!(k==='event'&&v==='Jinmo Koo / 2시간 30분 / 영어 슬라이드 방향'))fields[k].value=(k==='tests'&&v==="혈액응고검사, CBC, PSA, 혈당, HbA1c(당화혈색소), HPV, 매독. 기존 소변검사·간수치·염증수치 유지. HPV·HbA1c 명칭 최종 확인 필요.")?"혈액응고검사, 일반혈액검사(CBC), 전립선특이항원(PSA), 혈당, 당화혈색소(HbA1c), HPV, 매독, 소변검사, 간기능검사, 염증수치 검사.":v});if(['kst','ict'].includes(saved.timezone))document.getElementById('timezone').value=saved.timezone}}catch(e){}
 document.getElementById('export').onclick=()=>{const data=collect();data.questions=Object.fromEntries(groups.flatMap(g=>g[1].map(f=>[f[0],f[1]])));const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='highst-webinar-answers.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);const toast=document.getElementById('toast');toast.textContent='답변 파일을 다운로드했습니다.';toast.style.display='block';setTimeout(()=>toast.style.display='none',3000)};
 show(0);renderAgenda();switchView(location.hash.slice(1).split('&')[0]||'design',false);
 
