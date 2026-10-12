@@ -33,7 +33,8 @@
         }
       ],
       "transition": "First, let me briefly introduce myself."
-    }
+    },
+    "speakerCueLine": "Welcome / Jinmo Koo / HIGHST / MegaDerm / Clinical cases"
   },
   {
     "steps": [],
@@ -139,7 +140,8 @@
         }
       ],
       "transition": "Let’s begin with the materials: MegaDerm and MegaFill."
-    }
+    },
+    "speakerCueLine": "Korea University / HIGHST / Ewha Mokdong / Training / TAA award"
   },
   {
     "steps": [],
@@ -187,7 +189,8 @@
         }
       ],
       "transition": "Next, I’ll go through our preoperative evaluation."
-    }
+    },
+    "speakerCueLine": "MegaDerm sheet / Hydrated or dry / 3–5 mm / Sizes / MegaFill"
   },
   {
     "steps": [],
@@ -251,7 +254,8 @@
         }
       ],
       "transition": "With the evaluation complete, let’s move on to surgical preparation."
-    }
+    },
+    "speakerCueLine": "IIEF/PEDT / PT/PTT, TTT, CBC, PSA / BST/HbA1c / HIV, syphilis / Urine, liver / Length, sensitivity"
   },
   {
     "steps": [],
@@ -282,7 +286,8 @@
         }
       ],
       "transition": "Now, let’s look at the first case: a pubic incision."
-    }
+    },
+    "speakerCueLine": "Shaving / Draping / First case"
   },
   {
     "steps": [],
@@ -317,7 +322,8 @@
         }
       ],
       "transition": "The next case uses a circumcision-line incision."
-    }
+    },
+    "speakerCueLine": "Pubic incision / Background / Incision choice / Video / Key points"
   },
   {
     "steps": [],
@@ -352,7 +358,8 @@
         }
       ],
       "transition": "Next, we’ll look at secondary dermal grafting."
-    }
+    },
+    "speakerCueLine": "Circumcision line / Background / Video / Compare approaches"
   },
   {
     "steps": [],
@@ -387,7 +394,8 @@
         }
       ],
       "transition": "Let’s move on to the revision surgery case."
-    }
+    },
+    "speakerCueLine": "Previous procedure / Reason for second graft / Video / Key points"
   },
   {
     "steps": [],
@@ -422,7 +430,8 @@
         }
       ],
       "transition": "The final case focuses on contour step-off correction."
-    }
+    },
+    "speakerCueLine": "Previous surgery / Reason for revision / Findings / Video"
   },
   {
     "steps": [],
@@ -457,7 +466,8 @@
         }
       ],
       "transition": "After these cases, let’s review potential complications."
-    }
+    },
+    "speakerCueLine": "Contour step-off / Location / Correction / Video / Key points"
   },
   {
     "steps": [],
@@ -508,7 +518,8 @@
         }
       ],
       "transition": "Finally, I’ll discuss postoperative care and dressing."
-    }
+    },
+    "speakerCueLine": "Published ADM reports / Hematoma, edema / Wound / Contour, discomfort"
   },
   {
     "steps": [],
@@ -547,7 +558,8 @@
         }
       ],
       "transition": "Thank you for your attention. I’m happy to take your questions."
-    }
+    },
+    "speakerCueLine": "Care instructions / Dressing video / Follow-up / Questions"
   },
   {
     "steps": [],
@@ -582,6 +594,7 @@
         }
       ],
       "transition": ""
-    }
+    },
+    "speakerCueLine": "Thank you / Questions / Clarify / Discussion / Closing"
   }
 ]

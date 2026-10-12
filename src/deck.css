@@ -20,15 +20,10 @@
 .conference-slide .deck-blank-media{aspect-ratio:16/9;overflow:hidden}
 .deck-blank-media video,.deck-blank-media img{display:block;width:100%;height:100%;object-fit:contain}
 
-.english-notes{padding:23px 28px 25px}
-.english-notes summary{font-size:14px;color:#81633d}
-.speaker-cues{list-style:decimal-leading-zero;margin:22px 0 0;padding:0 0 0 29px;max-width:1100px}
-.speaker-cues li{padding-left:12px;margin:0 0 13px;font-size:17px;line-height:1.6;color:#555e61;overflow-wrap:anywhere}
-.speaker-cues li::marker{font-size:12px;color:#a38a66;font-variant-numeric:tabular-nums}
-.speaker-cues strong{color:#20282c;font-weight:600;margin-right:12px}
-.english-notes .speaker-transition{display:flex;gap:18px;border-top:1px solid #e5e5df;padding-top:17px;margin:21px 0 0;max-width:none;font-size:16px;line-height:1.65;color:#20282c}
-.english-notes .speaker-transition[hidden]{display:none}
-.speaker-transition>span:first-child{color:#81633d;font-size:12px;font-weight:600;line-height:2.2;flex-shrink:0}
-.preparation-notes{margin-top:10px;background:transparent;border-color:#dedfd8;padding:16px 24px}
+.english-notes{display:flex;align-items:baseline;gap:16px;padding:14px 20px}
+.english-notes[hidden]{display:none}
+.cue-label{font-size:11px;color:#81633d;font-weight:600;flex-shrink:0}
+.english-notes #speaker-cues{font-size:16px;line-height:1.55;font-weight:500;color:#20282c;margin:0;max-width:none;overflow-wrap:anywhere}
+.preparation-notes{margin-top:8px;background:transparent;border-color:#dedfd8;padding:12px 20px}
 .preparation-notes summary{color:#777e75}
-@media(max-width:560px){.english-notes{padding:19px 18px}.speaker-cues{padding-left:24px;margin-top:18px}.speaker-cues li{font-size:16px;padding-left:5px;margin-bottom:15px}.speaker-cues strong{display:block;margin-right:0}.english-notes .speaker-transition{font-size:15px;gap:13px}.preparation-notes{padding:15px 18px}}
+@media(max-width:560px){.english-notes{gap:10px;padding:12px 14px}.english-notes #speaker-cues{font-size:14px}.cue-label{font-size:10px}.preparation-notes{padding:12px 14px}}

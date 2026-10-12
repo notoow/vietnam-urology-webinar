@@ -15,15 +15,13 @@ function show(i){
  [...outline.querySelectorAll('button')].forEach((b,j)=>b.setAttribute('aria-current',j===current));select.value=current;
  document.getElementById('slide-count').textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
  document.getElementById('slide-status').textContent=slides[current].dataset.state;document.getElementById('slide-note').textContent=notes[current];
- const cues=deck[current].speakerCues;
- document.getElementById('speaker-cues').replaceChildren(...cues.items.map(cue=>{const item=document.createElement('li'),label=document.createElement('strong'),text=document.createElement('span');label.textContent=cue.label;text.textContent=cue.text;item.append(label,text);return item}));
- const transition=document.getElementById('speaker-transition');transition.textContent=cues.transition||'';transition.parentElement.hidden=!cues.transition;
+ document.getElementById('speaker-cues').textContent=deck[current].speakerCueLine;
  document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===slides.length-1;
 }
 select.onchange=e=>show(e.target.value);document.getElementById('prev').onclick=()=>show(current-1);document.getElementById('next').onclick=()=>show(current+1);
 function switchView(view,writeHash=true){if(!['design','perioperative','program','interview','materials'].includes(view))view='design';activeView=view;document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==view);document.querySelectorAll('.main-nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.view===view));if(writeHash)history.replaceState(null,'','#'+view);window.scrollTo(0,0)}
 document.querySelectorAll('.main-nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));document.querySelector('.brand-link').onclick=e=>{e.preventDefault();switchView('design')};window.addEventListener('hashchange',()=>switchView(location.hash.slice(1).split('&')[0],false));
-const memo=document.getElementById('speaker-notes'),notesToggle=document.getElementById('notes-toggle');notesToggle.textContent='발표 메모';notesToggle.setAttribute('aria-controls','speaker-notes');notesToggle.setAttribute('aria-expanded',String(memo.open));notesToggle.onclick=()=>memo.open=!memo.open;memo.addEventListener('toggle',()=>notesToggle.setAttribute('aria-expanded',String(memo.open)));
+const memo=document.getElementById('speaker-notes'),notesToggle=document.getElementById('notes-toggle');notesToggle.onclick=()=>{memo.hidden=!memo.hidden;notesToggle.setAttribute('aria-expanded',String(!memo.hidden))};
 let previousScroll=0;document.getElementById('present').onclick=()=>{previousScroll=window.scrollY;document.body.classList.add('presenting');document.getElementById('exit-present').focus()};function exitPresentation(){document.body.classList.remove('presenting');window.scrollTo(0,previousScroll);document.getElementById('present').focus()}document.getElementById('exit-present').onclick=exitPresentation;
 document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if(e.key==='Escape'&&document.body.classList.contains('presenting'))exitPresentation();if(activeView==='design'&&document.body.classList.contains('presenting')){if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(current+1)}if(e.key==='ArrowLeft'){e.preventDefault();show(current-1)}}});
 const eventProgram=[
