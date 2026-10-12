@@ -15,10 +15,17 @@ module.exports = function layoutDeck(deck) {
     if(s.type==='cover') items=templateItems('cover',n);
     else if(s.type==='evaluation') items=templateItems('evaluation',n);
     else if(s.type==='profile') items=[
-      image('highst-logo.png',72,64,192,54),
-      text('Jinmo Koo',72,248,710,82,54,600),
-      text(s.subtitle,72,351,710,45,28,400,muted),
-      image('jinmo-koo-profile.jpg',866,64,342,592,'cover','Jinmo Koo, HIGHST Urology'),
+      image(s.asset,72,54,105,135,'cover','Jinmo Koo, HIGHST Urology'),
+      text(s.title,216,58,766,64,43,600),
+      text(s.subtitle,216,120,766,37,25,400,muted),
+      text(s.biography.education,216,169,766,30,21,400,muted),
+      logo(),rect(72,220,1136,1,rule),
+      text('Clinical & academic appointments',72,252,550,34,22,600,gold),
+      ...s.biography.appointments.map((value,j)=>text(value,72,297+j*36,550,32,j===3?21:22,400,j===3?muted:ink)),
+      text('Professional memberships',72,468,550,34,22,600,gold),
+      ...s.biography.memberships.map((value,j)=>text(value,72,513+j*36,550,32,22)),
+      text('Training, appointments & recognition',672,252,536,34,22,600,gold),
+      ...s.biography.training.map((entry)=>text(entry.text,672,entry.y,536,32,entry.size||21,entry.weight||400,entry.muted?muted:ink)),
       ...footer(n)
     ];
     else if(s.type==='products') items=[

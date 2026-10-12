@@ -24,10 +24,72 @@
     "section": "Speaker",
     "type": "profile",
     "subtitle": "HIGHST Urology",
-    "note": "제공된 구진모 원장님 프로필 사진을 사용했습니다. 발표할 학력·경력은 추가 예정입니다.",
-    "speakerNote": "Jinmo Koo, HIGHST Urology. Portrait supplied by HIGHST.",
-    "state": "학력·경력 추가 예정",
-    "asset": "jinmo-koo-profile.jpg"
+    "note": "고려대학교 의과대학 졸업. 현 하이스트 대표원장, 전 프라우드 대표원장, 이대목동병원 비뇨의학과 외래교수. Coloplast, Boston Scientific, Rigicon, Litemed, Hsing-Chi, UCI, L&C Bio 관련 경력과 2024년 대만남성과학회 발표 우수상, 대한비뇨기과학회·세계성의학회·아시아태평양성의학회 정회원 경력을 반영했습니다.",
+    "speakerNote": "Jinmo Koo, HIGHST Urology.\n\nEducation\nGraduated from Korea University College of Medicine.\n\nClinical and academic appointments\nCurrent Chief Director, HIGHST Urology.\nFormer Chief Director, PROUD Urology.\nAdjunct Professor of Urology, Ewha Womans University Mokdong Hospital.\n\nTraining, appointments and recognition\nCompleted erectile dysfunction training at UCI, USA.\nColoplast Reference Doctor.\nDesignated physician, Boston Scientific Center of Education.\nDesignated physician, Boston Scientific Center of Excellence.\nRigicon Certificate of Recognition.\nDesignated physician, Litemed Training Center.\nDesignated physician, Hsing-Chi Training Center.\nOfficially appointed consultant for international training, L&C Bio.\nOutstanding Presentation Award, Taiwan Andrology Association (TAA), 2024.\n\nFull member of the Korean Urological Association, International Society for Sexual Medicine and Asia Pacific Society for Sexual Medicine.\nPortrait supplied by HIGHST.",
+    "state": "학력·경력",
+    "asset": "jinmo-koo-headshot.png",
+    "biography": {
+      "education": "Graduate, Korea University College of Medicine",
+      "appointments": [
+        "Chief Director, HIGHST Urology",
+        "Former Chief Director, PROUD Urology",
+        "Adjunct Professor of Urology",
+        "Ewha Womans University Mokdong Hospital"
+      ],
+      "memberships": [
+        "Korean Urological Association",
+        "International Society for Sexual Medicine",
+        "Asia Pacific Society for Sexual Medicine"
+      ],
+      "training": [
+        {
+          "text": "UCI, USA: Erectile dysfunction training",
+          "y": 297
+        },
+        {
+          "text": "Coloplast Reference Doctor",
+          "y": 333
+        },
+        {
+          "text": "Boston Scientific designated physician",
+          "y": 369
+        },
+        {
+          "text": "Center of Education / Center of Excellence",
+          "y": 397,
+          "size": 19,
+          "muted": true
+        },
+        {
+          "text": "Rigicon Certificate of Recognition",
+          "y": 433
+        },
+        {
+          "text": "Litemed / Hsing-Chi Training Center physician",
+          "y": 469
+        },
+        {
+          "text": "L&C Bio international training consultant",
+          "y": 505
+        },
+        {
+          "text": "Outstanding Presentation Award (2024)",
+          "y": 556,
+          "weight": 600
+        },
+        {
+          "text": "Taiwan Andrology Association (TAA)",
+          "y": 584,
+          "muted": true
+        }
+      ]
+    },
+    "sources": [
+      "https://www.highsturology.co.kr/v2/proud/doctor.php",
+      "https://www.issm.info/public/about/vision-and-mission",
+      "https://apssm.asia/",
+      "https://uroweb.org/education-events/78th-annual-meeting-of-the-korean-urological-association-kua-2026"
+    ]
   },
   {
     "steps": [],
