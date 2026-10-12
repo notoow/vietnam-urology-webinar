@@ -12,7 +12,28 @@
     "asset": "jinmo-koo-portrait.png",
     "note": "베트남 MegaDerm 웨비나. 구진모 원장님, 2026년 10월 21일.",
     "speakerNote": "Jinmo Koo, HIGHST Urology. Vietnam MegaDerm Webinar, 21 October 2026. Portrait supplied by HIGHST. Brand reference: https://www.highsturology.co.kr/v2/proud/doctor.php",
-    "state": "발표 구성"
+    "state": "발표 구성",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Welcome",
+          "text": "Thank you for joining us today."
+        },
+        {
+          "label": "Introduction",
+          "text": "Jinmo Koo / HIGHST Urology, Korea"
+        },
+        {
+          "label": "Topic",
+          "text": "MegaDerm penile augmentation"
+        },
+        {
+          "label": "Today’s focus",
+          "text": "Preoperative evaluation / surgical videos / complications / postoperative care"
+        }
+      ],
+      "transition": "First, let me briefly introduce myself."
+    }
   },
   {
     "steps": [],
@@ -89,7 +110,36 @@
       "https://www.issm.info/public/about/vision-and-mission",
       "https://apssm.asia/",
       "https://uroweb.org/education-events/78th-annual-meeting-of-the-korean-urological-association-kua-2026"
-    ]
+    ],
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Education",
+          "text": "Korea University College of Medicine"
+        },
+        {
+          "label": "Current role",
+          "text": "Chief Director, HIGHST Urology"
+        },
+        {
+          "label": "Clinical background",
+          "text": "Former Chief Director, PROUD Urology / adjunct professor, Ewha Mokdong Hospital"
+        },
+        {
+          "label": "Training",
+          "text": "Erectile dysfunction training at UCI / international training and designated physician roles"
+        },
+        {
+          "label": "Recognition",
+          "text": "2024 Outstanding Presentation Award, Taiwan Andrology Association"
+        },
+        {
+          "label": "Professional societies",
+          "text": "Korean Urological Association / ISSM / APSSM"
+        }
+      ],
+      "transition": "Let’s begin with the materials: MegaDerm and MegaFill."
+    }
   },
   {
     "steps": [],
@@ -116,7 +166,28 @@
     "state": "제품 소개",
     "sources": [
       "https://lncbio.co.kr/theme/basic/images/L%26CBIO_catalog.pdf"
-    ]
+    ],
+    "speakerCues": {
+      "items": [
+        {
+          "label": "MegaDerm",
+          "text": "Sheet acellular dermal matrix"
+        },
+        {
+          "label": "Two types",
+          "text": "Hydrated / freeze-dried"
+        },
+        {
+          "label": "Our stock",
+          "text": "3–5 mm thick / 5 × 6, 5 × 8, 5 × 10, 6 × 12 cm"
+        },
+        {
+          "label": "MegaFill",
+          "text": "Micronized acellular dermal matrix"
+        }
+      ],
+      "transition": "Next, I’ll go through our preoperative evaluation."
+    }
   },
   {
     "steps": [],
@@ -155,7 +226,32 @@
     ],
     "note": "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰·음경 길이 측정·진동각 검사를 한 장에 정리했습니다.",
     "speakerNote": "Preoperative assessment at HIGHST includes IIEF and PEDT questionnaires, the listed laboratory and infection tests, flaccid and stretched penile length measurement, and penile biothesiometry. HbA1c denotes glycated hemoglobin. Sources: https://pubmed.ncbi.nlm.nih.gov/9187685/ ; https://pubmed.ncbi.nlm.nih.gov/17568761/ ; https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/ ; https://pubmed.ncbi.nlm.nih.gov/28874780/",
-    "sources": []
+    "sources": [],
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Questionnaires",
+          "text": "IIEF: erectile function / PEDT: premature ejaculation"
+        },
+        {
+          "label": "Blood tests",
+          "text": "Coagulation / CBC / PSA / blood glucose / HbA1c, glycated hemoglobin"
+        },
+        {
+          "label": "Screening",
+          "text": "HPV / syphilis / urine testing / liver function / inflammatory markers"
+        },
+        {
+          "label": "Physical examination",
+          "text": "Penile length: flaccid and stretched"
+        },
+        {
+          "label": "Sensitivity",
+          "text": "Penile biothesiometry / vibration perception threshold"
+        }
+      ],
+      "transition": "With the evaluation complete, let’s move on to surgical preparation."
+    }
   },
   {
     "steps": [],
@@ -169,7 +265,24 @@
     "subtitle": "Shaving and Draping",
     "note": "새로 촬영할 쉐이빙·드랩 영상 자리입니다. 영상 영역은 비워두었습니다.",
     "speakerNote": "Shaving and draping.",
-    "state": "촬영 예정 · 영상 자리 비움"
+    "state": "촬영 예정 · 영상 자리 비움",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Preparation",
+          "text": "Shaving and draping"
+        },
+        {
+          "label": "Shaving",
+          "text": "Preparation area shown in the video"
+        },
+        {
+          "label": "Draping",
+          "text": "Sequence shown in the video"
+        }
+      ],
+      "transition": "Now, let’s look at the first case: a pubic incision."
+    }
   },
   {
     "steps": [],
@@ -183,7 +296,28 @@
     "caseNumber": "01",
     "note": "Case 1 · 치골절개 수술. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
     "speakerNote": "Case 1: Pubic Incision.",
-    "state": "촬영 예정 · 영상 자리 비움"
+    "state": "촬영 예정 · 영상 자리 비움",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Case 1",
+          "text": "Pubic incision"
+        },
+        {
+          "label": "Case introduction",
+          "text": "Clinical background / choice of incision"
+        },
+        {
+          "label": "Video walkthrough",
+          "text": "Incision / key operative stages"
+        },
+        {
+          "label": "Discussion",
+          "text": "Main points from this case"
+        }
+      ],
+      "transition": "The next case uses a circumcision-line incision."
+    }
   },
   {
     "steps": [],
@@ -197,7 +331,28 @@
     "caseNumber": "02",
     "note": "Case 2 · 포경선 절개 수술. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
     "speakerNote": "Case 2: Circumcision-line Incision.",
-    "state": "촬영 예정 · 영상 자리 비움"
+    "state": "촬영 예정 · 영상 자리 비움",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Case 2",
+          "text": "Circumcision-line incision"
+        },
+        {
+          "label": "Case introduction",
+          "text": "Clinical background / choice of incision"
+        },
+        {
+          "label": "Video walkthrough",
+          "text": "Incision / key operative stages"
+        },
+        {
+          "label": "Comparison",
+          "text": "Points to compare with the pubic approach"
+        }
+      ],
+      "transition": "Next, we’ll look at secondary dermal grafting."
+    }
   },
   {
     "steps": [],
@@ -211,7 +366,28 @@
     "caseNumber": "03",
     "note": "Case 3 · 진피 2차 이식. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
     "speakerNote": "Case 3: Secondary Dermal Grafting.",
-    "state": "촬영 예정 · 영상 자리 비움"
+    "state": "촬영 예정 · 영상 자리 비움",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Case 3",
+          "text": "Secondary dermal grafting"
+        },
+        {
+          "label": "Background",
+          "text": "Previous procedure / reason for a second graft"
+        },
+        {
+          "label": "Video walkthrough",
+          "text": "Key operative stages"
+        },
+        {
+          "label": "Discussion",
+          "text": "Main considerations in this case"
+        }
+      ],
+      "transition": "Let’s move on to the revision surgery case."
+    }
   },
   {
     "steps": [],
@@ -225,7 +401,28 @@
     "caseNumber": "04",
     "note": "Case 4 · 재수술. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
     "speakerNote": "Case 4: Revision Surgery.",
-    "state": "촬영 예정 · 영상 자리 비움"
+    "state": "촬영 예정 · 영상 자리 비움",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Case 4",
+          "text": "Revision surgery"
+        },
+        {
+          "label": "Background",
+          "text": "Previous procedure / reason for revision"
+        },
+        {
+          "label": "Video walkthrough",
+          "text": "Operative findings / key stages"
+        },
+        {
+          "label": "Discussion",
+          "text": "Points to highlight in revision surgery"
+        }
+      ],
+      "transition": "The final case focuses on contour step-off correction."
+    }
   },
   {
     "steps": [],
@@ -239,7 +436,28 @@
     "caseNumber": "05",
     "note": "Case 5 · 턱짐 교정. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
     "speakerNote": "Case 5: Contour Step-off Correction.",
-    "state": "촬영 예정 · 영상 자리 비움"
+    "state": "촬영 예정 · 영상 자리 비움",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Case 5",
+          "text": "Contour step-off correction"
+        },
+        {
+          "label": "Case introduction",
+          "text": "Location of the contour concern"
+        },
+        {
+          "label": "Video walkthrough",
+          "text": "Correction shown in the video"
+        },
+        {
+          "label": "Discussion",
+          "text": "Main points from this case"
+        }
+      ],
+      "transition": "After these cases, let’s review potential complications."
+    }
   },
   {
     "steps": [],
@@ -269,7 +487,28 @@
     "state": "문헌 기반 초안 · 원장님 설명 추가 예정",
     "sources": [
       "https://pubmed.ncbi.nlm.nih.gov/31420614/"
-    ]
+    ],
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Context",
+          "text": "Published ADM literature / not HIGHST- or MegaDerm-specific outcome data"
+        },
+        {
+          "label": "Bleeding and swelling",
+          "text": "Hematoma / foreskin edema"
+        },
+        {
+          "label": "Wound complications",
+          "text": "Delayed healing / infection / skin necrosis"
+        },
+        {
+          "label": "Contour and discomfort",
+          "text": "Graft contour irregularity / discomfort during erection"
+        }
+      ],
+      "transition": "Finally, I’ll discuss postoperative care and dressing."
+    }
   },
   {
     "steps": [],
@@ -291,7 +530,24 @@
     "type": "aftercare",
     "note": "PDF에 요청된 수술 후 관리·드레싱 설명 자리입니다. 실제 드레싱 장면과 원장님 설명을 추가합니다. 재료·교체 주기·약물·회복 일정은 임의로 넣지 않았습니다.",
     "speakerNote": "Postoperative care and dressing technique.",
-    "state": "관리 설명·드레싱 영상 추가 예정"
+    "state": "관리 설명·드레싱 영상 추가 예정",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Postoperative care",
+          "text": "Main instructions to explain"
+        },
+        {
+          "label": "Dressing",
+          "text": "Sequence shown in the video"
+        },
+        {
+          "label": "Follow-up",
+          "text": "Points to discuss with the patient"
+        }
+      ],
+      "transition": "Thank you for your attention. I’m happy to take your questions."
+    }
   },
   {
     "steps": [],
@@ -305,6 +561,27 @@
     "subtitle": "Thank you",
     "note": "질의응답 및 마무리.",
     "speakerNote": "Thank you.",
-    "state": "발표 구성"
+    "state": "발표 구성",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Thank you",
+          "text": "Thank you for your time and attention."
+        },
+        {
+          "label": "Questions",
+          "text": "I’d be happy to discuss your questions."
+        },
+        {
+          "label": "Clarify",
+          "text": "Could you please repeat or clarify the question?"
+        },
+        {
+          "label": "Close",
+          "text": "Thank you for the discussion."
+        }
+      ],
+      "transition": ""
+    }
   }
 ]
