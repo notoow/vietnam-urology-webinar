@@ -5,13 +5,13 @@
     "foot": "Jinmo Koo · HIGHST Urology",
     "id": "cover",
     "ko": "표지",
-    "title": "MegaDerm\nPenile\nAugmentation",
+    "title": "MegaDerm\nPenile Augmentation",
     "section": "Overview",
     "type": "cover",
-    "subtitle": "Clinical Cases and Perioperative Care",
-    "asset": "dermis-01.png",
+    "subtitle": "Clinical cases and perioperative care",
+    "asset": "jinmo-koo-portrait.png",
     "note": "베트남 MegaDerm 웨비나. 구진모 원장님, 2026년 10월 21일.",
-    "speakerNote": "Jinmo Koo, HIGHST Urology. Vietnam MegaDerm Webinar, 21 October 2026.",
+    "speakerNote": "Jinmo Koo, HIGHST Urology. Vietnam MegaDerm Webinar, 21 October 2026. Portrait supplied by HIGHST. Brand reference: https://www.highsturology.co.kr/v2/proud/doctor.php",
     "state": "발표 구성"
   },
   {
@@ -24,9 +24,10 @@
     "section": "Speaker",
     "type": "profile",
     "subtitle": "HIGHST Urology",
-    "note": "이름과 병원명을 반영했습니다. 학력·경력과 프로필 사진은 전달받은 뒤 추가합니다.",
-    "speakerNote": "Jinmo Koo, HIGHST Urology.",
-    "state": "학력·경력 추가 예정"
+    "note": "제공된 구진모 원장님 프로필 사진을 사용했습니다. 발표할 학력·경력은 추가 예정입니다.",
+    "speakerNote": "Jinmo Koo, HIGHST Urology. Portrait supplied by HIGHST.",
+    "state": "학력·경력 추가 예정",
+    "asset": "jinmo-koo-profile.jpg"
   },
   {
     "steps": [],
@@ -60,10 +61,10 @@
     "foot": "Jinmo Koo · HIGHST Urology",
     "section": "Evaluation",
     "type": "evaluation",
-    "state": "수술 전 설문",
-    "id": "questionnaires",
-    "ko": "설문지 · IIEF/PEDT",
-    "title": "Patient Questionnaires",
+    "state": "수술 전 평가",
+    "id": "evaluation",
+    "ko": "수술 전 평가",
+    "title": "Preoperative Evaluation",
     "rows": [
       {
         "head": "IIEF",
@@ -72,25 +73,7 @@
       {
         "head": "PEDT",
         "body": "Premature Ejaculation\nDiagnostic Tool"
-      }
-    ],
-    "note": "수술 전 설문: IIEF(국제발기능지수)와 PEDT(조루 진단 도구).",
-    "speakerNote": "The preoperative evaluation includes the International Index of Erectile Function (IIEF) and the Premature Ejaculation Diagnostic Tool (PEDT).",
-    "sources": [
-      "https://pubmed.ncbi.nlm.nih.gov/9187685/",
-      "https://pubmed.ncbi.nlm.nih.gov/17568761/"
-    ]
-  },
-  {
-    "steps": [],
-    "foot": "Jinmo Koo · HIGHST Urology",
-    "section": "Evaluation",
-    "type": "evaluation",
-    "state": "수술 전 검사",
-    "id": "tests",
-    "ko": "혈액검사·감염 선별검사",
-    "title": "Laboratory & Infection Screening",
-    "rows": [
+      },
       {
         "head": "Blood tests",
         "body": "Blood coagulation tests\nComplete blood count (CBC)\nProstate-specific antigen (PSA)\nBlood glucose\nHbA1c (glycated hemoglobin)"
@@ -98,24 +81,7 @@
       {
         "head": "Screening and other tests",
         "body": "HPV testing\nSyphilis testing\nUrine testing\nLiver function\nInflammatory markers"
-      }
-    ],
-    "note": "수술 전 검사: 혈액응고검사, 일반혈액검사(CBC), 전립선특이항원(PSA), 혈당, 당화혈색소(HbA1c), HPV, 매독, 소변검사, 간기능검사, 염증수치 검사.",
-    "speakerNote": "Preoperative testing includes blood coagulation tests, complete blood count (CBC), prostate-specific antigen (PSA), blood glucose, glycated hemoglobin (HbA1c), HPV and syphilis testing, urine testing, liver function and inflammatory markers.",
-    "sources": [
-      "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/"
-    ]
-  },
-  {
-    "steps": [],
-    "foot": "Jinmo Koo · HIGHST Urology",
-    "section": "Evaluation",
-    "type": "evaluation",
-    "state": "신체진찰",
-    "id": "physical-examination",
-    "ko": "신체진찰·음경 길이·진동각 검사",
-    "title": "Physical Examination",
-    "rows": [
+      },
       {
         "head": "Penile length measurement",
         "body": "Flaccid length\nStretched length"
@@ -125,11 +91,9 @@
         "body": "Vibration perception threshold\nPenile sensitivity assessment"
       }
     ],
-    "note": "신체진찰: 이완 상태(flaccid)와 신장 상태(stretched)의 음경 길이 측정, 진동각 검사를 통한 음경 민감도 평가.",
-    "speakerNote": "Physical examination includes penile length measurement in the flaccid and stretched states. Penile biothesiometry assesses vibration perception thresholds and penile sensitivity.",
-    "sources": [
-      "https://pubmed.ncbi.nlm.nih.gov/28874780/"
-    ]
+    "note": "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰·음경 길이 측정·진동각 검사를 한 장에 정리했습니다.",
+    "speakerNote": "Preoperative assessment at HIGHST includes IIEF and PEDT questionnaires, the listed laboratory and infection tests, flaccid and stretched penile length measurement, and penile biothesiometry. HbA1c denotes glycated hemoglobin. Sources: https://pubmed.ncbi.nlm.nih.gov/9187685/ ; https://pubmed.ncbi.nlm.nih.gov/17568761/ ; https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/ ; https://pubmed.ncbi.nlm.nih.gov/28874780/",
+    "sources": []
   },
   {
     "steps": [],
