@@ -1,0 +1,469 @@
+{
+  "width": 1280,
+  "height": 720,
+  "slides": [
+    {
+      "id": "cover",
+      "label": "표지",
+      "note": "원장님 프로필 사진과 발표 제목을 중심으로 구성했습니다.",
+      "speakerNote": "Jinmo Koo, HIGHST Urology. Vietnam MegaDerm Webinar, 21 October 2026. Portrait supplied by HIGHST. Brand reference: https://www.highsturology.co.kr/v2/proud/doctor.php",
+      "items": [
+        {
+          "kind": "image",
+          "asset": "highst-logo.png",
+          "x": 72,
+          "y": 64,
+          "w": 192,
+          "h": 54,
+          "fit": "contain",
+          "alt": "HIGHST Urology"
+        },
+        {
+          "kind": "image",
+          "asset": "jinmo-koo-portrait.png",
+          "x": 866,
+          "y": 64,
+          "w": 342,
+          "h": 592,
+          "fit": "cover",
+          "alt": "Jinmo Koo, HIGHST Urology"
+        },
+        {
+          "kind": "text",
+          "text": "Vietnam Urology Webinar",
+          "x": 72,
+          "y": 172,
+          "w": 740,
+          "h": 28,
+          "size": 16,
+          "weight": 500,
+          "color": "#697276"
+        },
+        {
+          "kind": "text",
+          "text": "MegaDerm",
+          "x": 72,
+          "y": 227,
+          "w": 738,
+          "h": 68,
+          "size": 54,
+          "weight": 600,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Penile Augmentation",
+          "x": 72,
+          "y": 294,
+          "w": 744,
+          "h": 72,
+          "size": 54,
+          "weight": 600,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Clinical cases and perioperative care",
+          "x": 72,
+          "y": 400,
+          "w": 738,
+          "h": 40,
+          "size": 25,
+          "weight": 400,
+          "color": "#697276"
+        },
+        {
+          "kind": "text",
+          "text": "Jinmo Koo",
+          "x": 72,
+          "y": 531,
+          "w": 738,
+          "h": 40,
+          "size": 27,
+          "weight": 600,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "HIGHST Urology",
+          "x": 72,
+          "y": 575,
+          "w": 738,
+          "h": 30,
+          "size": 20,
+          "weight": 400,
+          "color": "#697276"
+        },
+        {
+          "kind": "text",
+          "text": "21 October 2026",
+          "x": 72,
+          "y": 644,
+          "w": 740,
+          "h": 24,
+          "size": 16,
+          "weight": 400,
+          "color": "#697276"
+        }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "label": "수술 전 평가",
+      "note": "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰과 민감도 검사를 한 장에 정리했습니다.",
+      "speakerNote": "Preoperative assessment at HIGHST includes IIEF and PEDT questionnaires, the listed laboratory and infection tests, flaccid and stretched penile length measurement, and penile biothesiometry. HbA1c denotes glycated hemoglobin. Sources: https://pubmed.ncbi.nlm.nih.gov/9187685/ ; https://pubmed.ncbi.nlm.nih.gov/17568761/ ; https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/ ; https://pubmed.ncbi.nlm.nih.gov/28874780/",
+      "items": [
+        {
+          "kind": "text",
+          "text": "Preoperative Evaluation",
+          "x": 72,
+          "y": 63,
+          "w": 910,
+          "h": 64,
+          "size": 43,
+          "weight": 600,
+          "color": "#20282C"
+        },
+        {
+          "kind": "image",
+          "asset": "highst-logo.png",
+          "x": 1042,
+          "y": 59,
+          "w": 166,
+          "h": 47,
+          "fit": "contain",
+          "alt": "HIGHST Urology"
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 139,
+          "w": 1136,
+          "h": 1,
+          "color": "#DDE1E2"
+        },
+        {
+          "kind": "text",
+          "text": "Questionnaires",
+          "x": 72,
+          "y": 182,
+          "w": 494,
+          "h": 35,
+          "size": 23,
+          "weight": 600,
+          "color": "#98774B"
+        },
+        {
+          "kind": "text",
+          "text": "IIEF / PEDT",
+          "x": 72,
+          "y": 227,
+          "w": 494,
+          "h": 45,
+          "size": 32,
+          "weight": 600,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "International Index of Erectile Function",
+          "x": 72,
+          "y": 283,
+          "w": 500,
+          "h": 29,
+          "size": 19,
+          "weight": 400,
+          "color": "#697276"
+        },
+        {
+          "kind": "text",
+          "text": "Premature Ejaculation Diagnostic Tool",
+          "x": 72,
+          "y": 314,
+          "w": 500,
+          "h": 29,
+          "size": 19,
+          "weight": 400,
+          "color": "#697276"
+        },
+        {
+          "kind": "text",
+          "text": "Physical examination",
+          "x": 72,
+          "y": 397,
+          "w": 494,
+          "h": 35,
+          "size": 23,
+          "weight": 600,
+          "color": "#98774B"
+        },
+        {
+          "kind": "text",
+          "text": "Penile length",
+          "x": 72,
+          "y": 442,
+          "w": 494,
+          "h": 36,
+          "size": 26,
+          "weight": 500,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Flaccid and stretched",
+          "x": 72,
+          "y": 480,
+          "w": 494,
+          "h": 30,
+          "size": 20,
+          "weight": 400,
+          "color": "#697276"
+        },
+        {
+          "kind": "text",
+          "text": "Penile biothesiometry",
+          "x": 72,
+          "y": 532,
+          "w": 494,
+          "h": 36,
+          "size": 26,
+          "weight": 500,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Vibration perception threshold",
+          "x": 72,
+          "y": 570,
+          "w": 494,
+          "h": 30,
+          "size": 20,
+          "weight": 400,
+          "color": "#697276"
+        },
+        {
+          "kind": "rect",
+          "x": 616,
+          "y": 182,
+          "w": 1,
+          "h": 426,
+          "color": "#DDE1E2"
+        },
+        {
+          "kind": "text",
+          "text": "Laboratory tests",
+          "x": 666,
+          "y": 182,
+          "w": 542,
+          "h": 35,
+          "size": 23,
+          "weight": 600,
+          "color": "#98774B"
+        },
+        {
+          "kind": "text",
+          "text": "Blood coagulation tests",
+          "x": 666,
+          "y": 235,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Complete blood count (CBC)",
+          "x": 666,
+          "y": 273,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Prostate-specific antigen (PSA)",
+          "x": 666,
+          "y": 311,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Blood glucose",
+          "x": 666,
+          "y": 349,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "HbA1c (glycated hemoglobin)",
+          "x": 666,
+          "y": 387,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "HPV testing",
+          "x": 666,
+          "y": 425,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Syphilis testing",
+          "x": 666,
+          "y": 463,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Urine testing",
+          "x": 666,
+          "y": 501,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Liver function",
+          "x": 666,
+          "y": 539,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Inflammatory markers",
+          "x": 666,
+          "y": 577,
+          "w": 542,
+          "h": 34,
+          "size": 24,
+          "weight": 400,
+          "color": "#20282C"
+        },
+        {
+          "kind": "text",
+          "text": "Jinmo Koo · HIGHST Urology",
+          "x": 72,
+          "y": 670,
+          "w": 700,
+          "h": 20,
+          "size": 12,
+          "weight": 400,
+          "color": "#697276"
+        },
+        {
+          "kind": "text",
+          "text": "02",
+          "x": 1180,
+          "y": 670,
+          "w": 28,
+          "h": 20,
+          "size": 12,
+          "weight": 400,
+          "color": "#697276"
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "label": "증례 영상",
+      "note": "Case 1 · 치골절개. 1920×1080 영상용 16:9 영역입니다. 실제 증례 영상은 새로 촬영한 뒤 넣습니다.",
+      "speakerNote": "Case 1: Pubic Incision.",
+      "items": [
+        {
+          "kind": "text",
+          "text": "Case 1",
+          "x": 72,
+          "y": 38,
+          "w": 700,
+          "h": 23,
+          "size": 14,
+          "weight": 600,
+          "color": "#98774B"
+        },
+        {
+          "kind": "text",
+          "text": "Pubic Incision",
+          "x": 72,
+          "y": 71,
+          "w": 910,
+          "h": 58,
+          "size": 42,
+          "weight": 600,
+          "color": "#20282C"
+        },
+        {
+          "kind": "image",
+          "asset": "highst-logo.png",
+          "x": 1042,
+          "y": 59,
+          "w": 166,
+          "h": 47,
+          "fit": "contain",
+          "alt": "HIGHST Urology"
+        },
+        {
+          "kind": "rect",
+          "x": 192,
+          "y": 142,
+          "w": 896,
+          "h": 504,
+          "color": "#151A1D",
+          "role": "video-placeholder"
+        },
+        {
+          "kind": "text",
+          "text": "Jinmo Koo · HIGHST Urology",
+          "x": 72,
+          "y": 670,
+          "w": 700,
+          "h": 20,
+          "size": 12,
+          "weight": 400,
+          "color": "#697276"
+        },
+        {
+          "kind": "text",
+          "text": "03",
+          "x": 1180,
+          "y": 670,
+          "w": 28,
+          "h": 20,
+          "size": 12,
+          "weight": 400,
+          "color": "#697276"
+        }
+      ]
+    }
+  ]
+}

@@ -8,6 +8,8 @@
 
 [영어 발표 보기](https://notoow.github.io/vietnam-urology-webinar/#design) · [편집 가능한 PPTX](downloads/highst-perioperative-webinar.pptx)
 
+[새 디자인 3장](https://notoow.github.io/vietnam-urology-webinar/design-study.html) · [3장 PPTX](downloads/highst-design-study.pptx): 표지, 수술 전 평가 요약, 치골절개 증례 영상의 새 디자인입니다. 프리텐다드와 원본 로고를 사용하며, 표지는 제공된 구진모 원장님 프로필 사진을 사용합니다. 증례 영상 영역은 16:9 빈 화면으로 유지합니다. 디자인 기준은 하이스트 공식 홈페이지를 참고했습니다. `src/design-study.json`과 `src/design-study.template.html`에서 관리하며 `npm run build`로 함께 생성합니다.
+
 발표는 제공된 베트남.pdf의 9개 구성 항목을 15장으로 배치했습니다. 표지, 원장님 소개, MegaDerm·MegaFill 소개, 수술 전 검사, 수술 준비 영상, 다섯 증례, 기타 합병증, 수술 후 관리·드레싱, Q&A 순서입니다.
 
 증례는 PDF 순서대로 Case 1 치골절개, Case 2 포경선 절개, Case 3 진피 2차 이식, Case 4 재수술, Case 5 턱짐 교정입니다. 사용자 확인에 따라 다섯 증례를 모두 포함하고 새로 촬영할 영상 영역을 비워두었습니다. 수술 준비 영상도 빈 영역으로 남겼습니다. 영상 슬라이드 6장은 1920×1080 원본에 맞는 16:9 화면과 간결한 상단 제목으로 구성합니다.

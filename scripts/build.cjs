@@ -23,3 +23,4 @@ html=html.replace('<meta charset="utf-8">','<meta charset="utf-8"><meta http-equ
 fs.writeFileSync(path.join(root,'highst-review.html'),html);
 fs.writeFileSync(path.join(root,'index.html'),html);
 console.log('Built presentation and shared filming plan.');
+require('./build-design-study.cjs');
