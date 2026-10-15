@@ -39,9 +39,9 @@ const eventProgram=[
 {start:900,end:915,title:'Opening',detail:'오프닝'},
 {start:915,end:955,title:'Vietnamese Physician Session',detail:'베트남 남성의학과 회장 또는 부회장 진행 예정'},
 {start:955,end:960,title:'Short Break',detail:'휴식'},
-{start:960,end:1020,title:'Jinmo Koo Presentation',detail:'구진모 원장님 영어 발표 · 요청된 60분 세션',speaker:true},
-{start:1020,end:1040,title:'Q&A',detail:'프로그램상 20분 · 요청 문구의 30분과 차이 있음'},
-{start:1040,end:1045,title:'Unspecified',detail:'공유받은 프로그램에 내용이 없는 5분 · 확인 필요',gap:true},
+{start:960,end:1020,title:'Jinmo Koo Presentation',detail:'구진모 원장 영어 발표 · 60분',speaker:true},
+{start:1020,end:1040,title:'Q&A',detail:'질의응답'},
+{start:1040,end:1045,title:'To be announced',detail:'세부 프로그램 미정',gap:true},
 {start:1045,end:1050,title:'Closing',detail:'클로징'}
 ];
 const modules=deck.filter(s=>!s.caseGroup||s.casePhase==='profile').map(s=>[
@@ -58,7 +58,7 @@ const groups=[
       [
         "speaker_bio",
         "구진모 원장님 학력·경력",
-        "발표할 학력·경력과 프로필 사진을 정리합니다.",
+        "학력·경력에 관한 메모",
         ""
       ]
     ]
@@ -69,13 +69,13 @@ const groups=[
       [
         "questionnaires",
         "수술 전 설문지",
-        "사용할 설문 버전과 언어를 기록합니다.",
+        "설문 항목에 관한 메모",
         "IIEF / PEDT"
       ],
       [
         "tests",
         "혈액·소변검사 정확한 항목",
-        "검사지의 항목명을 그대로 입력해 주세요.",
+        "검사 항목에 관한 메모",
         "혈액응고검사(PT/PTT), 테스토스테론(TTT), 일반혈액검사(CBC), 전립선특이항원(PSA), 혈당(BST/HbA1c), HIV, 매독, 소변검사, 간수치(GOT/GPT/GGT), 염증수치 검사."
       ],
       [
@@ -87,42 +87,42 @@ const groups=[
       [
         "physical_examination",
         "신체진찰·음경 길이 측정",
-        "이완·신장 상태 측정 장면과 설명을 정리합니다.",
+        "이완·신장 상태의 측정에 관한 메모",
         "Physical examination / Penile length measurement: flaccid and stretched."
       ]
     ]
   ],
   [
-  "편집 중인 증례 영상",
+  "증례 영상",
   [
     [
       "video_preparation",
       "공통 드랩 영상",
-      "증례 시작 전 1회 재생할 최종본",
+      "수술 준비에 관한 메모",
       ""
     ],
     [
       "video_case_01",
       "Case 1 · T링 제거 후 진피 삽입",
-      "최종 편집본 파일명 또는 공유 링크",
+      "수술 영상에 관한 메모",
       ""
     ],
     [
       "video_case_02",
       "Case 2 · 진피 이식",
-      "최종 편집본 파일명 또는 공유 링크",
+      "수술 영상에 관한 메모",
       ""
     ],
     [
       "video_case_03",
       "Case 3 · 진피 두 장 이식",
-      "최종 편집본 파일명 또는 공유 링크",
+      "수술 영상에 관한 메모",
       ""
     ],
     [
       "video_case_04",
       "Case 4 · 포경 및 진피 이식",
-      "최종 편집본 파일명 또는 공유 링크",
+      "수술 영상에 관한 메모",
       ""
     ]
   ]
@@ -132,14 +132,14 @@ const groups=[
     [
       [
         "complications",
-        "발표할 합병증과 대처",
-        "원장님이 설명할 내용을 정리합니다.",
+        "합병증과 대처",
+        "합병증과 대처에 관한 메모",
         ""
       ],
       [
         "aftercare",
         "수술 후 관리·드레싱",
-        "드레싱 영상과 실제 관리 방법을 정리합니다.",
+        "드레싱과 관리 방법에 관한 메모",
         ""
       ]
     ]
@@ -149,18 +149,18 @@ const groups=[
     [
       [
         "interpretation",
-        "통역 방식과 시간 배분",
-        "60분 세션 내 영상·설명·통역 시간을 확인합니다.",
-        "영어↔베트남어 통역. 세부 배분 확인 필요."
+        "발표와 통역",
+        "세션 진행에 관한 메모",
+        "영어↔베트남어 통역."
       ]
     ]
   ]
 ];
-const fields={};const qroot=document.getElementById('questionnaire');groups.forEach((g,i)=>{const d=document.createElement('details');d.className='qa-group';d.open=true;const s=document.createElement('summary');s.innerHTML='<span>'+String(i+1).padStart(2,'0')+'</span>'+g[0];d.appendChild(s);const grid=document.createElement('div');grid.className='qa-fields';g[1].forEach(f=>{const label=document.createElement('label');label.htmlFor=f[0];label.append(document.createTextNode(f[1]));const hint=document.createElement('span');hint.textContent=f[2];const input=document.createElement('textarea');input.id=f[0];input.value=f[3];input.placeholder='메모하거나 대화로 말씀해 주세요.';input.addEventListener('input',save);fields[f[0]]=input;label.append(hint,input);grid.appendChild(label)});d.appendChild(grid);qroot.appendChild(d)});
+const fields={};const qroot=document.getElementById('questionnaire');groups.forEach((g,i)=>{const d=document.createElement('details');d.className='qa-group';d.open=true;const s=document.createElement('summary');s.innerHTML='<span>'+String(i+1).padStart(2,'0')+'</span>'+g[0];d.appendChild(s);const grid=document.createElement('div');grid.className='qa-fields';g[1].forEach(f=>{const label=document.createElement('label');label.htmlFor=f[0];label.append(document.createTextNode(f[1]));const hint=document.createElement('span');hint.textContent=f[2];const input=document.createElement('textarea');input.id=f[0];input.value=f[3];input.placeholder='메모를 입력하세요.';input.addEventListener('input',save);fields[f[0]]=input;label.append(hint,input);grid.appendChild(label)});d.appendChild(grid);qroot.appendChild(d)});
 function collect(){return{version:3,updatedAt:new Date().toISOString(),design:'HIGHST original logo / white and gold / Pretendard',timezone:document.getElementById('timezone').value,eventDate:'2026-10-21',presentationMinutes:60,webinarMinutes:150,answers:Object.fromEntries(Object.entries(fields).map(([k,v])=>[k,v.value]))}}
-function save(){try{localStorage.setItem('highst-vietnam-review-v1',JSON.stringify(collect()));document.getElementById('save-state').textContent='현재 브라우저에 저장됨 · 파일과 채팅에는 자동 반영되지 않습니다.'}catch(e){document.getElementById('save-state').textContent='브라우저 저장이 제한됩니다. 답변 내보내기로 보관해 주세요.'}}
+function save(){try{localStorage.setItem('highst-vietnam-review-v1',JSON.stringify(collect()));document.getElementById('save-state').textContent='현재 브라우저에 저장됨'}catch(e){document.getElementById('save-state').textContent='브라우저 저장이 제한됩니다. 메모를 파일로 내보내 보관하세요.'}}
 try{const saved=JSON.parse(localStorage.getItem('highst-vietnam-review-v1')||'null');if(saved&&[1,2,3].includes(saved.version)){Object.entries(saved.answers||{}).forEach(([k,v])=>{if(fields[k]&&typeof v==='string'&&!(k==='event'&&v==='Jinmo Koo / 2시간 30분 / 영어 슬라이드 방향'))fields[k].value=(k==='tests'&&["혈액응고검사, CBC, PSA, 혈당, HbA1c(당화혈색소), HPV, 매독. 기존 소변검사·간수치·염증수치 유지. HPV·HbA1c 명칭 최종 확인 필요.","혈액응고검사, 일반혈액검사(CBC), 전립선특이항원(PSA), 혈당, 당화혈색소(HbA1c), HPV, 매독, 소변검사, 간기능검사, 염증수치 검사."].includes(v))?"혈액응고검사(PT/PTT), 테스토스테론(TTT), 일반혈액검사(CBC), 전립선특이항원(PSA), 혈당(BST/HbA1c), HIV, 매독, 소변검사, 간수치(GOT/GPT/GGT), 염증수치 검사.":v});if(['kst','ict'].includes(saved.timezone))document.getElementById('timezone').value=saved.timezone}}catch(e){}
-document.getElementById('export').onclick=()=>{const data=collect();data.questions=Object.fromEntries(groups.flatMap(g=>g[1].map(f=>[f[0],f[1]])));const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='highst-webinar-answers.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);const toast=document.getElementById('toast');toast.textContent='답변 파일을 다운로드했습니다.';toast.style.display='block';setTimeout(()=>toast.style.display='none',3000)};
+document.getElementById('export').onclick=()=>{const data=collect();data.questions=Object.fromEntries(groups.flatMap(g=>g[1].map(f=>[f[0],f[1]])));const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='highst-webinar-answers.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);const toast=document.getElementById('toast');toast.textContent='메모 파일을 다운로드했습니다.';toast.style.display='block';setTimeout(()=>toast.style.display='none',3000)};
 show(0);renderAgenda();switchView(location.hash.slice(1).split('&')[0]||'design',false);
 
 document.getElementById('periop-open').onclick=()=>switchView('perioperative');
