@@ -1,5 +1,16 @@
 const deck=__DECK_DATA__;
 const notes=deck.map(s=>s.note);
+const cityClocks=[...document.querySelectorAll('[data-clock-zone]')].map(element=>({
+ element,
+ formatter:new Intl.DateTimeFormat('en-GB',{timeZone:element.dataset.clockZone,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'})
+}));
+function updateCityClocks(){
+ const now=new Date();
+ cityClocks.forEach(({element,formatter})=>{element.textContent=formatter.format(now);element.dateTime=now.toISOString()});
+}
+updateCityClocks();
+setInterval(updateCityClocks,1000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateCityClocks()});
 let current=0,activeView='design';
 const slides=[...document.querySelectorAll('.slide')];
 const outline=document.getElementById('outline-list'),select=document.getElementById('slide-select');
