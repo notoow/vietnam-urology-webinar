@@ -38,7 +38,7 @@ const modules=deck.filter(s=>!s.caseGroup||s.casePhase==='profile').map(s=>[
  s.ko.replace(' · 요약','')+(s.caseNumber?' · 환자 요약 / 수술 영상 / 전후 비교':''),null
 ]);
 
-function renderAgenda(){const zone=document.getElementById('timezone').value;const offset=zone==='ict'?-120:0;const format=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');document.getElementById('zone-heading').textContent=zone==='ict'?'베트남시간 ICT':'한국시간 KST';document.getElementById('event-body').innerHTML=eventProgram.map(r=>'<tr class="'+(r.gap?'gap-row':r.speaker?'speaker-row':'')+'"><td>'+format(r.start+offset)+'–'+format(r.end+offset)+'</td><td>'+r.title+'</td><td>'+r.detail+'</td></tr>').join('');document.getElementById('agenda-body').innerHTML=modules.map((m,i)=>'<tr><td>'+String(i+1).padStart(2,'0')+'</td><td>'+m[0]+'<small>'+(m[2]===null?'시간 미정':m[2]+'분')+'</small></td><td>'+m[1]+'</td></tr>').join('')}
+function renderAgenda(){const zone=document.getElementById('timezone').value;const offset=zone==='ict'?-120:0;const format=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');document.getElementById('zone-heading').textContent=zone==='ict'?'하노이 시간':'서울 시간';document.getElementById('event-body').innerHTML=eventProgram.map(r=>'<tr class="'+(r.gap?'gap-row':r.speaker?'speaker-row':'')+'"><td>'+format(r.start+offset)+'–'+format(r.end+offset)+'</td><td>'+r.title+'</td><td>'+r.detail+'</td></tr>').join('');document.getElementById('agenda-body').innerHTML=modules.map((m,i)=>'<tr><td>'+String(i+1).padStart(2,'0')+'</td><td>'+m[0]+'<small>'+(m[2]===null?'시간 미정':m[2]+'분')+'</small></td><td>'+m[1]+'</td></tr>').join('')}
 document.getElementById('timezone').onchange=()=>{renderAgenda();save()};
 const groups=[
   [
