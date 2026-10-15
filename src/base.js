@@ -3,7 +3,7 @@ const notes=deck.map(s=>s.note);
 let current=0,activeView='design';
 const slides=[...document.querySelectorAll('.slide')];
 const outline=document.getElementById('outline-list'),select=document.getElementById('slide-select');
-const sectionNames={"Overview":"표지","Speaker":"발표자 소개","Materials":"재료 소개","Evaluation":"수술 전 검사","Preparation":"수술 준비","Clinical Cases":"증례 1–5","Complications":"합병증","Aftercare":"수술 후 관리","Discussion":"질의응답"};
+const sectionNames={"Overview":"표지","Speaker":"발표자 소개","Materials":"재료 소개","Evaluation":"수술 전 검사","Preparation":"수술 준비","Clinical Cases":"증례 1–4","Complications":"합병증","Aftercare":"수술 후 관리","Discussion":"질의응답"};
 let lastSection='';
 slides.forEach((s,i)=>{
  if(deck[i].section!==lastSection){lastSection=deck[i].section;const h=document.createElement('p');h.className='outline-group';h.textContent=sectionNames[lastSection];outline.append(h);}
@@ -33,68 +33,10 @@ const eventProgram=[
 {start:1040,end:1045,title:'Unspecified',detail:'공유받은 프로그램에 내용이 없는 5분 · 확인 필요',gap:true},
 {start:1045,end:1050,title:'Closing',detail:'클로징'}
 ];
-const modules=[
-  [
-    "Introduction",
-    "표지·구진모 원장님 소개",
-    null
-  ],
-  [
-    "MegaDerm & MegaFill",
-    "MegaDerm 종류와 MegaFill 소개",
-    null
-  ],
-  [
-    "Preoperative Evaluation",
-    "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰·길이 측정·진동각 검사",
-    null
-  ],
-  [
-    "Surgical Preparation",
-    "새로 촬영할 쉐이빙·드랩 영상",
-    null
-  ],
-  [
-    "Case 1 · Pubic Incision",
-    "치골절개 수술",
-    null
-  ],
-  [
-    "Case 2 · Circumcision-line Incision",
-    "포경선 절개 수술",
-    null
-  ],
-  [
-    "Case 3 · Secondary Dermal Grafting",
-    "진피 2차 이식",
-    null
-  ],
-  [
-    "Case 4 · Revision Surgery",
-    "재수술",
-    null
-  ],
-  [
-    "Case 5 · Contour Step-off Correction",
-    "턱짐 교정",
-    null
-  ],
-  [
-    "Potential Complications",
-    "기타 합병증",
-    null
-  ],
-  [
-    "Postoperative Care & Dressing",
-    "수술 후 관리와 드레싱 방법",
-    null
-  ],
-  [
-    "Questions & Answers",
-    "Q&A·마무리",
-    null
-  ]
-];
+const modules=deck.filter(s=>!s.caseGroup||s.casePhase==='profile').map(s=>[
+ s.caseNumber?'Case '+Number(s.caseNumber)+' · '+s.title:s.title.replaceAll('\n',' '),
+ s.ko.replace(' · 요약','')+(s.caseNumber?' · 환자 요약 / 수술 영상 / 전후 비교':''),null
+]);
 
 function renderAgenda(){const zone=document.getElementById('timezone').value;const offset=zone==='ict'?-120:0;const format=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');document.getElementById('zone-heading').textContent=zone==='ict'?'베트남시간 ICT':'한국시간 KST';document.getElementById('event-body').innerHTML=eventProgram.map(r=>'<tr class="'+(r.gap?'gap-row':r.speaker?'speaker-row':'')+'"><td>'+format(r.start+offset)+'–'+format(r.end+offset)+'</td><td>'+r.title+'</td><td>'+r.detail+'</td></tr>').join('');document.getElementById('agenda-body').innerHTML=modules.map((m,i)=>'<tr><td>'+String(i+1).padStart(2,'0')+'</td><td>'+m[0]+'<small>'+(m[2]===null?'시간 미정':m[2]+'분')+'</small></td><td>'+m[1]+'</td></tr>').join('')}
 document.getElementById('timezone').onchange=()=>{renderAgenda();save()};
@@ -140,46 +82,40 @@ const groups=[
     ]
   ],
   [
-    "새로 촬영할 영상",
+  "편집 중인 증례 영상",
+  [
     [
-      [
-        "video_preparation",
-        "수술 준비 영상",
-        "쉐이빙·드랩 영상의 파일명 또는 공유 링크",
-        ""
-      ],
-      [
-        "video_pubic",
-        "Case 1 · 치골절개 수술",
-        "영상의 파일명 또는 시놀로지 공유 링크",
-        ""
-      ],
-      [
-        "video_circumcision",
-        "Case 2 · 포경선 절개 수술",
-        "영상의 파일명 또는 시놀로지 공유 링크",
-        ""
-      ],
-      [
-        "video_secondary_graft",
-        "Case 3 · 진피 2차 이식수술",
-        "영상의 파일명 또는 시놀로지 공유 링크",
-        ""
-      ],
-      [
-        "video_revision",
-        "Case 4 · 재수술",
-        "영상의 파일명 또는 시놀로지 공유 링크",
-        ""
-      ],
-      [
-        "video_contour",
-        "Case 5 · 턱짐 교정수술",
-        "영상의 파일명 또는 시놀로지 공유 링크",
-        ""
-      ]
+      "video_preparation",
+      "공통 드랩 영상",
+      "증례 시작 전 1회 재생할 최종본",
+      ""
+    ],
+    [
+      "video_case_01",
+      "Case 1 · T링 제거 후 진피 삽입",
+      "최종 편집본 파일명 또는 공유 링크",
+      ""
+    ],
+    [
+      "video_case_02",
+      "Case 2 · 진피 이식",
+      "최종 편집본 파일명 또는 공유 링크",
+      ""
+    ],
+    [
+      "video_case_03",
+      "Case 3 · 진피 두 장 이식",
+      "최종 편집본 파일명 또는 공유 링크",
+      ""
+    ],
+    [
+      "video_case_04",
+      "Case 4 · 포경 및 진피 이식",
+      "최종 편집본 파일명 또는 공유 링크",
+      ""
     ]
-  ],
+  ]
+],
   [
     "합병증·수술 후 관리",
     [

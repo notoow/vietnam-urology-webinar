@@ -6,13 +6,22 @@
 
 ## 현재 발표 구성
 
-[영어 발표 보기](https://notoow.github.io/vietnam-urology-webinar/#design) · [편집 가능한 PPTX](downloads/highst-perioperative-webinar.pptx)
+[웹 발표 검토](https://notoow.github.io/vietnam-urology-webinar/#design)
 
-[디자인 시안 3장](https://notoow.github.io/vietnam-urology-webinar/design-study.html) · [3장 PPTX](downloads/highst-design-study.pptx): 표지, 수술 전 평가 요약, 치골절개 증례 영상에 사용한 디자인 기준입니다. 승인된 디자인을 본 발표 전체에 적용했습니다. 프리텐다드와 원본 로고를 사용하며, 표지는 제공된 구진모 원장님 프로필 사진을 사용합니다. 증례 영상 영역은 16:9 빈 화면으로 유지합니다. 디자인 기준은 하이스트 공식 홈페이지를 참고했습니다. `src/design-study.json`과 `src/design-study.template.html`에서 관리하며 `npm run build`로 함께 생성합니다.
+현재 작업은 웹 검토가 우선입니다. 웹이 확정되면 동일 데이터와 배치로 PPTX를 만듭니다. 기존 배포 PPTX는 이전 버전이므로 웹의 다운로드 버튼을 비활성화했습니다.
 
-발표는 제공된 베트남.pdf의 9개 구성 항목을 13장으로 배치했습니다. 표지, 원장님 소개, MegaDerm·MegaFill 소개, 수술 전 검사, 수술 준비 영상, 다섯 증례, 기타 합병증, 수술 후 관리·드레싱, Q&A 순서입니다.
+발표는 총 20장입니다. 표지, 원장님 소개, MegaDerm·MegaFill, 수술 전 평가, 공통 드랩, 실제 네 증례(각 3장), 합병증, 수술 후 관리·드레싱, Q&A 순서입니다. 드랩은 증례 시작 직전에 한 번만 보여줍니다.
 
-증례는 PDF 순서대로 Case 1 치골절개, Case 2 포경선 절개, Case 3 진피 2차 이식, Case 4 재수술, Case 5 턱짐 교정입니다. 사용자 확인에 따라 다섯 증례를 모두 포함하고 새로 촬영할 영상 영역을 비워두었습니다. 수술 준비 영상도 빈 영역으로 남겼습니다. 수술 후 드레싱을 포함한 영상 슬라이드 7장은 1920×1080 원본에 맞는 16:9 화면과 간결한 상단 제목으로 구성합니다.
+- Case 1: T-ring Removal and Dermal Grafting (2026-10-12)
+- Case 2: Dermal Grafting (2026-10-12)
+- Case 3: Two-sheet Dermal Grafting (2026-10-14)
+- Case 4: Circumcision and Dermal Grafting (2026-10-14)
+
+증례마다 환자 요약과 사진, 16:9 수술 영상, 전후 비교를 배치했습니다. Case 1–2에는 제공한 수술 후 JPG를 사용하고, Case 3–4에는 원본 영상에서 추출한 장면을 Operative image로 표시했습니다. 원본 영상은 변경하지 않았으며 사용자가 편집 중인 최종 영상을 기다립니다. 영상 영역은 896×504로 유지합니다.
+
+수술 전 사진과 확인되지 않은 수술 후 사진, 나이·절개 방식·필러·진피 규격·마취 정보, 측정값은 임의로 채우지 않았습니다. Case 3의 진피 두 장은 사용자가 지정한 증례 구분입니다. 파일명의 약어를 임상 정보로 해석하지 않았으며 환자 이름과 원본 폴더 경로는 발표 데이터에 넣지 않았습니다. 기존 37세·30세 증례는 구성만 참고하고 사진·정보·수치를 사용하지 않았습니다.
+
+승인된 디자인의 흰 배경, 골드 포인트, Pretendard와 원본 로고를 유지합니다. 본문은 `src/deck.json`, 공통 배치는 `scripts/layout-deck.cjs`에서 관리합니다. 이미지와 문안 출처는 각 증례의 `provenance`와 준비 메모에 기록하며 환자명은 저장하지 않습니다.
 
 수술 전 평가는 승인된 한 장의 구성으로 통합했습니다. IIEF/PEDT 설문, 혈액·감염 선별검사, 신체진찰·음경 길이 측정·진동각 검사를 모두 포함합니다. 길이는 flaccid/stretched 상태로 표기합니다. 검사 목록은 혈액응고검사(PT/PTT), TTT(testosterone), CBC, PSA, Blood glucose (BST/HbA1c), HIV, 매독, 소변검사, Liver enzymes (GOT/GPT/GGT), 염증수치입니다. HbA1c는 별도 행 대신 혈당 항목에 포함합니다. 2장에 원장님 학력·경력, 교육·지정 경력, 수상 및 학회 회원 이력을 영어로 정리했습니다. 실제 영상과 수술 후 관리 세부 설명은 추가 예정입니다. 합병증 목록은 발표자 실적이나 발생률이 아닌 문헌 기반 초안입니다. 출처는 `src/deck.json`의 해당 슬라이드 참고 문안과 `sources`에 있습니다.
 

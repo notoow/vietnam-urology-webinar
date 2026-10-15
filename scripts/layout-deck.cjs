@@ -8,6 +8,17 @@ const footer = n => [text('Jinmo Koo · HIGHST Urology',72,670,700,20,12,400,mut
 const header = title => [text(title,72,63,910,64,43,600),logo(),rect(72,139,1136,1,rule)];
 const clone = value => JSON.parse(JSON.stringify(value));
 const templateItems = (id,n) => clone(study.slides.find(s=>s.id===id).items).map(o => o.kind==='text'&&o.x===1180&&o.y===670 ? {...o,text:String(n).padStart(2,'0')} : o);
+const caseHeader = s => [
+  text(s.caseLabel || 'Case '+Number(s.caseNumber),72,38,910,23,14,600,gold),
+  text(s.title,72,71,950,58,42,600),logo()
+];
+const photo = (asset,label,x,y,w,h) => asset
+  ? [image(asset,x,y,w,h,'contain',label)]
+  : [{...rect(x,y,w,h,'#F4F4F1'),role:'photo-placeholder',label},
+     text(label,x+24,y+h/2-15,w-48,32,22,400,muted)];
+const table = (values,x,y,w,h,widths,header=false,size=21) => ({
+  kind:'table',values,x,y,w,h,widths,header,size,color:ink,muted,gold,rule
+});
 
 module.exports = function layoutDeck(deck) {
   return {width:1280,height:720,slides:deck.map((s,i)=>{
@@ -40,9 +51,36 @@ module.exports = function layoutDeck(deck) {
       text('3–5 mm thick     5 × 6, 5 × 8, 5 × 10, 6 × 12 cm',72,610,1100,33,22,400,muted),
       ...footer(n)
     ];
+    else if(s.type==='case-profile') items=[
+      ...caseHeader(s),
+      text('Patient profile',72,173,432,34,23,600,gold),
+      table(s.profile,72,220,448,280,[155,293]),
+      text(s.profileImageLabel||'Before',568,173,640,34,23,600,gold),
+      ...photo(s.profileAsset||s.beforeAsset,s.profileImageLabel||'Preoperative photograph',568,218,640,360),
+      text('Operative focus',72,544,448,30,21,600,gold),
+      text(s.focus,72,589,1136,53,22),
+      ...footer(n)
+    ];
+    else if(s.type==='case-result') {
+      const columns=s.specimen ? [
+        {label:'Before',asset:s.beforeAsset},
+        {label:'Excess skin and dermal graft',asset:s.specimenAsset},
+        {label:'After',asset:s.afterAsset}
+      ] : [{label:'Before',asset:s.beforeAsset},{label:'After',asset:s.afterAsset}];
+      const gap=24,w=(1136-gap*(columns.length-1))/columns.length;
+      items=[...caseHeader(s),
+        ...columns.flatMap((c,j)=>[
+          text(c.label,72+j*(w+gap),169,w,32,columns.length===3?21:23,600,gold),
+          ...photo(c.asset,c.label==='Before'?'Preoperative photograph':c.label==='After'?'Postoperative photograph':'Removed tissue photograph',72+j*(w+gap),211,w,282)
+        ]),
+        table(s.measurements,72,511,1136,128,[536,300,300],true,19),
+        text(s.measurementContext||'Length measurement state: —     Postoperative interval: —',72,644,1136,20,13,400,muted),
+        ...footer(n)
+      ];
+    }
     else if(s.type==='media'||s.type==='aftercare') {
       items=templateItems('case',n);
-      items[0].text=s.caseNumber?'Case '+Number(s.caseNumber):s.subtitle||'Dressing technique';
+      items[0].text=s.caseLabel||(s.caseNumber?'Case '+Number(s.caseNumber):s.subtitle||'Dressing technique');
       items[1].text=s.title;
     }
     else if(s.type==='closing') items=[

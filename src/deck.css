@@ -19,6 +19,11 @@
 .conference-slide h2.conference-text{letter-spacing:-.025em}
 .conference-slide .deck-blank-media{aspect-ratio:16/9;overflow:hidden}
 .deck-blank-media video,.deck-blank-media img{display:block;width:100%;height:100%;object-fit:contain}
+.conference-slide table.conference-table{display:table;border-collapse:collapse;table-layout:fixed;font-family:Pretendard,sans-serif;line-height:1.15}
+.conference-table td,.conference-table th{padding:0 .65cqw;text-align:left;vertical-align:middle;border-bottom:1px solid #dde1e2;font-weight:400;white-space:pre-wrap}
+.conference-table th{color:#98774b;font-weight:600}
+.conference-table .profile-label{color:#697276}
+.conference-table tr:last-child td{border-bottom:0}
 
 .english-notes{display:flex;align-items:baseline;gap:16px;padding:14px 20px}
 .english-notes[hidden]{display:none}
@@ -27,3 +32,4 @@
 .preparation-notes{margin-top:8px;background:transparent;border-color:#dedfd8;padding:12px 20px}
 .preparation-notes summary{color:#777e75}
 @media(max-width:560px){.english-notes{gap:10px;padding:12px 14px}.english-notes #speaker-cues{font-size:14px}.cue-label{font-size:10px}.preparation-notes{padding:12px 14px}}
+@media(max-width:560px){.work-heading{flex-direction:column}.work-heading .actions{align-self:flex-end}}

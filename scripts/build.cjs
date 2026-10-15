@@ -2,6 +2,7 @@ const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
 let html=read('src/index.template.html');
 const deck=JSON.parse(read('src/deck.json'));
+html=html.replaceAll('__DECK_COUNT__',String(deck.length));
 const parts={DECK_SLIDES:require('./render-deck.cjs')(deck),DECK_CSS:read('src/deck.css'),REUSED_DATA:read('src/base.js').replace('__DECK_DATA__',()=>JSON.stringify(deck).replaceAll('<','\\u003c')),PERI_CSS:read('src/perioperative.css'),PERI_HTML:read('src/perioperative.html'),PERI_JS:read('src/perioperative.js'),PERI_CLOUD:read('node_modules/@supabase/supabase-js/dist/umd/supabase.js')+'\n'+read('src/perioperative-cloud.js')};
 for(const [token,value] of Object.entries(parts))html=html.replaceAll('__'+token+'__',()=>value);
 const source=JSON.parse(read('src/filming-source.json'));

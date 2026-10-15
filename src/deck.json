@@ -262,212 +262,590 @@
     "rows": [],
     "foot": "Jinmo Koo · HIGHST Urology",
     "id": "preparation",
-    "ko": "수술 준비 영상",
+    "ko": "공통 수술 준비 · 드랩 1회",
     "title": "Surgical Preparation",
     "section": "Preparation",
     "type": "media",
-    "subtitle": "Shaving and Draping",
-    "note": "새로 촬영할 쉐이빙·드랩 영상 자리입니다. 영상 영역은 비워두었습니다.",
+    "subtitle": "Common preparation",
+    "note": "2026-10-12 촬영한 드랩 원본 MK2_1298.MP4. 사용자가 편집한 최종본을 증례 시작 전에 한 번만 보여줍니다. 각 증례에는 드랩을 반복하지 않습니다. 쉐이빙 영상 포함 여부는 최종 편집본에서 확인합니다.",
     "speakerNote": "Shaving and draping.",
-    "state": "촬영 예정 · 영상 자리 비움",
+    "state": "드랩 최종 편집본 연결 대기",
     "speakerCues": {
       "items": [
         {
           "label": "Preparation",
-          "text": "Shaving and draping"
-        },
-        {
-          "label": "Shaving",
-          "text": "Preparation area shown in the video"
-        },
-        {
-          "label": "Draping",
-          "text": "Sequence shown in the video"
+          "text": "Common draping sequence"
         }
       ],
-      "transition": "Now, let’s look at the first case: a pubic incision."
+      "transition": "The first case involves T-ring removal and dermal grafting."
     },
-    "speakerCueLine": "Shaving / Draping / First case"
+    "speakerCueLine": "Common preparation / Draping / Case 1"
   },
   {
-    "steps": [],
-    "rows": [],
-    "foot": "Jinmo Koo · HIGHST Urology",
-    "id": "pubic-video",
-    "ko": "Case 1 · 치골절개 수술",
-    "title": "Pubic Incision",
-    "section": "Clinical Cases",
-    "type": "media",
     "caseNumber": "01",
-    "note": "Case 1 · 치골절개 수술. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
-    "speakerNote": "Case 1: Pubic Incision.",
-    "state": "촬영 예정 · 영상 자리 비움",
-    "speakerCues": {
-      "items": [
-        {
-          "label": "Case 1",
-          "text": "Pubic incision"
-        },
-        {
-          "label": "Case introduction",
-          "text": "Clinical background / choice of incision"
-        },
-        {
-          "label": "Video walkthrough",
-          "text": "Incision / key operative stages"
-        },
-        {
-          "label": "Discussion",
-          "text": "Main points from this case"
-        }
-      ],
-      "transition": "The next case uses a circumcision-line incision."
-    },
-    "speakerCueLine": "Pubic incision / Background / Incision choice / Video / Key points"
-  },
-  {
+    "caseGroup": "case-01",
+    "title": "T-ring Removal and Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
     "steps": [],
     "rows": [],
-    "foot": "Jinmo Koo · HIGHST Urology",
-    "id": "circumcision-video",
-    "ko": "Case 2 · 포경선 절개 수술",
-    "title": "Circumcision-line Incision",
-    "section": "Clinical Cases",
-    "type": "media",
-    "caseNumber": "02",
-    "note": "Case 2 · 포경선 절개 수술. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
-    "speakerNote": "Case 2: Circumcision-line Incision.",
-    "state": "촬영 예정 · 영상 자리 비움",
+    "sourceDate": "2026-10-12",
+    "id": "case-01-profile",
+    "type": "case-profile",
+    "casePhase": "profile",
+    "ko": "Case 1 · T링 제거 후 진피 삽입 · 요약",
+    "profile": [
+      [
+        "Age",
+        "—"
+      ],
+      [
+        "Incision",
+        "—"
+      ],
+      [
+        "Filler",
+        "—"
+      ],
+      [
+        "Dermal graft",
+        "—"
+      ],
+      [
+        "Anesthesia",
+        "—"
+      ]
+    ],
+    "profileAsset": "cases/case-01-postoperative.jpg",
+    "profileImageLabel": "Postoperative photograph",
+    "focus": "T-ring removal / Dermal graft insertion",
+    "state": "실제 증례 사진 반영 · 환자 세부정보 입력 대기",
+    "provenance": {
+      "files": [
+        "MK2_1274.MP4",
+        "MK2_1297.MP4"
+      ],
+      "imageSource": "MK2_1278.JPG"
+    },
+    "note": "2026-10-12 촬영 실제 Case 1. 제공 폴더의 수술 후 JPG 사진을 사용했습니다. 수술 전 사진으로 표시하지 않습니다. 나이·절개 방식·필러·진피 규격·마취 정보는 별도 확인 후 입력합니다. 파일명의 약어를 임상 정보로 해석하지 않았습니다. T링 증례의 포경선 절개 여부는 미확정입니다. 환자 이름과 원본 폴더 경로는 발표 파일에 넣지 않습니다.",
+    "speakerNote": "Case 1: T-ring Removal and Dermal Grafting.",
+    "speakerCueLine": "Case 1 / T-ring removal / Profile / Postoperative photo",
     "speakerCues": {
       "items": [
         {
-          "label": "Case 2",
-          "text": "Circumcision-line incision"
-        },
+          "label": "Patient profile",
+          "text": "Age / Incision / Filler / Graft / Anesthesia"
+        }
+      ],
+      "transition": "Let’s watch the operative video."
+    }
+  },
+  {
+    "caseNumber": "01",
+    "caseGroup": "case-01",
+    "title": "T-ring Removal and Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "steps": [],
+    "rows": [],
+    "sourceDate": "2026-10-12",
+    "id": "case-01-video",
+    "type": "media",
+    "casePhase": "video",
+    "ko": "Case 1 · T링 제거 후 진피 삽입 · 수술 영상",
+    "state": "사용자 컷편집 중 · 최종 영상 연결 대기",
+    "provenance": {
+      "files": [
+        "MK2_1274.MP4",
+        "MK2_1297.MP4"
+      ]
+    },
+    "note": "2026-10-12 촬영. 사용자가 컷편집 중인 최종본을 연결할 896×504, 16:9 영상 자리입니다. 원본 영상은 수정하거나 임베드하지 않았습니다. 공통 드랩은 증례 시작 전 한 번만 보여줍니다.",
+    "speakerNote": "Case 1: operative video.",
+    "speakerCueLine": "T-ring removal / Dermal graft insertion",
+    "speakerCues": {
+      "items": [
         {
-          "label": "Case introduction",
-          "text": "Clinical background / choice of incision"
-        },
-        {
-          "label": "Video walkthrough",
-          "text": "Incision / key operative stages"
-        },
+          "label": "Operative focus",
+          "text": "T-ring removal / Dermal graft insertion"
+        }
+      ],
+      "transition": "Let’s compare the preoperative and postoperative images."
+    }
+  },
+  {
+    "caseNumber": "01",
+    "caseGroup": "case-01",
+    "title": "T-ring Removal and Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "steps": [],
+    "rows": [],
+    "sourceDate": "2026-10-12",
+    "id": "case-01-result",
+    "type": "case-result",
+    "casePhase": "result",
+    "ko": "Case 1 · T링 제거 후 진피 삽입 · 전후 비교",
+    "measurements": [
+      [
+        "Measurement",
+        "Before (cm)",
+        "After (cm)"
+      ],
+      [
+        "Penile length",
+        "—",
+        "—"
+      ],
+      [
+        "Penile thickness",
+        "—",
+        "—"
+      ],
+      [
+        "Glans circumference",
+        "—",
+        "—"
+      ]
+    ],
+    "afterAsset": "cases/case-01-postoperative.jpg",
+    "measurementContext": "Measurement values and postoperative interval pending confirmation",
+    "state": "수술 후 사진 반영 · 수술 전 사진·수치 대기",
+    "note": "측정값은 사용자가 다시 전달할 예정입니다. 수술 전 사진, 동일 조건의 전후 비교 사진, 측정 상태와 부위, thickness가 의미하는 측정량, 수술 후 촬영 시점을 확인합니다. 현재 수치는 모두 비워두었습니다. 영상의 수술 중 장면을 Before 또는 After 사진으로 대체하지 않았습니다.",
+    "speakerNote": "Case 1: preoperative and postoperative comparison.",
+    "speakerCueLine": "Before / After / Length / Thickness / Glans circumference / Timing",
+    "speakerCues": {
+      "items": [
         {
           "label": "Comparison",
-          "text": "Points to compare with the pubic approach"
+          "text": "Before / After / Measurements / Timing"
         }
       ],
-      "transition": "Next, we’ll look at secondary dermal grafting."
-    },
-    "speakerCueLine": "Circumcision line / Background / Video / Compare approaches"
+      "transition": "Next is Case 2: Dermal Grafting."
+    }
   },
   {
+    "caseNumber": "02",
+    "caseGroup": "case-02",
+    "title": "Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
     "steps": [],
     "rows": [],
-    "foot": "Jinmo Koo · HIGHST Urology",
-    "id": "secondary-graft-video",
-    "ko": "Case 3 · 진피 2차 이식",
-    "title": "Secondary Dermal Grafting",
+    "sourceDate": "2026-10-12",
+    "id": "case-02-profile",
+    "type": "case-profile",
+    "casePhase": "profile",
+    "ko": "Case 2 · 진피 이식 · 요약",
+    "profile": [
+      [
+        "Age",
+        "—"
+      ],
+      [
+        "Incision",
+        "—"
+      ],
+      [
+        "Filler",
+        "—"
+      ],
+      [
+        "Dermal graft",
+        "—"
+      ],
+      [
+        "Anesthesia",
+        "—"
+      ]
+    ],
+    "profileAsset": "cases/case-02-postoperative.jpg",
+    "profileImageLabel": "Postoperative photograph",
+    "focus": "Dermal graft placement / Fixation / Closure",
+    "state": "실제 증례 사진 반영 · 환자 세부정보 입력 대기",
+    "provenance": {
+      "files": [
+        "MK2_1299.MP4"
+      ],
+      "imageSource": "MK2_1305.JPG"
+    },
+    "note": "2026-10-12 촬영 실제 Case 2. 제공 폴더의 수술 후 JPG 사진을 사용했습니다. 수술 전 사진으로 표시하지 않습니다. 나이·절개 방식·필러·진피 규격·마취 정보는 별도 확인 후 입력합니다. 파일명의 약어를 임상 정보로 해석하지 않았습니다. 5×8 표기는 파일명에 있지만 진피 규격은 확인 후 입력합니다. 환자 이름과 원본 폴더 경로는 발표 파일에 넣지 않습니다.",
+    "speakerNote": "Case 2: Dermal Grafting.",
+    "speakerCueLine": "Case 2 / Dermal graft / Profile / Postoperative photo",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Patient profile",
+          "text": "Age / Incision / Filler / Graft / Anesthesia"
+        }
+      ],
+      "transition": "Let’s watch the operative video."
+    }
+  },
+  {
+    "caseNumber": "02",
+    "caseGroup": "case-02",
+    "title": "Dermal Grafting",
     "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "steps": [],
+    "rows": [],
+    "sourceDate": "2026-10-12",
+    "id": "case-02-video",
     "type": "media",
+    "casePhase": "video",
+    "ko": "Case 2 · 진피 이식 · 수술 영상",
+    "state": "사용자 컷편집 중 · 최종 영상 연결 대기",
+    "provenance": {
+      "files": [
+        "MK2_1299.MP4"
+      ]
+    },
+    "note": "2026-10-12 촬영. 사용자가 컷편집 중인 최종본을 연결할 896×504, 16:9 영상 자리입니다. 원본 영상은 수정하거나 임베드하지 않았습니다. 공통 드랩은 증례 시작 전 한 번만 보여줍니다.",
+    "speakerNote": "Case 2: operative video.",
+    "speakerCueLine": "Dermal graft placement / Fixation / Closure",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Operative focus",
+          "text": "Dermal graft placement / Fixation / Closure"
+        }
+      ],
+      "transition": "Let’s compare the preoperative and postoperative images."
+    }
+  },
+  {
+    "caseNumber": "02",
+    "caseGroup": "case-02",
+    "title": "Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "steps": [],
+    "rows": [],
+    "sourceDate": "2026-10-12",
+    "id": "case-02-result",
+    "type": "case-result",
+    "casePhase": "result",
+    "ko": "Case 2 · 진피 이식 · 전후 비교",
+    "measurements": [
+      [
+        "Measurement",
+        "Before (cm)",
+        "After (cm)"
+      ],
+      [
+        "Penile length",
+        "—",
+        "—"
+      ],
+      [
+        "Penile thickness",
+        "—",
+        "—"
+      ],
+      [
+        "Glans circumference",
+        "—",
+        "—"
+      ]
+    ],
+    "afterAsset": "cases/case-02-postoperative.jpg",
+    "measurementContext": "Measurement values and postoperative interval pending confirmation",
+    "state": "수술 후 사진 반영 · 수술 전 사진·수치 대기",
+    "note": "측정값은 사용자가 다시 전달할 예정입니다. 수술 전 사진, 동일 조건의 전후 비교 사진, 측정 상태와 부위, thickness가 의미하는 측정량, 수술 후 촬영 시점을 확인합니다. 현재 수치는 모두 비워두었습니다. 영상의 수술 중 장면을 Before 또는 After 사진으로 대체하지 않았습니다.",
+    "speakerNote": "Case 2: preoperative and postoperative comparison.",
+    "speakerCueLine": "Before / After / Length / Thickness / Glans circumference / Timing",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Comparison",
+          "text": "Before / After / Measurements / Timing"
+        }
+      ],
+      "transition": "Next is Case 3: Two-sheet Dermal Grafting."
+    }
+  },
+  {
     "caseNumber": "03",
-    "note": "Case 3 · 진피 2차 이식. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
-    "speakerNote": "Case 3: Secondary Dermal Grafting.",
-    "state": "촬영 예정 · 영상 자리 비움",
+    "caseGroup": "case-03",
+    "title": "Two-sheet Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "steps": [],
+    "rows": [],
+    "sourceDate": "2026-10-14",
+    "id": "case-03-profile",
+    "type": "case-profile",
+    "casePhase": "profile",
+    "ko": "Case 3 · 진피 두 장 이식 · 요약",
+    "profile": [
+      [
+        "Age",
+        "—"
+      ],
+      [
+        "Incision",
+        "—"
+      ],
+      [
+        "Filler",
+        "—"
+      ],
+      [
+        "Dermal graft",
+        "Two sheets"
+      ],
+      [
+        "Anesthesia",
+        "—"
+      ]
+    ],
+    "profileAsset": "cases/case-03-operative.jpg",
+    "profileImageLabel": "Operative image",
+    "focus": "Two dermal sheets / Placement and fixation",
+    "state": "실제 증례 사진 반영 · 환자 세부정보 입력 대기",
+    "provenance": {
+      "files": [
+        "MK2_1366.MP4"
+      ],
+      "imageSource": "MK2_1366.MP4",
+      "imageTimestampSeconds": 1877.5957199999998
+    },
+    "note": "2026-10-14 촬영 실제 Case 3. 수술 원본 영상의 장면을 사용했습니다. 수술 전 사진으로 표시하지 않습니다. 나이·절개 방식·필러·진피 규격·마취 정보는 별도 확인 후 입력합니다. 파일명의 약어를 임상 정보로 해석하지 않았습니다. 환자 이름과 원본 폴더 경로는 발표 파일에 넣지 않습니다.",
+    "speakerNote": "Case 3: Two-sheet Dermal Grafting.",
+    "speakerCueLine": "Case 3 / Two dermal sheets / Profile / Operative image",
     "speakerCues": {
       "items": [
         {
-          "label": "Case 3",
-          "text": "Secondary dermal grafting"
-        },
-        {
-          "label": "Background",
-          "text": "Previous procedure / reason for a second graft"
-        },
-        {
-          "label": "Video walkthrough",
-          "text": "Key operative stages"
-        },
-        {
-          "label": "Discussion",
-          "text": "Main considerations in this case"
+          "label": "Patient profile",
+          "text": "Age / Incision / Filler / Graft / Anesthesia"
         }
       ],
-      "transition": "Let’s move on to the revision surgery case."
-    },
-    "speakerCueLine": "Previous procedure / Reason for second graft / Video / Key points"
+      "transition": "Let’s watch the operative video."
+    }
   },
   {
+    "caseNumber": "03",
+    "caseGroup": "case-03",
+    "title": "Two-sheet Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
     "steps": [],
     "rows": [],
-    "foot": "Jinmo Koo · HIGHST Urology",
-    "id": "revision-video",
-    "ko": "Case 4 · 재수술",
-    "title": "Revision Surgery",
-    "section": "Clinical Cases",
+    "sourceDate": "2026-10-14",
+    "id": "case-03-video",
     "type": "media",
+    "casePhase": "video",
+    "ko": "Case 3 · 진피 두 장 이식 · 수술 영상",
+    "state": "사용자 컷편집 중 · 최종 영상 연결 대기",
+    "provenance": {
+      "files": [
+        "MK2_1366.MP4"
+      ]
+    },
+    "note": "2026-10-14 촬영. 사용자가 컷편집 중인 최종본을 연결할 896×504, 16:9 영상 자리입니다. 원본 영상은 수정하거나 임베드하지 않았습니다. 공통 드랩은 증례 시작 전 한 번만 보여줍니다.",
+    "speakerNote": "Case 3: operative video.",
+    "speakerCueLine": "Two dermal sheets / Placement and fixation",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Operative focus",
+          "text": "Two dermal sheets / Placement and fixation"
+        }
+      ],
+      "transition": "Let’s compare the preoperative and postoperative images."
+    }
+  },
+  {
+    "caseNumber": "03",
+    "caseGroup": "case-03",
+    "title": "Two-sheet Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "steps": [],
+    "rows": [],
+    "sourceDate": "2026-10-14",
+    "id": "case-03-result",
+    "type": "case-result",
+    "casePhase": "result",
+    "ko": "Case 3 · 진피 두 장 이식 · 전후 비교",
+    "measurements": [
+      [
+        "Measurement",
+        "Before (cm)",
+        "After (cm)"
+      ],
+      [
+        "Penile length",
+        "—",
+        "—"
+      ],
+      [
+        "Penile thickness",
+        "—",
+        "—"
+      ],
+      [
+        "Glans circumference",
+        "—",
+        "—"
+      ]
+    ],
+    "measurementContext": "Measurement values and postoperative interval pending confirmation",
+    "state": "전후 사진·수치 입력 대기",
+    "note": "측정값은 사용자가 다시 전달할 예정입니다. 수술 전 사진, 동일 조건의 전후 비교 사진, 측정 상태와 부위, thickness가 의미하는 측정량, 수술 후 촬영 시점을 확인합니다. 현재 수치는 모두 비워두었습니다. 영상의 수술 중 장면을 Before 또는 After 사진으로 대체하지 않았습니다.",
+    "speakerNote": "Case 3: preoperative and postoperative comparison.",
+    "speakerCueLine": "Before / After / Length / Thickness / Glans circumference / Timing",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Comparison",
+          "text": "Before / After / Measurements / Timing"
+        }
+      ],
+      "transition": "Next is Case 4: Circumcision and Dermal Grafting."
+    }
+  },
+  {
     "caseNumber": "04",
-    "note": "Case 4 · 재수술. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
-    "speakerNote": "Case 4: Revision Surgery.",
-    "state": "촬영 예정 · 영상 자리 비움",
-    "speakerCues": {
-      "items": [
-        {
-          "label": "Case 4",
-          "text": "Revision surgery"
-        },
-        {
-          "label": "Background",
-          "text": "Previous procedure / reason for revision"
-        },
-        {
-          "label": "Video walkthrough",
-          "text": "Operative findings / key stages"
-        },
-        {
-          "label": "Discussion",
-          "text": "Points to highlight in revision surgery"
-        }
-      ],
-      "transition": "The final case focuses on contour step-off correction."
-    },
-    "speakerCueLine": "Previous surgery / Reason for revision / Findings / Video"
-  },
-  {
+    "caseGroup": "case-04",
+    "title": "Circumcision and Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
     "steps": [],
     "rows": [],
-    "foot": "Jinmo Koo · HIGHST Urology",
-    "id": "contour-video",
-    "ko": "Case 5 · 턱짐 교정",
-    "title": "Contour Step-off Correction",
-    "section": "Clinical Cases",
-    "type": "media",
-    "caseNumber": "05",
-    "note": "Case 5 · 턱짐 교정. 새로 촬영할 증례 영상 자리입니다. 실제 영상·사진은 넣지 않았습니다.",
-    "speakerNote": "Case 5: Contour Step-off Correction.",
-    "state": "촬영 예정 · 영상 자리 비움",
+    "sourceDate": "2026-10-14",
+    "id": "case-04-profile",
+    "type": "case-profile",
+    "casePhase": "profile",
+    "ko": "Case 4 · 포경 및 진피 이식 · 요약",
+    "profile": [
+      [
+        "Age",
+        "—"
+      ],
+      [
+        "Incision",
+        "—"
+      ],
+      [
+        "Filler",
+        "—"
+      ],
+      [
+        "Dermal graft",
+        "—"
+      ],
+      [
+        "Anesthesia",
+        "—"
+      ]
+    ],
+    "profileAsset": "cases/case-04-operative.jpg",
+    "profileImageLabel": "Operative image",
+    "focus": "Circumcision / Dermal graft placement / Closure",
+    "state": "실제 증례 사진 반영 · 환자 세부정보 입력 대기",
+    "provenance": {
+      "files": [
+        "MK2_1429.MP4"
+      ],
+      "imageSource": "MK2_1429.MP4",
+      "imageTimestampSeconds": 1177.89672
+    },
+    "note": "2026-10-14 촬영 실제 Case 4. 수술 원본 영상의 장면을 사용했습니다. 수술 전 사진으로 표시하지 않습니다. 나이·절개 방식·필러·진피 규격·마취 정보는 별도 확인 후 입력합니다. 파일명의 약어를 임상 정보로 해석하지 않았습니다. 환자 이름과 원본 폴더 경로는 발표 파일에 넣지 않습니다.",
+    "speakerNote": "Case 4: Circumcision and Dermal Grafting.",
+    "speakerCueLine": "Case 4 / Circumcision / Profile / Operative image",
     "speakerCues": {
       "items": [
         {
-          "label": "Case 5",
-          "text": "Contour step-off correction"
-        },
-        {
-          "label": "Case introduction",
-          "text": "Location of the contour concern"
-        },
-        {
-          "label": "Video walkthrough",
-          "text": "Correction shown in the video"
-        },
-        {
-          "label": "Discussion",
-          "text": "Main points from this case"
+          "label": "Patient profile",
+          "text": "Age / Incision / Filler / Graft / Anesthesia"
         }
       ],
-      "transition": "After these cases, let’s review potential complications."
+      "transition": "Let’s watch the operative video."
+    }
+  },
+  {
+    "caseNumber": "04",
+    "caseGroup": "case-04",
+    "title": "Circumcision and Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "steps": [],
+    "rows": [],
+    "sourceDate": "2026-10-14",
+    "id": "case-04-video",
+    "type": "media",
+    "casePhase": "video",
+    "ko": "Case 4 · 포경 및 진피 이식 · 수술 영상",
+    "state": "사용자 컷편집 중 · 최종 영상 연결 대기",
+    "provenance": {
+      "files": [
+        "MK2_1429.MP4"
+      ]
     },
-    "speakerCueLine": "Contour step-off / Location / Correction / Video / Key points"
+    "note": "2026-10-14 촬영. 사용자가 컷편집 중인 최종본을 연결할 896×504, 16:9 영상 자리입니다. 원본 영상은 수정하거나 임베드하지 않았습니다. 공통 드랩은 증례 시작 전 한 번만 보여줍니다.",
+    "speakerNote": "Case 4: operative video.",
+    "speakerCueLine": "Circumcision / Dermal graft placement / Closure",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Operative focus",
+          "text": "Circumcision / Dermal graft placement / Closure"
+        }
+      ],
+      "transition": "Let’s compare the preoperative and postoperative images."
+    }
+  },
+  {
+    "caseNumber": "04",
+    "caseGroup": "case-04",
+    "title": "Circumcision and Dermal Grafting",
+    "section": "Clinical Cases",
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "steps": [],
+    "rows": [],
+    "sourceDate": "2026-10-14",
+    "id": "case-04-result",
+    "type": "case-result",
+    "casePhase": "result",
+    "ko": "Case 4 · 포경 및 진피 이식 · 전후 비교",
+    "measurements": [
+      [
+        "Measurement",
+        "Before (cm)",
+        "After (cm)"
+      ],
+      [
+        "Penile length",
+        "—",
+        "—"
+      ],
+      [
+        "Penile thickness",
+        "—",
+        "—"
+      ],
+      [
+        "Glans circumference",
+        "—",
+        "—"
+      ]
+    ],
+    "measurementContext": "Measurement values and postoperative interval pending confirmation",
+    "state": "전후 사진·수치 입력 대기",
+    "note": "측정값은 사용자가 다시 전달할 예정입니다. 수술 전 사진, 동일 조건의 전후 비교 사진, 측정 상태와 부위, thickness가 의미하는 측정량, 수술 후 촬영 시점을 확인합니다. 현재 수치는 모두 비워두었습니다. 영상의 수술 중 장면을 Before 또는 After 사진으로 대체하지 않았습니다.",
+    "speakerNote": "Case 4: preoperative and postoperative comparison.",
+    "speakerCueLine": "Before / After / Length / Thickness / Glans circumference / Timing",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Comparison",
+          "text": "Before / After / Measurements / Timing"
+        }
+      ],
+      "transition": "Next, I’ll discuss potential complications."
+    }
   },
   {
     "steps": [],
