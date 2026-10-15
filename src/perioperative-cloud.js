@@ -18,8 +18,8 @@ function message(error){
  if(/RATE_LIMIT/.test(value))return '짧은 시간에 변경이 많아 잠시 저장을 제한했습니다. 입력은 유지됩니다. 잠시 후 다시 저장해 주세요.';
  if(/BOARD_LIMIT/.test(value))return '과정 수가 한도에 도달했습니다. 기존 과정을 수정하거나 삭제한 과정을 복원해 주세요.';
  if(/EDITING_PAUSED/.test(value))return '공동 편집이 잠시 중지되었습니다. 입력한 내용은 유지됩니다.';
- if(/CLIENT_UPDATE_REQUIRED/.test(value))return '새 씬 기능이 적용되었습니다. 입력을 복사해 두고 페이지를 새로고침해 주세요.';
- if(/INVALID_/.test(value))return '글자 수와 내용을 확인해 주세요. 씬은 카드당 20개·총 4,000자까지, HTML 없이 일반 글로 입력해 주세요.';
+ if(/CLIENT_UPDATE_REQUIRED/.test(value))return '최신 페이지를 불러와야 합니다. 입력 내용을 복사해 보관한 뒤 새로고침해 주세요.';
+ if(/INVALID_/.test(value))return '한 과정에 씬 20개, 합계 4,000자까지 입력할 수 있습니다. 글자 수와 내용을 확인하고 텍스트로 입력해 주세요.';
  return '서버에 저장하지 못했습니다. 입력 내용은 유지됩니다. 인터넷 연결을 확인한 뒤 다시 저장해 주세요.';
 }
 async function rpc(name,args={}){const {data,error}=await client.rpc('highst_filming_public_'+name,args);if(error)throw error;return data;}

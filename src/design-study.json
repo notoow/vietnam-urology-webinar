@@ -5,8 +5,8 @@
     {
       "id": "cover",
       "label": "표지",
-      "note": "원장님 프로필 사진과 발표 제목을 중심으로 구성했습니다.",
-      "speakerNote": "Jinmo Koo, HIGHST Urology. Vietnam MegaDerm Webinar, 21 October 2026. Portrait supplied by HIGHST. Brand reference: https://www.highsturology.co.kr/v2/proud/doctor.php",
+      "note": "베트남 MegaDerm 웨비나 · 구진모 원장 · 2026년 10월 21일.",
+      "speakerNote": "Jinmo Koo, HIGHST Urology. Vietnam MegaDerm Webinar, 21 October 2026.",
       "items": [
         {
           "kind": "image",
@@ -110,7 +110,7 @@
     {
       "id": "evaluation",
       "label": "수술 전 평가",
-      "note": "IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰과 민감도 검사를 한 장에 정리했습니다.",
+      "note": "수술 전 평가: IIEF/PEDT 설문, 혈액·감염 검사, 신체진찰, 음경 길이 측정 및 진동각 검사.",
       "speakerNote": "Preoperative assessment at HIGHST includes IIEF and PEDT questionnaires, flaccid and stretched penile length measurement, and penile biothesiometry.\n\nLaboratory tests\nBlood coagulation tests (PT/PTT)\nTTT (testosterone)\nComplete blood count (CBC)\nProstate-specific antigen (PSA)\nBlood glucose (BST/HbA1c)\nHIV testing\nSyphilis testing\nUrine testing\nLiver enzymes (GOT/GPT/GGT)\nInflammatory markers\n\nHbA1c denotes glycated hemoglobin and appears under the blood glucose heading.\nSources: https://pubmed.ncbi.nlm.nih.gov/9187685/ ; https://pubmed.ncbi.nlm.nih.gov/17568761/ ; https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/ ; https://pubmed.ncbi.nlm.nih.gov/28874780/",
       "items": [
         {
@@ -397,8 +397,8 @@
     {
       "id": "case",
       "label": "증례 영상",
-      "note": "Case 1 · 치골절개. 1920×1080 영상용 16:9 영역입니다. 실제 증례 영상은 새로 촬영한 뒤 넣습니다.",
-      "speakerNote": "Case 1: Pubic Incision.",
+      "note": "Case 1. T링 제거 후 진피 이식.",
+      "speakerNote": "Case 1: T-ring Removal and Dermal Grafting.",
       "items": [
         {
           "kind": "text",
@@ -413,7 +413,7 @@
         },
         {
           "kind": "text",
-          "text": "Pubic Incision",
+          "text": "T-ring Removal and Dermal Grafting",
           "x": 72,
           "y": 71,
           "w": 910,
