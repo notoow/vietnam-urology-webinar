@@ -2,7 +2,7 @@ const deck=__DECK_DATA__;
 const notes=deck.map(s=>s.note);
 const cityClocks=[...document.querySelectorAll('[data-clock-zone]')].map(element=>({
  element,
- formatter:new Intl.DateTimeFormat('en-GB',{timeZone:element.dataset.clockZone,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'})
+ formatter:new Intl.DateTimeFormat('en-US',{timeZone:element.dataset.clockZone,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true})
 }));
 function updateCityClocks(){
  const now=new Date();

@@ -161,10 +161,11 @@
     "title": "MegaDerm & MegaFill",
     "section": "Materials",
     "type": "products",
-    "asset": "graft-packaging.png",
+    "asset": "megaderm-6x12.jpg",
+    "megafillAsset": "megafill.jpg",
     "caption": "MegaDerm stock at HIGHST: 3–5 mm / 5 × 6, 5 × 8, 5 × 10, 6 × 12 cm",
-    "note": "수화타입·건조타입과 MegaFill의 재료 형태를 소개합니다. 두께와 크기는 원내 보유 규격입니다. 사진의 좌우 제품 타입은 아직 지정하지 않았습니다.",
-    "speakerNote": "MegaDerm is a sheet acellular dermal matrix. HIGHST stocks hydrated and freeze-dried types. The stated thickness and sizes describe HIGHST's inventory. MegaFill is a micronized form of acellular dermal matrix. The photograph is supplied by HIGHST. Individual packages are not assigned type labels.",
+    "note": "수화타입·건조타입과 MegaFill의 재료 형태를 소개합니다. 두께와 크기는 원내 보유 규격입니다. 제공하신 6 × 12 cm 진피와 MegaFill 사진을 사용했습니다.",
+    "speakerNote": "MegaDerm is a sheet acellular dermal matrix. HIGHST stocks hydrated and freeze-dried types. The stated thickness and sizes describe HIGHST's inventory. MegaFill is a micronized form of acellular dermal matrix. The photographs of a 6 × 12 cm dermal graft and MegaFill were supplied and identified by HIGHST. The photographed sheet is not assigned a hydrated or freeze-dried type label.",
     "state": "제품 소개",
     "sources": [
       "https://lncbio.co.kr/theme/basic/images/L%26CBIO_catalog.pdf"

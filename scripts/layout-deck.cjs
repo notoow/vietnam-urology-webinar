@@ -44,11 +44,13 @@ module.exports = function layoutDeck(deck) {
       text(s.rows[0].head,72,196,520,44,31,600),
       text('Acellular dermal matrix',72,252,520,38,25,400,muted),
       text('Hydrated / Freeze-dried',72,296,520,38,25,400,muted),
+      text('6 × 12 cm graft shown',72,340,520,28,18,400,gold),
       text(s.rows[1].head,72,412,520,44,31,600),
       text(s.rows[1].body,72,468,535,38,24,400,muted),
-      image(s.asset,648,194,560,348,'contain','Packaged dermal grafts supplied by HIGHST'),
-      text('MegaDerm stock at HIGHST',72,574,1100,28,18,600,gold),
-      text('3–5 mm thick     5 × 6, 5 × 8, 5 × 10, 6 × 12 cm',72,610,1100,33,22,400,muted),
+      image(s.asset,792,160,360,240,'contain','6 × 12 cm dermal graft supplied by HIGHST'),
+      image(s.megafillAsset,792,414,360,202.5,'contain','MegaFill syringes supplied by HIGHST'),
+      text('MegaDerm stock at HIGHST',72,574,680,28,18,600,gold),
+      text('3–5 mm thick     5 × 6, 5 × 8, 5 × 10, 6 × 12 cm',72,610,680,33,22,400,muted),
       ...footer(n)
     ];
     else if(s.type==='case-profile') items=[

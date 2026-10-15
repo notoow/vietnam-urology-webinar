@@ -14,8 +14,8 @@ if(source.url){
  sourceLink='<a class="btn" href="'+href+'" target="_blank" rel="noopener noreferrer">촬영원본 열기 ↗</a>';
 }
 html=html.replace('__SOURCE_LINK__',()=>sourceLink);
-for(const [token,name,mime] of [['LOGO','highst-logo.png','image/png'],['DERMIS1','dermis-01.png','image/png'],['DERMIS2','dermis-02.png','image/png'],['PACKAGING','graft-packaging.png','image/png'],['FONT','PretendardVariable.woff2','font/woff2']])html=html.replaceAll('__'+token+'__','data:'+mime+';base64,'+fs.readFileSync(path.join(root,'assets',name)).toString('base64'));
-if(/__(?:REUSED_DATA|DECK_\w+|PERI_\w+|LOGO|DERMIS[12]|PACKAGING|FONT)__/.test(html))throw Error('Unresolved build token');
+for(const [token,name,mime] of [['LOGO','highst-logo.png','image/png'],['DERMIS1','dermis-01.png','image/png'],['DERMIS2','dermis-02.png','image/png'],['PACKAGING','graft-packaging.png','image/png'],['DERMIS6X12','megaderm-6x12.jpg','image/jpeg'],['MEGAFILL','megafill.jpg','image/jpeg'],['FONT','PretendardVariable.woff2','font/woff2']])html=html.replaceAll('__'+token+'__','data:'+mime+';base64,'+fs.readFileSync(path.join(root,'assets',name)).toString('base64'));
+if(/__(?:REUSED_DATA|DECK_\w+|PERI_\w+|LOGO|DERMIS[12]|DERMIS6X12|MEGAFILL|PACKAGING|FONT)__/.test(html))throw Error('Unresolved build token');
 const crypto=require('node:crypto');
 html=html.replace(/\r\n?/g,'\n');
 const hashes=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>"'sha256-"+crypto.createHash('sha256').update(m[1]).digest('base64')+"'");
