@@ -53,6 +53,37 @@ module.exports = function layoutDeck(deck) {
       text('3–5 mm thick     5 × 6, 5 × 8, 5 × 10, 6 × 12 cm',72,610,680,33,22,400,muted),
       ...footer(n)
     ];
+    else if(s.type==='penile-complications') items=[
+      ...header(s.title),
+      ...s.figures.flatMap((figure,j)=>{
+        const x=72+j*392;
+        return [
+          text(figure.label,x,183,352,34,25,600,j===0?muted:ink),
+          rect(x,228,352,1,j===0?rule:gold),
+          image(figure.asset,x+24,248,304,306,'contain',figure.label)
+        ];
+      }),
+      rect(72,583,1136,1,rule),
+      text(s.literatureLine,72,598,1136,26,18,400,muted),
+      text(s.caption,72,632,1136,20,13,400,muted),
+      ...footer(n)
+    ];
+    else if(s.type==='graft-complications') items=[
+      ...header(s.title),
+      text('Contour and position',72,163,1136,28,18,400,muted),
+      ...s.figures.flatMap((figure,j)=>{
+        const x=72+j*292;
+        return [
+          text(figure.label,x,211,260,33,24,600),
+          rect(x,256,260,1,gold),
+          ...(figure.assets
+            ? figure.assets.map((asset,k)=>image(asset,x+k*136,286,124,292,'contain',figure.label+(k?' — graft':' — surface')))
+            : [image(figure.asset,x,286,260,292,'contain',figure.label)]),
+          ...(figure.assets?[text('Surface',x,592,124,24,15,400,muted),text('Graft',x+136,592,124,24,15,400,muted)]:[])
+        ];
+      }),
+      ...footer(n)
+    ];
     else if(s.type==='case-profile') items=[
       ...caseHeader(s),
       text('Patient profile',72,173,432,34,23,600,gold),
@@ -80,7 +111,17 @@ module.exports = function layoutDeck(deck) {
         ...footer(n)
       ];
     }
-    else if(s.type==='media'||s.type==='aftercare') {
+    else if(s.type==='aftercare') {
+      items=templateItems('case',n);
+      items[0].text=s.subtitle;
+      items[1].text=s.title;
+      const frame=items.findIndex(o=>o.role==='video-placeholder');
+      const {x,y,w,h}=items[frame];
+      items[frame]=s.asset
+        ? image(s.asset,x,y,w,h,'contain','Postoperative care: '+s.title)
+        : {...rect(x,y,w,h,'#F4F4F1'),role:'photo-placeholder',label:'Postoperative care: '+s.title};
+    }
+    else if(s.type==='media') {
       items=templateItems('case',n);
       items[0].text=s.caseLabel||(s.caseNumber?'Case '+Number(s.caseNumber):s.subtitle||'Dressing technique');
       items[1].text=s.title;

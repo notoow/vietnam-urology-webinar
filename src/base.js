@@ -14,7 +14,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateCity
 let current=0,activeView='design';
 const slides=[...document.querySelectorAll('.slide')];
 const outline=document.getElementById('outline-list'),select=document.getElementById('slide-select');
-const sectionNames={"Overview":"표지","Speaker":"발표자 소개","Materials":"재료 소개","Evaluation":"수술 전 검사","Preparation":"수술 준비","Clinical Cases":"증례 1–4","Complications":"합병증","Aftercare":"수술 후 관리","Discussion":"질의응답"};
+const sectionNames={"Overview":"표지","Speaker":"발표자 소개","Materials":"재료 소개","Evaluation":"수술 전 검사","Preparation":"수술 준비","Clinical Cases":"증례 1–4","Complications":"음경·진피 합병증","Aftercare":"절개별 후관리","Discussion":"질의응답"};
 let lastSection='';
 slides.forEach((s,i)=>{
  if(deck[i].section!==lastSection){lastSection=deck[i].section;const h=document.createElement('p');h.className='outline-group';h.textContent=sectionNames[lastSection];outline.append(h);}

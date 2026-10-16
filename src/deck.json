@@ -298,23 +298,15 @@
     "profile": [
       [
         "Age",
-        "—"
+        "54 years"
       ],
       [
         "Incision",
-        "—"
+        "Pubic incision"
       ],
       [
-        "Filler",
-        "—"
-      ],
-      [
-        "Dermal graft",
-        "—"
-      ],
-      [
-        "Anesthesia",
-        "—"
+        "Graft size",
+        "5 × 6 cm"
       ]
     ],
     "profileAsset": "cases/case-01-postoperative.jpg",
@@ -330,12 +322,12 @@
     },
     "note": "Case 1. T링 제거 후 진피 이식. 수술 후 사진.",
     "speakerNote": "Case 1: T-ring Removal and Dermal Grafting.",
-    "speakerCueLine": "Case 1 / T-ring removal / Profile / Postoperative photo",
+    "speakerCueLine": "Case 1 / 54 years / Pubic incision / 5 × 6 cm / T-ring removal",
     "speakerCues": {
       "items": [
         {
           "label": "Patient profile",
-          "text": "Age / Incision / Filler / Graft / Anesthesia"
+          "text": "Age / Incision / Graft size"
         }
       ],
       "transition": "Let’s watch the operative video."
@@ -441,23 +433,15 @@
     "profile": [
       [
         "Age",
-        "—"
+        "62 years"
       ],
       [
         "Incision",
-        "—"
+        "Circumcision-line\nincision"
       ],
       [
-        "Filler",
-        "—"
-      ],
-      [
-        "Dermal graft",
-        "—"
-      ],
-      [
-        "Anesthesia",
-        "—"
+        "Graft size",
+        "5 × 8 cm"
       ]
     ],
     "profileAsset": "cases/case-02-postoperative.jpg",
@@ -468,16 +452,16 @@
       "files": [
         "MK2_1299.MP4"
       ],
-      "imageSource": "MK2_1305.JPG"
+      "imageSource": "MK2_1301.JPG"
     },
     "note": "Case 2. 진피 이식. 수술 후 사진.",
     "speakerNote": "Case 2: Dermal Grafting.",
-    "speakerCueLine": "Case 2 / Dermal graft / Profile / Postoperative photo",
+    "speakerCueLine": "Case 2 / 62 years / Circumcision-line incision / 5 × 8 cm",
     "speakerCues": {
       "items": [
         {
           "label": "Patient profile",
-          "text": "Age / Incision / Filler / Graft / Anesthesia"
+          "text": "Age / Incision / Graft size"
         }
       ],
       "transition": "Let’s watch the operative video."
@@ -582,23 +566,15 @@
     "profile": [
       [
         "Age",
-        "—"
+        "31 years"
       ],
       [
         "Incision",
         "—"
       ],
       [
-        "Filler",
-        "—"
-      ],
-      [
-        "Dermal graft",
-        "Two sheets"
-      ],
-      [
-        "Anesthesia",
-        "—"
+        "Graft size",
+        "6 × 12 cm + —\n(2 sheets)"
       ]
     ],
     "profileAsset": "cases/case-03-operative.jpg",
@@ -614,12 +590,12 @@
     },
     "note": "Case 3. 진피 두 장 이식. 수술 중 사진.",
     "speakerNote": "Case 3: Two-sheet Dermal Grafting.",
-    "speakerCueLine": "Case 3 / Two dermal sheets / Profile / Operative image",
+    "speakerCueLine": "Case 3 / 31 years / Two dermal sheets / 6 × 12 cm",
     "speakerCues": {
       "items": [
         {
           "label": "Patient profile",
-          "text": "Age / Incision / Filler / Graft / Anesthesia"
+          "text": "Age / Incision / Graft size"
         }
       ],
       "transition": "Let’s watch the operative video."
@@ -678,18 +654,18 @@
       ],
       [
         "Penile length",
-        "—",
-        "—"
+        "10",
+        "13.5"
       ],
       [
         "Penile thickness",
-        "—",
-        "—"
+        "10",
+        "13"
       ],
       [
         "Glans circumference",
-        "—",
-        "—"
+        "8",
+        "10"
       ]
     ],
     "measurementContext": "Measurement state: —     Postoperative interval: —",
@@ -723,23 +699,15 @@
     "profile": [
       [
         "Age",
-        "—"
+        "23 years"
       ],
       [
         "Incision",
         "—"
       ],
       [
-        "Filler",
-        "—"
-      ],
-      [
-        "Dermal graft",
-        "—"
-      ],
-      [
-        "Anesthesia",
-        "—"
+        "Graft size",
+        "5 × 8 cm"
       ]
     ],
     "profileAsset": "cases/case-04-operative.jpg",
@@ -755,12 +723,12 @@
     },
     "note": "Case 4. 포경 및 진피 이식. 수술 중 사진.",
     "speakerNote": "Case 4: Circumcision and Dermal Grafting.",
-    "speakerCueLine": "Case 4 / Circumcision / Profile / Operative image",
+    "speakerCueLine": "Case 4 / 23 years / Circumcision / 5 × 8 cm",
     "speakerCues": {
       "items": [
         {
           "label": "Patient profile",
-          "text": "Age / Incision / Filler / Graft / Anesthesia"
+          "text": "Age / Incision / Graft size"
         }
       ],
       "transition": "Let’s watch the operative video."
@@ -819,17 +787,17 @@
       ],
       [
         "Penile length",
-        "—",
+        "8",
         "—"
       ],
       [
         "Penile thickness",
-        "—",
+        "7.5",
         "—"
       ],
       [
         "Glans circumference",
-        "—",
+        "8",
         "—"
       ]
     ],
@@ -845,100 +813,142 @@
           "text": "Before / After / Measurements / Timing"
         }
       ],
-      "transition": "Next, I’ll discuss potential complications."
+      "transition": "Next, I’ll discuss penile complications."
     }
   },
   {
     "steps": [],
-    "rows": [
+    "rows": [],
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "id": "penile-complications",
+    "ko": "음경 합병증",
+    "title": "Penile Complications",
+    "section": "Complications",
+    "type": "penile-complications",
+    "state": "음경 합병증",
+    "figures": [
       {
-        "head": "Bleeding and swelling",
-        "body": "Hematoma, foreskin edema"
+        "label": "Reference",
+        "asset": "complications/reference.png"
       },
       {
-        "head": "Wound complications",
-        "body": "Delayed healing, infection, skin necrosis"
+        "label": "Curvature / Tilting",
+        "asset": "complications/curvature.png"
       },
       {
-        "head": "Contour and discomfort",
-        "body": "Graft contour irregularity, discomfort during erection"
+        "label": "Shortening",
+        "asset": "complications/shortening.png"
       }
     ],
-    "foot": "Jinmo Koo · HIGHST Urology",
-    "id": "complications",
-    "ko": "기타 합병증",
-    "title": "Potential Complications",
-    "section": "Complications",
-    "type": "rows",
-    "caption": "Reported in ADM augmentation literature",
-    "note": "문헌에 보고된 ADM 확대술의 합병증 범주입니다. 하이스트 또는 MegaDerm의 발생률·치료 성적을 나타내지 않습니다.",
-    "speakerNote": "These categories are reported in published ADM augmentation literature. They do not represent HIGHST or MegaDerm-specific outcome data. No incidence rates are extrapolated to HIGHST.",
-    "state": "문헌에 보고된 합병증",
+    "literatureLine": "Hematoma · Foreskin edema · Delayed healing · Infection · Skin necrosis · Erectile discomfort",
+    "caption": "Other complications reported in ADM augmentation literature · PMID 31420614",
+    "note": "음경 형태 변화: 만곡·기울어짐, 길이 감소. 혈종·부종·상처 치유 지연·감염·피부 괴사·발기 시 불편감은 ADM 문헌에 보고된 항목이며, 하이스트나 MegaDerm의 발생률을 나타내지 않습니다.",
+    "speakerNote": "Penile shape and length changes. Other reported complications include hematoma, foreskin edema, delayed healing, infection, skin necrosis and erectile discomfort. These are not HIGHST- or MegaDerm-specific outcome data.",
     "sources": [
       "https://pubmed.ncbi.nlm.nih.gov/31420614/"
     ],
+    "speakerCueLine": "Reference / Curvature, tilting / Shortening / Other reported complications",
     "speakerCues": {
       "items": [
         {
-          "label": "Context",
-          "text": "Published ADM literature / not HIGHST- or MegaDerm-specific outcome data"
-        },
-        {
-          "label": "Bleeding and swelling",
-          "text": "Hematoma / foreskin edema"
-        },
-        {
-          "label": "Wound complications",
-          "text": "Delayed healing / infection / skin necrosis"
-        },
-        {
-          "label": "Contour and discomfort",
-          "text": "Graft contour irregularity / discomfort during erection"
+          "label": "Shape and length",
+          "text": "Reference / Curvature and tilting / Shortening"
         }
       ],
-      "transition": "Finally, I’ll discuss postoperative care and dressing."
-    },
-    "speakerCueLine": "Published ADM reports / Hematoma, edema / Wound / Contour, discomfort"
+      "transition": "Next, let’s look at graft-related complications."
+    }
   },
   {
     "steps": [],
-    "rows": [
+    "rows": [],
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "id": "graft-complications",
+    "ko": "진피 합병증",
+    "title": "Graft-related Complications",
+    "section": "Complications",
+    "type": "graft-complications",
+    "state": "진피 합병증",
+    "figures": [
       {
-        "head": "Postoperative care",
-        "body": ""
+        "label": "Contour step-off",
+        "assets": [
+          "complications/step-off-surface.png",
+          "complications/step-off-graft.png"
+        ]
       },
       {
-        "head": "Dressing technique",
-        "body": ""
+        "label": "Folding",
+        "asset": "complications/folding.png"
+      },
+      {
+        "label": "Retraction",
+        "asset": "complications/retraction.png"
+      },
+      {
+        "label": "Rotation",
+        "asset": "complications/rotation.png"
       }
     ],
+    "note": "진피 윤곽과 위치 변화: 턱짐, 접힘, 수축·후퇴, 회전.",
+    "speakerNote": "Graft contour and position: contour step-off, folding, retraction and rotation.",
+    "speakerCueLine": "Contour step-off / Folding / Retraction / Rotation",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Graft contour and position",
+          "text": "Contour step-off / Folding / Retraction / Rotation"
+        }
+      ],
+      "transition": "Next is postoperative care after a circumcision-line incision."
+    }
+  },
+  {
+    "steps": [],
+    "rows": [],
     "foot": "Jinmo Koo · HIGHST Urology",
-    "id": "aftercare",
-    "ko": "수술 후 관리·드레싱",
-    "title": "Postoperative Care & Dressing",
+    "id": "aftercare-circumcision",
+    "ko": "포경선 절개 후관리",
+    "title": "Circumcision-line Incision",
     "section": "Aftercare",
     "type": "aftercare",
-    "note": "수술 후 관리와 드레싱.",
-    "speakerNote": "Postoperative care and dressing technique.",
+    "note": "포경선 절개 후관리.",
+    "speakerNote": "Postoperative care and dressing: circumcision-line incision.",
     "state": "수술 후 관리",
     "speakerCues": {
       "items": [
         {
-          "label": "Postoperative care",
-          "text": "Main instructions to explain"
-        },
+          "label": "Aftercare",
+          "text": "Circumcision-line Incision / Dressing / Follow-up"
+        }
+      ],
+      "transition": "Next is postoperative care after a pubic incision."
+    },
+    "speakerCueLine": "Circumcision-line Incision / Postoperative care / Dressing / Follow-up",
+    "subtitle": "Postoperative Care & Dressing"
+  },
+  {
+    "steps": [],
+    "rows": [],
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "id": "aftercare-pubic",
+    "ko": "치골절개 후관리",
+    "title": "Pubic Incision",
+    "section": "Aftercare",
+    "type": "aftercare",
+    "note": "치골절개 후관리.",
+    "speakerNote": "Postoperative care and dressing: pubic incision.",
+    "state": "수술 후 관리",
+    "speakerCues": {
+      "items": [
         {
-          "label": "Dressing",
-          "text": "Sequence shown in the video"
-        },
-        {
-          "label": "Follow-up",
-          "text": "Points to discuss with the patient"
+          "label": "Aftercare",
+          "text": "Pubic Incision / Dressing / Follow-up"
         }
       ],
       "transition": "Thank you for your attention. I’m happy to take your questions."
     },
-    "speakerCueLine": "Care instructions / Dressing video / Follow-up / Questions"
+    "speakerCueLine": "Pubic Incision / Postoperative care / Dressing / Follow-up",
+    "subtitle": "Postoperative Care & Dressing"
   },
   {
     "steps": [],
