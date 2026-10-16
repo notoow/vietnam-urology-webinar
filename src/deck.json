@@ -339,15 +339,15 @@
     "preoperativeMeasurements": [
       [
         "Penile length",
-        "—"
+        "5 cm"
       ],
       [
         "Penile thickness",
-        "—"
+        "8 cm"
       ],
       [
         "Glans circumference",
-        "—"
+        "8 cm"
       ]
     ],
     "profileCrop": {
@@ -414,18 +414,18 @@
       ],
       [
         "Penile length",
-        "—",
-        "—"
+        "5",
+        "7"
       ],
       [
         "Penile thickness",
-        "—",
-        "—"
+        "8",
+        "9"
       ],
       [
         "Glans circumference",
-        "—",
-        "—"
+        "8",
+        "9"
       ]
     ],
     "afterAsset": "cases/case-01-after.jpg",
@@ -520,15 +520,15 @@
     "preoperativeMeasurements": [
       [
         "Penile length",
-        "—"
+        "4.5 cm"
       ],
       [
         "Penile thickness",
-        "—"
+        "8 cm"
       ],
       [
         "Glans circumference",
-        "—"
+        "8 cm"
       ]
     ],
     "profileCrop": {
@@ -594,18 +594,18 @@
       ],
       [
         "Penile length",
-        "—",
-        "—"
+        "4.5",
+        "7"
       ],
       [
         "Penile thickness",
-        "—",
-        "—"
+        "8",
+        "9"
       ],
       [
         "Glans circumference",
-        "—",
-        "—"
+        "8",
+        "9"
       ]
     ],
     "afterAsset": "cases/case-02-after.jpg",
