@@ -71,14 +71,15 @@ module.exports = function layoutDeck(deck) {
       ...header(s.title),
       text('Contour and position',72,163,1136,28,18,400,muted),
       ...s.figures.flatMap((figure,j)=>{
-        const x=72+j*292;
+        const x=j===0?72:536+(j-1)*232;
+        const width=figure.assets?440:208;
         return [
-          text(figure.label,x,211,260,33,24,600),
-          rect(x,256,260,1,gold),
+          text(figure.label,x,211,width,33,24,600),
+          rect(x,256,width,1,gold),
           ...(figure.assets
-            ? figure.assets.map((asset,k)=>image(asset,x+k*136,286,124,292,'contain',figure.label+(k?' — graft':' — surface')))
-            : [image(figure.asset,x,286,260,292,'contain',figure.label)]),
-          ...(figure.assets?[text('Surface',x,592,124,24,15,400,muted),text('Graft',x+136,592,124,24,15,400,muted)]:[])
+            ? figure.assets.map((asset,k)=>image(asset,x+k*232,286,208,292,'contain',figure.label+(k?' — graft':' — surface')))
+            : [image(figure.asset,x,286,208,292,'contain',figure.label)]),
+          ...(figure.assets?[text('Surface',x,592,208,24,15,400,muted),text('Graft',x+232,592,208,24,15,400,muted)]:[])
         ];
       }),
       ...footer(n)
