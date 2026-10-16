@@ -89,7 +89,8 @@ module.exports = function layoutDeck(deck) {
       text('Normal ↔ graft-related change',72,163,1136,28,18,400,muted),
       ...s.labels.flatMap((label,j)=>{
         const column=1136/s.labels.length,x=72+j*column;
-        return [text(label,x,209,column-12,47,19,600),rect(x,265,column-12,1,gold)];
+        const height=label.split('\n').length*19*1.2;
+        return [text(label,x,256-height,column-12,height,19,600),rect(x,265,column-12,1,gold)];
       }),
       {...image(s.asset,72,278,1136,340,'contain',s.alt),stillAsset:s.stillAsset},
       ...footer(n)
