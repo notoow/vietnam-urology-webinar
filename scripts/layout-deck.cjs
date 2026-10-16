@@ -153,8 +153,10 @@ module.exports = function layoutDeck(deck) {
       ...header(s.title),
       ...s.rows.flatMap((r,j)=>{
         const y=195+j*135;
-        return [text(r.head,72,y,1136,40,29,600),text(r.body,72,y+51,1136,42,24,400,muted),...(j< s.rows.length-1?[rect(72,y+104,1136,1,rule)]:[])];
+        const width=s.illustrationAsset?700:1136;
+        return [text(r.head,72,y,width,40,29,600),text(r.body,72,y+51,width,42,24,400,muted),...(j< s.rows.length-1?[rect(72,y+104,width,1,rule)]:[])];
       }),
+      ...(s.illustrationAsset?[image(s.illustrationAsset,824,181,384,432,'contain',s.illustrationAlt||s.title)]:[]),
       ...(s.caption?[text(s.caption,72,625,1100,28,16,400,muted)]:[]),
       ...footer(n)
     ];

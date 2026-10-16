@@ -483,8 +483,8 @@
       ],
       "imageSource": "MK2_1301.JPG"
     },
-    "note": "Case 2. 진피 이식. 수술 후 사진.",
-    "speakerNote": "Case 2: Dermal Grafting.",
+    "note": "Case 2. 진피 이식. 수술 후 사진. 절개법: 포경선 절개.",
+    "speakerNote": "Case 2: Dermal Grafting. Incision: circumcision-line.",
     "speakerCueLine": "Case 2 / 62 years / Circumcision-line incision / 5 × 8 cm",
     "speakerCues": {
       "items": [
@@ -494,7 +494,8 @@
         }
       ],
       "transition": "Let’s watch the operative video."
-    }
+    },
+    "caseLabel": "Case 2 · Circumcision-line incision"
   },
   {
     "caseNumber": "02",
@@ -515,8 +516,8 @@
         "MK2_1299.MP4"
       ]
     },
-    "note": "Case 2. 진피 배치·고정·봉합.",
-    "speakerNote": "Case 2: operative video.",
+    "note": "Case 2. 진피 배치·고정·봉합. 절개법: 포경선 절개.",
+    "speakerNote": "Case 2: operative video. Incision: circumcision-line.",
     "speakerCueLine": "Dermal graft placement / Fixation / Closure",
     "speakerCues": {
       "items": [
@@ -528,7 +529,8 @@
       "transition": "Let’s compare the preoperative and postoperative images."
     },
     "videoAsset": "videos/case-02.mp4",
-    "posterAsset": "videos/case-02-poster.png"
+    "posterAsset": "videos/case-02-poster.png",
+    "caseLabel": "Case 2 · Circumcision-line incision"
   },
   {
     "caseNumber": "02",
@@ -568,8 +570,8 @@
     "afterAsset": "cases/case-02-after.jpg",
     "measurementContext": "Measurement state: —     Postoperative interval: —",
     "state": "수술 전후 비교",
-    "note": "Case 02. 수술 전후 사진, 길이·굵기·귀두 둘레 비교.",
-    "speakerNote": "Case 2: preoperative and postoperative comparison.",
+    "note": "Case 02. 수술 전후 사진, 길이·굵기·귀두 둘레 비교. 절개법: 포경선 절개.",
+    "speakerNote": "Case 2: preoperative and postoperative comparison. Incision: circumcision-line.",
     "speakerCueLine": "Before / After / Length / Thickness / Glans circumference / Timing",
     "speakerCues": {
       "items": [
@@ -592,7 +594,8 @@
       "y": 0.4401041666666667,
       "w": 0.5,
       "h": 0.1901978417266187
-    }
+    },
+    "caseLabel": "Case 2 · Circumcision-line incision"
   },
   {
     "caseNumber": "03",
@@ -614,7 +617,7 @@
       ],
       [
         "Incision",
-        "—"
+        "Circumcision-line\nincision"
       ],
       [
         "Graft size",
@@ -631,9 +634,9 @@
       ],
       "imageSource": "cases/case-03-after.jpg"
     },
-    "note": "Case 3. 5 × 6 cm와 6 × 12 cm 진피 두 장 이식. 수술 후 사진.",
-    "speakerNote": "Case 3: Two-sheet Dermal Grafting.",
-    "speakerCueLine": "Case 3 / 31 years / Two sheets / 5 × 6 cm + 6 × 12 cm",
+    "note": "Case 3. 5 × 6 cm와 6 × 12 cm 진피 두 장 이식. 수술 후 사진. 절개법: 포경선 절개.",
+    "speakerNote": "Case 3: Two-sheet Dermal Grafting. Incision: circumcision-line.",
+    "speakerCueLine": "Case 3 / 31 years / Circumcision-line incision / Two sheets / 5 × 6 cm + 6 × 12 cm",
     "speakerCues": {
       "items": [
         {
@@ -642,7 +645,8 @@
         }
       ],
       "transition": "Let’s watch the operative video."
-    }
+    },
+    "caseLabel": "Case 3 · Circumcision-line incision"
   },
   {
     "caseNumber": "03",
@@ -663,8 +667,8 @@
         "MK2_1366.MP4"
       ]
     },
-    "note": "Case 3. 진피 두 장 이식의 수술 영상.",
-    "speakerNote": "Case 3: operative video.",
+    "note": "Case 3. 진피 두 장 이식의 수술 영상. 절개법: 포경선 절개.",
+    "speakerNote": "Case 3: operative video. Incision: circumcision-line.",
     "speakerCueLine": "Two dermal sheets / 5 × 6 cm + 6 × 12 cm",
     "speakerCues": {
       "items": [
@@ -676,7 +680,8 @@
       "transition": "Let’s compare the preoperative and postoperative images."
     },
     "videoAsset": "videos/case-03.mp4",
-    "posterAsset": "videos/case-03-poster.png"
+    "posterAsset": "videos/case-03-poster.png",
+    "caseLabel": "Case 3 · Circumcision-line incision"
   },
   {
     "caseNumber": "03",
@@ -715,8 +720,8 @@
     ],
     "measurementContext": "Measurement state: —     Postoperative interval: —",
     "state": "수술 전후 비교",
-    "note": "Case 03. 수술 전후 사진, 길이·굵기·귀두 둘레 비교.",
-    "speakerNote": "Case 3: preoperative and postoperative comparison.",
+    "note": "Case 03. 수술 전후 사진, 길이·굵기·귀두 둘레 비교. 절개법: 포경선 절개.",
+    "speakerNote": "Case 3: preoperative and postoperative comparison. Incision: circumcision-line.",
     "speakerCueLine": "Before / After / Length / Thickness / Glans circumference / Timing",
     "speakerCues": {
       "items": [
@@ -730,17 +735,18 @@
     "beforeAsset": "cases/case-03-before.jpg",
     "afterAsset": "cases/case-03-after.jpg",
     "beforeCrop": {
-      "x": 0.0,
+      "x": 0,
       "y": 0.05555555555555555,
-      "w": 1.0,
+      "w": 1,
       "h": 0.9016786570743406
     },
     "afterCrop": {
-      "x": 0.0,
+      "x": 0,
       "y": 0.05555555555555555,
-      "w": 1.0,
+      "w": 1,
       "h": 0.9016786570743406
-    }
+    },
+    "caseLabel": "Case 3 · Circumcision-line incision"
   },
   {
     "caseNumber": "04",
@@ -762,7 +768,7 @@
       ],
       [
         "Incision",
-        "—"
+        "Circumcision-line\nincision"
       ],
       [
         "Graft size",
@@ -779,9 +785,9 @@
       ],
       "imageSource": "cases/case-04-after.jpg"
     },
-    "note": "Case 4. 포경 및 진피 이식. 수술 후 사진.",
-    "speakerNote": "Case 4: Circumcision and Dermal Grafting.",
-    "speakerCueLine": "Case 4 / 23 years / Circumcision / 5 × 8 cm",
+    "note": "Case 4. 포경 및 진피 이식. 수술 후 사진. 절개법: 포경선 절개.",
+    "speakerNote": "Case 4: Circumcision and Dermal Grafting. Incision: circumcision-line.",
+    "speakerCueLine": "Case 4 / 23 years / Circumcision-line incision / 5 × 8 cm",
     "speakerCues": {
       "items": [
         {
@@ -790,7 +796,8 @@
         }
       ],
       "transition": "Let’s watch the operative video."
-    }
+    },
+    "caseLabel": "Case 4 · Circumcision-line incision"
   },
   {
     "caseNumber": "04",
@@ -811,8 +818,8 @@
         "MK2_1429.MP4"
       ]
     },
-    "note": "Case 4. 포경, 진피 배치 및 봉합.",
-    "speakerNote": "Case 4: operative video.",
+    "note": "Case 4. 포경, 진피 배치 및 봉합. 절개법: 포경선 절개.",
+    "speakerNote": "Case 4: operative video. Incision: circumcision-line.",
     "speakerCueLine": "Circumcision / Dermal graft placement / Closure",
     "speakerCues": {
       "items": [
@@ -824,7 +831,8 @@
       "transition": "Let’s compare the preoperative and postoperative images."
     },
     "videoAsset": "videos/case-04.mp4",
-    "posterAsset": "videos/case-04-poster.png"
+    "posterAsset": "videos/case-04-poster.png",
+    "caseLabel": "Case 4 · Circumcision-line incision"
   },
   {
     "caseNumber": "04",
@@ -863,8 +871,8 @@
     ],
     "measurementContext": "Measurement state: —     Postoperative interval: —",
     "state": "수술 전후 비교",
-    "note": "Case 04. 수술 전후 사진, 길이·굵기·귀두 둘레 비교.",
-    "speakerNote": "Case 4: preoperative and postoperative comparison.",
+    "note": "Case 04. 수술 전후 사진, 길이·굵기·귀두 둘레 비교. 절개법: 포경선 절개.",
+    "speakerNote": "Case 4: preoperative and postoperative comparison. Incision: circumcision-line.",
     "speakerCueLine": "Before / After / Length / Thickness / Glans circumference / Timing",
     "speakerCues": {
       "items": [
@@ -888,7 +896,8 @@
       "y": 0.3472222222222222,
       "w": 0.5208333333333334,
       "h": 0.3522182254196643
-    }
+    },
+    "caseLabel": "Case 4 · Circumcision-line incision"
   },
   {
     "steps": [],
@@ -940,7 +949,9 @@
       ],
       "transition": "Next, I’ll discuss graft-related complications."
     },
-    "speakerCueLine": "Published ADM reports / Hematoma, edema / Wound / Erectile discomfort"
+    "speakerCueLine": "Published ADM reports / Hematoma, edema / Wound / Erectile discomfort",
+    "illustrationAsset": "complications/general-penile-complications.png",
+    "illustrationAlt": "Medical illustration of postoperative swelling, wound changes, and discomfort during erection"
   },
   {
     "steps": [],
