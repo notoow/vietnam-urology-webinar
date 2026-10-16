@@ -562,7 +562,19 @@
       ],
       "transition": "Next is Case 3: Two-sheet Dermal Grafting."
     },
-    "beforeAsset": "cases/case-02-before.jpg"
+    "beforeAsset": "cases/case-02-before.jpg",
+    "beforeCrop": {
+      "x": 0.20833333333333334,
+      "y": 0.3932291666666667,
+      "w": 0.5555555555555556,
+      "h": 0.21133093525179855
+    },
+    "afterCrop": {
+      "x": 0.18055555555555555,
+      "y": 0.4244791666666667,
+      "w": 0.5555555555555556,
+      "h": 0.21133093525179855
+    }
   },
   {
     "caseNumber": "03",

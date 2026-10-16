@@ -12,8 +12,8 @@ const caseHeader = s => [
   text(s.caseLabel || 'Case '+Number(s.caseNumber),72,38,910,23,14,600,gold),
   text(s.title,72,71,950,58,42,600),logo()
 ];
-const photo = (asset,label,x,y,w,h) => asset
-  ? [image(asset,x,y,w,h,'contain',label)]
+const photo = (asset,label,x,y,w,h,crop) => asset
+  ? [{...image(asset,x,y,w,h,'contain',label),...(crop?{crop}:{})}]
   : [{...rect(x,y,w,h,'#F4F4F1'),role:'photo-placeholder',label},
      text(label,x+24,y+h/2-15,w-48,32,22,400,muted)];
 const table = (values,x,y,w,h,widths,header=false,size=21) => ({
@@ -107,15 +107,15 @@ module.exports = function layoutDeck(deck) {
     ];
     else if(s.type==='case-result') {
       const columns=s.specimen ? [
-        {label:'Before',asset:s.beforeAsset},
+        {label:'Before',asset:s.beforeAsset,crop:s.beforeCrop},
         {label:s.specimenLabel||'Excess skin and dermal graft',asset:s.specimenAsset},
-        {label:'After',asset:s.afterAsset}
-      ] : [{label:'Before',asset:s.beforeAsset},{label:'After',asset:s.afterAsset}];
+        {label:'After',asset:s.afterAsset,crop:s.afterCrop}
+      ] : [{label:'Before',asset:s.beforeAsset,crop:s.beforeCrop},{label:'After',asset:s.afterAsset,crop:s.afterCrop}];
       const gap=24,w=(1136-gap*(columns.length-1))/columns.length;
       items=[...caseHeader(s),
         ...columns.flatMap((c,j)=>[
           text(c.label,72+j*(w+gap),169,w,32,columns.length===3?21:23,600,gold),
-          ...photo(c.asset,c.label==='Before'?'Preoperative photograph':c.label==='After'?'Postoperative photograph':c.label,72+j*(w+gap),211,w,282)
+          ...photo(c.asset,c.label==='Before'?'Preoperative photograph':c.label==='After'?'Postoperative photograph':c.label,72+j*(w+gap),211,w,282,c.crop)
         ]),
         table(s.measurements,72,511,1136,128,[536,300,300],true,19),
         text(s.measurementContext||'Length measurement state: —     Postoperative interval: —',72,644,1136,20,13,400,muted),

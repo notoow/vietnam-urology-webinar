@@ -14,6 +14,10 @@ const box=o=>'left:'+o.x/12.8+'%;top:'+o.y/12.8+'cqw;width:'+o.w/12.8+'%;height:
 module.exports=function renderDeck(deck){
  return layoutDeck(deck).slides.map((s,i)=>'<article class="slide conference-slide '+(i===0?'current':'')+'" data-slide-id="'+esc(s.id)+'" data-title="'+esc(s.ko)+'" data-state="'+esc(s.state)+'">'+s.items.map(o=>{
   if(o.kind==='image'){
+   if(o.crop){
+    const c=o.crop;
+    return '<div class="conference-item" style="'+box(o)+'overflow:hidden"><img src="'+asset(o.asset)+'" alt="'+esc(o.alt)+'" style="position:absolute;max-width:none;left:'+(-100*c.x/c.w)+'%;top:'+(-100*c.y/c.h)+'%;width:'+(100/c.w)+'%;height:'+(100/c.h)+'%"></div>';
+   }
    if(o.stillAsset)return '<picture class="conference-item" style="'+box(o)+'"><source media="(prefers-reduced-motion: reduce)" srcset="'+asset(o.stillAsset)+'"><img src="'+asset(o.asset)+'" alt="'+esc(o.alt)+'" style="width:100%;height:100%;object-fit:'+o.fit+'"></picture>';
    return '<img class="conference-item" src="'+asset(o.asset)+'" alt="'+esc(o.alt)+'" style="'+box(o)+'object-fit:'+o.fit+'">';
   }
