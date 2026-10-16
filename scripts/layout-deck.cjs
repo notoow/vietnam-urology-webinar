@@ -108,14 +108,14 @@ module.exports = function layoutDeck(deck) {
     else if(s.type==='case-result') {
       const columns=s.specimen ? [
         {label:'Before',asset:s.beforeAsset},
-        {label:'Excess skin and dermal graft',asset:s.specimenAsset},
+        {label:s.specimenLabel||'Excess skin and dermal graft',asset:s.specimenAsset},
         {label:'After',asset:s.afterAsset}
       ] : [{label:'Before',asset:s.beforeAsset},{label:'After',asset:s.afterAsset}];
       const gap=24,w=(1136-gap*(columns.length-1))/columns.length;
       items=[...caseHeader(s),
         ...columns.flatMap((c,j)=>[
           text(c.label,72+j*(w+gap),169,w,32,columns.length===3?21:23,600,gold),
-          ...photo(c.asset,c.label==='Before'?'Preoperative photograph':c.label==='After'?'Postoperative photograph':'Removed tissue photograph',72+j*(w+gap),211,w,282)
+          ...photo(c.asset,c.label==='Before'?'Preoperative photograph':c.label==='After'?'Postoperative photograph':c.label,72+j*(w+gap),211,w,282)
         ]),
         table(s.measurements,72,511,1136,128,[536,300,300],true,19),
         text(s.measurementContext||'Length measurement state: —     Postoperative interval: —',72,644,1136,20,13,400,muted),
@@ -136,6 +136,10 @@ module.exports = function layoutDeck(deck) {
       items=templateItems('case',n);
       items[0].text=s.caseLabel||(s.caseNumber?'Case '+Number(s.caseNumber):s.subtitle||'Dressing technique');
       items[1].text=s.title;
+      if(s.videoAsset){
+        const frame=items.findIndex(o=>o.role==='video-placeholder');
+        items[frame]={...items[frame],kind:'video',asset:s.videoAsset,poster:s.posterAsset,label:(s.caseNumber?'Case '+Number(s.caseNumber)+': ':'')+s.title};
+      }
     }
     else if(s.type==='closing') items=[
       image('highst-logo.png',72,64,192,54),

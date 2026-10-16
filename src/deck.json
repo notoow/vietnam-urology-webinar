@@ -280,7 +280,9 @@
       ],
       "transition": "The first case involves T-ring removal and dermal grafting."
     },
-    "speakerCueLine": "Common preparation / Draping / Case 1"
+    "speakerCueLine": "Common preparation / Draping / Case 1",
+    "videoAsset": "videos/draping.mp4",
+    "posterAsset": "videos/draping-poster.jpg"
   },
   {
     "caseNumber": "01",
@@ -366,7 +368,9 @@
       ],
       "transition": "Let’s compare the preoperative and postoperative images."
     },
-    "caseLabel": "Case 1 · Pubic incision"
+    "caseLabel": "Case 1 · Pubic incision",
+    "videoAsset": "videos/case-01.mp4",
+    "posterAsset": "videos/case-01-poster.jpg"
   },
   {
     "caseNumber": "01",
@@ -403,7 +407,7 @@
         "—"
       ]
     ],
-    "afterAsset": "cases/case-01-postoperative.jpg",
+    "afterAsset": "cases/case-01-after.jpg",
     "measurementContext": "Measurement state: —     Postoperative interval: —",
     "state": "수술 전후 비교",
     "note": "Case 1. 치골절개를 통한 T링 제거 및 진피 이식의 수술 전후 비교.",
@@ -418,7 +422,11 @@
       ],
       "transition": "Next is Case 2: Dermal Grafting."
     },
-    "caseLabel": "Case 1 · Pubic incision"
+    "caseLabel": "Case 1 · Pubic incision",
+    "beforeAsset": "cases/case-01-before.jpg",
+    "specimen": true,
+    "specimenAsset": "cases/case-01-removed-t-ring.jpg",
+    "specimenLabel": "Removed T-ring"
   },
   {
     "caseNumber": "02",
@@ -500,7 +508,9 @@
         }
       ],
       "transition": "Let’s compare the preoperative and postoperative images."
-    }
+    },
+    "videoAsset": "videos/case-02.mp4",
+    "posterAsset": "videos/case-02-poster.jpg"
   },
   {
     "caseNumber": "02",
@@ -537,7 +547,7 @@
         "—"
       ]
     ],
-    "afterAsset": "cases/case-02-postoperative.jpg",
+    "afterAsset": "cases/case-02-after.jpg",
     "measurementContext": "Measurement state: —     Postoperative interval: —",
     "state": "수술 전후 비교",
     "note": "Case 02. 수술 전후 사진, 길이·굵기·귀두 둘레 비교.",
@@ -551,7 +561,8 @@
         }
       ],
       "transition": "Next is Case 3: Two-sheet Dermal Grafting."
-    }
+    },
+    "beforeAsset": "cases/case-02-before.jpg"
   },
   {
     "caseNumber": "03",
@@ -577,12 +588,12 @@
       ],
       [
         "Graft size",
-        "6 × 12 cm + —\n(2 sheets)"
+        "5 × 6 cm + 6 × 12 cm\n(2 sheets)"
       ]
     ],
     "profileAsset": "cases/case-03-operative.jpg",
     "profileImageLabel": "Operative image",
-    "focus": "Two dermal sheets / Placement and fixation",
+    "focus": "Two dermal sheets / 5 × 6 cm + 6 × 12 cm",
     "state": "증례 요약",
     "provenance": {
       "files": [
@@ -591,9 +602,9 @@
       "imageSource": "MK2_1366.MP4",
       "imageTimestampSeconds": 1877.5957199999998
     },
-    "note": "Case 3. 진피 두 장 이식. 수술 중 사진.",
+    "note": "Case 3. 5 × 6 cm와 6 × 12 cm 진피 두 장 이식.",
     "speakerNote": "Case 3: Two-sheet Dermal Grafting.",
-    "speakerCueLine": "Case 3 / 31 years / Two dermal sheets / 6 × 12 cm",
+    "speakerCueLine": "Case 3 / 31 years / Two sheets / 5 × 6 cm + 6 × 12 cm",
     "speakerCues": {
       "items": [
         {
@@ -623,18 +634,20 @@
         "MK2_1366.MP4"
       ]
     },
-    "note": "Case 3. 진피 두 장의 배치와 고정.",
+    "note": "Case 3. 진피 두 장 이식의 수술 영상.",
     "speakerNote": "Case 3: operative video.",
-    "speakerCueLine": "Two dermal sheets / Placement and fixation",
+    "speakerCueLine": "Two dermal sheets / 5 × 6 cm + 6 × 12 cm",
     "speakerCues": {
       "items": [
         {
           "label": "Operative focus",
-          "text": "Two dermal sheets / Placement and fixation"
+          "text": "Two dermal sheets / 5 × 6 cm + 6 × 12 cm"
         }
       ],
       "transition": "Let’s compare the preoperative and postoperative images."
-    }
+    },
+    "videoAsset": "videos/case-03.mp4",
+    "posterAsset": "videos/case-03-poster.jpg"
   },
   {
     "caseNumber": "03",
@@ -684,7 +697,9 @@
         }
       ],
       "transition": "Next is Case 4: Circumcision and Dermal Grafting."
-    }
+    },
+    "beforeAsset": "cases/case-03-before.jpg",
+    "afterAsset": "cases/case-03-after.jpg"
   },
   {
     "caseNumber": "04",
@@ -767,7 +782,9 @@
         }
       ],
       "transition": "Let’s compare the preoperative and postoperative images."
-    }
+    },
+    "videoAsset": "videos/case-04.mp4",
+    "posterAsset": "videos/case-04-poster.jpg"
   },
   {
     "caseNumber": "04",
@@ -791,17 +808,17 @@
       [
         "Penile length",
         "8",
-        "—"
+        "8"
       ],
       [
         "Penile thickness",
         "7.5",
-        "—"
+        "11"
       ],
       [
         "Glans circumference",
         "8",
-        "—"
+        "9"
       ]
     ],
     "measurementContext": "Measurement state: —     Postoperative interval: —",
@@ -817,7 +834,9 @@
         }
       ],
       "transition": "Next, I’ll discuss penile complications."
-    }
+    },
+    "beforeAsset": "cases/case-04-before.jpg",
+    "afterAsset": "cases/case-04-after.jpg"
   },
   {
     "steps": [],

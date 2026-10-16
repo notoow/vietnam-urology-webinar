@@ -19,7 +19,7 @@ if(/__(?:REUSED_DATA|DECK_\w+|PERI_\w+|LOGO|DERMIS[12]|DERMIS6X12|MEGAFILL|PACKA
 const crypto=require('node:crypto');
 html=html.replace(/\r\n?/g,'\n');
 const hashes=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>"'sha256-"+crypto.createHash('sha256').update(m[1]).digest('base64')+"'");
-const csp="default-src 'none'; script-src "+hashes.join(' ')+"; style-src 'unsafe-inline'; img-src 'self' data: https://notoow.github.io/vietnam-urology-webinar/assets/; font-src data:; connect-src https://wqymwtvktdhofzegjawn.supabase.co wss://wqymwtvktdhofzegjawn.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'";
+const csp="default-src 'none'; script-src "+hashes.join(' ')+"; style-src 'unsafe-inline'; img-src 'self' data: https://notoow.github.io/vietnam-urology-webinar/assets/; media-src 'self'; font-src data:; connect-src https://wqymwtvktdhofzegjawn.supabase.co wss://wqymwtvktdhofzegjawn.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'";
 html=html.replace('<meta charset="utf-8">','<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="'+csp+'"><meta name="referrer" content="no-referrer">');
 fs.writeFileSync(path.join(root,'highst-review.html'),html);
 fs.writeFileSync(path.join(root,'index.html'),html);

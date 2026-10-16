@@ -3,7 +3,7 @@ const layoutDeck=require('./layout-deck.cjs');
 const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const embedded=new Map();
 function asset(name){
- if(name.endsWith('.gif')){
+ if(/\.(gif|mp4)$/.test(name)){
   const hash=require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(__dirname,'../assets',name))).digest('hex').slice(0,12);
   return 'assets/'+name+'?v='+hash;
  }
@@ -17,6 +17,7 @@ module.exports=function renderDeck(deck){
    if(o.stillAsset)return '<picture class="conference-item" style="'+box(o)+'"><source media="(prefers-reduced-motion: reduce)" srcset="'+asset(o.stillAsset)+'"><img src="'+asset(o.asset)+'" alt="'+esc(o.alt)+'" style="width:100%;height:100%;object-fit:'+o.fit+'"></picture>';
    return '<img class="conference-item" src="'+asset(o.asset)+'" alt="'+esc(o.alt)+'" style="'+box(o)+'object-fit:'+o.fit+'">';
   }
+  if(o.kind==='video')return '<div class="conference-item deck-blank-media" style="'+box(o)+'background:#000"><video controls playsinline preload="none" aria-label="'+esc(o.label)+'"'+(o.poster?' poster="'+asset(o.poster)+'"':'')+'><source src="'+asset(o.asset)+'" type="video/mp4"><a href="'+asset(o.asset)+'">Open video</a></video></div>';
   if(o.kind==='rect')return '<div class="conference-item'+(o.role==='video-placeholder'?' deck-blank-media':'')+'"'+(o.role?' aria-label="'+esc(o.label||'Surgical video')+'"':'')+' style="'+box(o)+'background:'+o.color+'"></div>';
   if(o.kind==='table')return '<table class="conference-item conference-table" style="'+box(o)+'font-size:'+o.size/12.8+'cqw"><colgroup>'+o.widths.map(w=>'<col style="width:'+w/o.w*100+'%">').join('')+'</colgroup><tbody>'+o.values.map((row,r)=>'<tr'+(o.header&&r===0?' class="table-heading"':'')+'>'+row.map((v,c)=>'<'+(o.header&&r===0?'th':'td')+' style="height:'+o.h/o.values.length/12.8+'cqw"'+(!o.header&&c===0?' class="profile-label"':'')+'>'+esc(v)+'</'+(o.header&&r===0?'th':'td')+'>').join('')+'</tr>').join('')+'</tbody></table>';
   const tag=o.size>=42?'h2':'p';
