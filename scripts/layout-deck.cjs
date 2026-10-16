@@ -55,7 +55,7 @@ module.exports = function layoutDeck(deck) {
     ];
     else if(s.type==='graft-shape-complications') items=[
       ...header(s.title),
-      text('Shape and length',72,163,1136,28,18,400,muted),
+      text(s.subtitle,72,163,1136,28,18,400,muted),
       ...s.figures.flatMap((figure,j)=>{
         const x=72+j*392;
         return [
@@ -64,6 +64,7 @@ module.exports = function layoutDeck(deck) {
           image(figure.asset,x+24,278,304,342,'contain',figure.label)
         ];
       }),
+      text(s.recoveryCaption,72,631,1136,26,19,400,gold),
       ...footer(n)
     ];
     else if(s.type==='graft-complications') items=[
@@ -90,6 +91,8 @@ module.exports = function layoutDeck(deck) {
         return [text(label,x,209,177,47,19,600),rect(x,265,177,1,gold)];
       }),
       {...image(s.asset,72,278,1136,340,'contain',s.alt),stillAsset:s.stillAsset},
+      text(s.recoveryCaption,72,625,1136,23,16,400,gold),
+      text(s.clinicalContext,72,650,1136,16,12,400,muted),
       ...footer(n)
     ];
     else if(s.type==='case-profile') items=[

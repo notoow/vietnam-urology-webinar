@@ -397,12 +397,12 @@
     {
       "id": "case",
       "label": "증례 영상",
-      "note": "Case 1. T링 제거 후 진피 이식.",
-      "speakerNote": "Case 1: T-ring Removal and Dermal Grafting.",
+      "note": "Case 1. 치골절개를 통한 T링 제거 후 진피 이식.",
+      "speakerNote": "Case 1: T-ring removal and dermal grafting through a pubic incision.",
       "items": [
         {
           "kind": "text",
-          "text": "Case 1",
+          "text": "Case 1 · Pubic incision",
           "x": 72,
           "y": 38,
           "w": 700,

@@ -14,7 +14,7 @@
 
 발표는 총 24장입니다. 표지, 원장님 소개, MegaDerm·MegaFill, 수술 전 평가, 공통 드랩, 실제 네 증례(각 3장), 음경 전체 합병증, 진피 관련 형태·길이 변화, 진피 윤곽·위치 변화, 진피 변화 GIF 종합 비교, 포경선·치골절개 후관리(각 1장), Q&A 순서입니다. 드랩은 증례 시작 직전에 한 번만 보여줍니다.
 
-- Case 1: T-ring Removal and Dermal Grafting (2026-10-12)
+- Case 1: T-ring Removal and Dermal Grafting — Pubic incision (2026-10-12)
 - Case 2: Dermal Grafting (2026-10-12)
 - Case 3: Two-sheet Dermal Grafting (2026-10-14)
 - Case 4: Circumcision and Dermal Grafting (2026-10-14)
@@ -94,3 +94,5 @@ API 권한 분리는 [Supabase 공식 가이드](https://supabase.com/docs/guide
 로고와 사진의 권리는 원 권리자에게 있습니다. Pretendard 및 Supabase 클라이언트 라이선스는 assets/에 포함했습니다.
 
 합병증 18–21장은 전체 합병증 1장과 진피 관련 내용 3장으로 구분합니다. 진피 도식은 원본의 공통 좌표·크기를 유지하고, 수축 도식은 단일 형상의 RETRACTION main을 사용합니다. GIF는 여섯 유형을 정상 모습과 같은 위치에 겹쳐 교차 전환하며, 동작 줄이기 설정에서는 정지 이미지로 표시합니다.
+
+만곡·기울어짐과 길이 감소의 초기 회복 경과는 사용자가 제공한 하이스트 임상 경험으로 명시하며, 일반적인 회복률이나 회복 기간으로 확장하지 않습니다. 19장과 21장 및 발표 메모에 수술 직후 발생 가능성과 진피가 부드러워지면서 대개 회복된다는 설명을 함께 표시합니다.

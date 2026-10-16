@@ -311,7 +311,7 @@
     ],
     "profileAsset": "cases/case-01-postoperative.jpg",
     "profileImageLabel": "Postoperative photograph",
-    "focus": "T-ring removal / Dermal graft insertion",
+    "focus": "Pubic incision / T-ring removal / Dermal graft insertion",
     "state": "증례 요약",
     "provenance": {
       "files": [
@@ -320,8 +320,8 @@
       ],
       "imageSource": "MK2_1278.JPG"
     },
-    "note": "Case 1. T링 제거 후 진피 이식. 수술 후 사진.",
-    "speakerNote": "Case 1: T-ring Removal and Dermal Grafting.",
+    "note": "Case 1. 치골절개를 통한 T링 제거 후 진피 이식. 수술 후 사진.",
+    "speakerNote": "Case 1: T-ring removal and dermal grafting through a pubic incision.",
     "speakerCueLine": "Case 1 / 54 years / Pubic incision / 5 × 6 cm / T-ring removal",
     "speakerCues": {
       "items": [
@@ -330,8 +330,9 @@
           "text": "Age / Incision / Graft size"
         }
       ],
-      "transition": "Let’s watch the operative video."
-    }
+      "transition": "Let’s watch T-ring removal and graft placement through a pubic incision."
+    },
+    "caseLabel": "Case 1 · Pubic incision"
   },
   {
     "caseNumber": "01",
@@ -353,18 +354,19 @@
         "MK2_1297.MP4"
       ]
     },
-    "note": "Case 1. T링 제거 및 진피 삽입.",
-    "speakerNote": "Case 1: operative video.",
-    "speakerCueLine": "T-ring removal / Dermal graft insertion",
+    "note": "Case 1. 치골절개를 통한 T링 제거 및 진피 삽입.",
+    "speakerNote": "Case 1: T-ring removal and dermal grafting through a pubic incision.",
+    "speakerCueLine": "Pubic incision / T-ring removal / Dermal graft insertion",
     "speakerCues": {
       "items": [
         {
           "label": "Operative focus",
-          "text": "T-ring removal / Dermal graft insertion"
+          "text": "Pubic incision / T-ring removal / Dermal graft insertion"
         }
       ],
       "transition": "Let’s compare the preoperative and postoperative images."
-    }
+    },
+    "caseLabel": "Case 1 · Pubic incision"
   },
   {
     "caseNumber": "01",
@@ -404,9 +406,9 @@
     "afterAsset": "cases/case-01-postoperative.jpg",
     "measurementContext": "Measurement state: —     Postoperative interval: —",
     "state": "수술 전후 비교",
-    "note": "Case 01. 수술 전후 사진, 길이·굵기·귀두 둘레 비교.",
-    "speakerNote": "Case 1: preoperative and postoperative comparison.",
-    "speakerCueLine": "Before / After / Length / Thickness / Glans circumference / Timing",
+    "note": "Case 1. 치골절개를 통한 T링 제거 및 진피 이식의 수술 전후 비교.",
+    "speakerNote": "Case 1: T-ring removal and dermal grafting through a pubic incision.",
+    "speakerCueLine": "Pubic incision / Before / After / Length / Thickness / Glans circumference",
     "speakerCues": {
       "items": [
         {
@@ -415,7 +417,8 @@
         }
       ],
       "transition": "Next is Case 2: Dermal Grafting."
-    }
+    },
+    "caseLabel": "Case 1 · Pubic incision"
   },
   {
     "caseNumber": "02",
@@ -873,11 +876,11 @@
     "rows": [],
     "foot": "Jinmo Koo · HIGHST Urology",
     "id": "graft-shape-complications",
-    "ko": "진피 합병증 · 형태·길이",
-    "title": "Graft-related Complications",
+    "ko": "진피 관련 초기 변화 · 형태·길이",
+    "title": "Early Postoperative Changes",
     "section": "Complications",
     "type": "graft-shape-complications",
-    "state": "진피 합병증 · 형태·길이",
+    "state": "진피 관련 초기 변화",
     "figures": [
       {
         "label": "Normal",
@@ -892,18 +895,24 @@
         "asset": "complications/shortening.png"
       }
     ],
-    "note": "진피 관련 형태·길이 변화: 정상 모습과 만곡·기울어짐, 길이 감소의 비교.",
-    "speakerNote": "Graft-related changes in shape and length: normal appearance, curvature or tilting, and shortening.",
-    "speakerCueLine": "Normal / Graft-related changes / Curvature, tilting / Shortening",
+    "note": "하이스트 임상 경험: 만곡·기울어짐과 길이 감소는 수술 직후 나타날 수 있으며, 진피가 부드러워지면서 대개 회복되는 초기 변화입니다.",
+    "speakerNote": "In our clinical experience at HIGHST, curvature or tilting and shortening may occur immediately after surgery. These early changes usually resolve as the graft softens.",
+    "speakerCueLine": "Early postoperative / Curvature, shortening / Usually resolve as graft softens / HIGHST experience",
     "speakerCues": {
       "items": [
         {
-          "label": "Shape and length",
-          "text": "Normal / Curvature and tilting / Shortening"
+          "label": "Timing",
+          "text": "May occur immediately after surgery"
+        },
+        {
+          "label": "Clinical course at HIGHST",
+          "text": "Usually resolve as the graft softens"
         }
       ],
-      "transition": "Next are changes in graft contour and position."
-    }
+      "transition": "Next are complications affecting graft contour and position."
+    },
+    "subtitle": "Graft-related changes · Clinical experience at HIGHST Urology",
+    "recoveryCaption": "May occur immediately after surgery and usually resolve as the graft softens."
   },
   {
     "steps": [],
@@ -970,18 +979,24 @@
     "asset": "complications/normal-to-graft-changes.gif",
     "stillAsset": "complications/normal-to-graft-changes-still.png",
     "alt": "Normal and graft-related changes: curvature or tilting, shortening, contour step-off, folding, retraction and rotation.",
-    "note": "정상 모습과 진피 관련 변화 여섯 유형의 비교.",
-    "speakerNote": "Comparison of normal appearance with curvature or tilting, shortening, contour step-off, folding, retraction and rotation.",
-    "speakerCueLine": "Normal / Curvature / Shortening / Step-off / Folding / Retraction / Rotation",
+    "note": "정상 모습과 진피 관련 변화 여섯 유형의 비교. 만곡·기울어짐과 길이 감소는 수술 직후 나타날 수 있으며, 하이스트 임상 경험상 진피가 부드러워지면서 대개 회복됩니다.",
+    "speakerNote": "Compare the normal appearance with six graft-related changes. The first two, curvature or tilting and shortening, may occur immediately after surgery and usually resolve as the graft softens in our clinical experience at HIGHST.",
+    "speakerCueLine": "First two: early changes, usually resolve / Step-off / Folding / Retraction / Rotation",
     "speakerCues": {
       "items": [
+        {
+          "label": "Early postoperative changes",
+          "text": "Curvature / tilting and shortening: usually resolve as the graft softens (HIGHST clinical experience)"
+        },
         {
           "label": "Graft-related changes",
           "text": "Curvature / Shortening / Step-off / Folding / Retraction / Rotation"
         }
       ],
       "transition": "Next is postoperative care after a circumcision-line incision."
-    }
+    },
+    "recoveryCaption": "Early postoperative curvature / tilting and shortening usually resolve as the graft softens.",
+    "clinicalContext": "Clinical experience at HIGHST Urology"
   },
   {
     "steps": [],
