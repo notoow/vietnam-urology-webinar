@@ -108,7 +108,7 @@ module.exports = function layoutDeck(deck) {
     else if(s.type==='case-result') {
       const columns=s.specimen ? [
         {label:'Before',asset:s.beforeAsset,crop:s.beforeCrop},
-        {label:s.specimenLabel||'Excess skin and dermal graft',asset:s.specimenAsset},
+        {label:s.specimenLabel||'Excess skin and dermal graft',asset:s.specimenAsset,crop:s.specimenCrop},
         {label:'After',asset:s.afterAsset,crop:s.afterCrop}
       ] : [{label:'Before',asset:s.beforeAsset,crop:s.beforeCrop},{label:'After',asset:s.afterAsset,crop:s.afterCrop}];
       const gap=24,w=(1136-gap*(columns.length-1))/columns.length;

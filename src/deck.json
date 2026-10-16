@@ -426,7 +426,25 @@
     "beforeAsset": "cases/case-01-before.jpg",
     "specimen": true,
     "specimenAsset": "cases/case-01-removed-t-ring.jpg",
-    "specimenLabel": "Removed T-ring"
+    "specimenLabel": "Removed T-ring",
+    "beforeCrop": {
+      "x": 0.3697916666666667,
+      "y": 0.3090277777777778,
+      "w": 0.40625,
+      "h": 0.4211856617647059
+    },
+    "afterCrop": {
+      "x": 0.4166666666666667,
+      "y": 0.2708333333333333,
+      "w": 0.40625,
+      "h": 0.4211856617647059
+    },
+    "specimenCrop": {
+      "x": 0.2638888888888889,
+      "y": 0.4583333333333333,
+      "w": 0.4583333333333333,
+      "h": 0.2672909007352941
+    }
   },
   {
     "caseNumber": "02",
@@ -564,16 +582,16 @@
     },
     "beforeAsset": "cases/case-02-before.jpg",
     "beforeCrop": {
-      "x": 0.20833333333333334,
-      "y": 0.3932291666666667,
-      "w": 0.5555555555555556,
-      "h": 0.21133093525179855
+      "x": 0.25,
+      "y": 0.4088541666666667,
+      "w": 0.5,
+      "h": 0.1901978417266187
     },
     "afterCrop": {
-      "x": 0.18055555555555555,
-      "y": 0.4244791666666667,
-      "w": 0.5555555555555556,
-      "h": 0.21133093525179855
+      "x": 0.20833333333333334,
+      "y": 0.4401041666666667,
+      "w": 0.5,
+      "h": 0.1901978417266187
     }
   },
   {
@@ -710,7 +728,19 @@
       "transition": "Next is Case 4: Circumcision and Dermal Grafting."
     },
     "beforeAsset": "cases/case-03-before.jpg",
-    "afterAsset": "cases/case-03-after.jpg"
+    "afterAsset": "cases/case-03-after.jpg",
+    "beforeCrop": {
+      "x": 0.0,
+      "y": 0.05555555555555555,
+      "w": 1.0,
+      "h": 0.9016786570743406
+    },
+    "afterCrop": {
+      "x": 0.0,
+      "y": 0.05555555555555555,
+      "w": 1.0,
+      "h": 0.9016786570743406
+    }
   },
   {
     "caseNumber": "04",
@@ -846,7 +876,19 @@
       "transition": "Next, I’ll discuss penile complications."
     },
     "beforeAsset": "cases/case-04-before.jpg",
-    "afterAsset": "cases/case-04-after.jpg"
+    "afterAsset": "cases/case-04-after.jpg",
+    "beforeCrop": {
+      "x": 0.328125,
+      "y": 0.3125,
+      "w": 0.5208333333333334,
+      "h": 0.3522182254196643
+    },
+    "afterCrop": {
+      "x": 0.328125,
+      "y": 0.3472222222222222,
+      "w": 0.5208333333333334,
+      "h": 0.3522182254196643
+    }
   },
   {
     "steps": [],
