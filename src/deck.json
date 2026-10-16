@@ -1138,9 +1138,9 @@
       "Retraction",
       "Rotation"
     ],
-    "asset": "complications/normal-to-graft-changes.gif",
-    "stillAsset": "complications/normal-to-graft-changes-still.png",
-    "alt": "Normal appearance compared with surface step-off, graft step-off, folding, retraction and rotation.",
+    "asset": "complications/normal-to-graft-changes-cycle.gif",
+    "stillAsset": "complications/normal-to-graft-changes-cycle-still.png",
+    "alt": "Normal appearance compared with surface step-off, graft step-off, folding, retraction and rotation. The cycle indicator makes one clockwise revolution every 5.3 seconds.",
     "note": "정상 모습과 표면 턱짐, 진피 턱짐, 접힘, 수축·후퇴, 회전의 비교.",
     "speakerNote": "Compare normal appearance with surface step-off, graft step-off, folding, retraction and rotation.",
     "speakerCueLine": "Surface step-off / Graft step-off / Folding / Retraction / Rotation",
