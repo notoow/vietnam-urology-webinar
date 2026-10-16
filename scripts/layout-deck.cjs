@@ -53,19 +53,17 @@ module.exports = function layoutDeck(deck) {
       text('3–5 mm thick     5 × 6, 5 × 8, 5 × 10, 6 × 12 cm',72,610,680,33,22,400,muted),
       ...footer(n)
     ];
-    else if(s.type==='penile-complications') items=[
+    else if(s.type==='graft-shape-complications') items=[
       ...header(s.title),
+      text('Shape and length',72,163,1136,28,18,400,muted),
       ...s.figures.flatMap((figure,j)=>{
         const x=72+j*392;
         return [
-          text(figure.label,x,183,352,34,25,600,j===0?muted:ink),
-          rect(x,228,352,1,j===0?rule:gold),
-          image(figure.asset,x+24,248,304,306,'contain',figure.label)
+          text(figure.label,x,211,352,34,25,600,j===0?muted:ink),
+          rect(x,256,352,1,j===0?rule:gold),
+          image(figure.asset,x+24,278,304,342,'contain',figure.label)
         ];
       }),
-      rect(72,583,1136,1,rule),
-      text(s.literatureLine,72,598,1136,26,18,400,muted),
-      text(s.caption,72,632,1136,20,13,400,muted),
       ...footer(n)
     ];
     else if(s.type==='graft-complications') items=[
@@ -82,6 +80,16 @@ module.exports = function layoutDeck(deck) {
           ...(figure.assets?[text('Surface',x,592,124,24,15,400,muted),text('Graft',x+136,592,124,24,15,400,muted)]:[])
         ];
       }),
+      ...footer(n)
+    ];
+    else if(s.type==='graft-animation') items=[
+      ...header(s.title),
+      text('Normal ↔ graft-related change',72,163,1136,28,18,400,muted),
+      ...s.labels.flatMap((label,j)=>{
+        const x=72+j*(1136/6);
+        return [text(label,x,209,177,47,19,600),rect(x,265,177,1,gold)];
+      }),
+      {...image(s.asset,72,278,1136,340,'contain',s.alt),stillAsset:s.stillAsset},
       ...footer(n)
     ];
     else if(s.type==='case-profile') items=[

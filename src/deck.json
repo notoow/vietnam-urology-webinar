@@ -818,17 +818,69 @@
   },
   {
     "steps": [],
-    "rows": [],
+    "rows": [
+      {
+        "head": "Bleeding and swelling",
+        "body": "Hematoma, foreskin edema"
+      },
+      {
+        "head": "Wound complications",
+        "body": "Delayed healing, infection, skin necrosis"
+      },
+      {
+        "head": "Functional symptoms",
+        "body": "Discomfort during erection"
+      }
+    ],
     "foot": "Jinmo Koo · HIGHST Urology",
     "id": "penile-complications",
-    "ko": "음경 합병증",
-    "title": "Penile Complications",
+    "ko": "음경 전체 합병증",
+    "title": "General Penile Complications",
     "section": "Complications",
-    "type": "penile-complications",
-    "state": "음경 합병증",
+    "type": "rows",
+    "caption": "Reported in ADM augmentation literature · PMID 31420614",
+    "note": "문헌에 보고된 ADM 확대술의 합병증 범주입니다. 하이스트 또는 MegaDerm의 발생률·치료 성적을 나타내지 않습니다.",
+    "speakerNote": "These categories are reported in published ADM augmentation literature. They do not represent HIGHST or MegaDerm-specific outcome data. No incidence rates are extrapolated to HIGHST.",
+    "state": "음경 전체 합병증",
+    "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/31420614/"
+    ],
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Context",
+          "text": "Published ADM literature / not HIGHST- or MegaDerm-specific outcome data"
+        },
+        {
+          "label": "Bleeding and swelling",
+          "text": "Hematoma / foreskin edema"
+        },
+        {
+          "label": "Wound complications",
+          "text": "Delayed healing / infection / skin necrosis"
+        },
+        {
+          "label": "Functional symptoms",
+          "text": "Discomfort during erection"
+        }
+      ],
+      "transition": "Next, I’ll discuss graft-related complications."
+    },
+    "speakerCueLine": "Published ADM reports / Hematoma, edema / Wound / Erectile discomfort"
+  },
+  {
+    "steps": [],
+    "rows": [],
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "id": "graft-shape-complications",
+    "ko": "진피 합병증 · 형태·길이",
+    "title": "Graft-related Complications",
+    "section": "Complications",
+    "type": "graft-shape-complications",
+    "state": "진피 합병증 · 형태·길이",
     "figures": [
       {
-        "label": "Reference",
+        "label": "Normal",
         "asset": "complications/reference.png"
       },
       {
@@ -840,22 +892,17 @@
         "asset": "complications/shortening.png"
       }
     ],
-    "literatureLine": "Hematoma · Foreskin edema · Delayed healing · Infection · Skin necrosis · Erectile discomfort",
-    "caption": "Other complications reported in ADM augmentation literature · PMID 31420614",
-    "note": "음경 형태 변화: 만곡·기울어짐, 길이 감소. 혈종·부종·상처 치유 지연·감염·피부 괴사·발기 시 불편감은 ADM 문헌에 보고된 항목이며, 하이스트나 MegaDerm의 발생률을 나타내지 않습니다.",
-    "speakerNote": "Penile shape and length changes. Other reported complications include hematoma, foreskin edema, delayed healing, infection, skin necrosis and erectile discomfort. These are not HIGHST- or MegaDerm-specific outcome data.",
-    "sources": [
-      "https://pubmed.ncbi.nlm.nih.gov/31420614/"
-    ],
-    "speakerCueLine": "Reference / Curvature, tilting / Shortening / Other reported complications",
+    "note": "진피 관련 형태·길이 변화: 정상 모습과 만곡·기울어짐, 길이 감소의 비교.",
+    "speakerNote": "Graft-related changes in shape and length: normal appearance, curvature or tilting, and shortening.",
+    "speakerCueLine": "Normal / Graft-related changes / Curvature, tilting / Shortening",
     "speakerCues": {
       "items": [
         {
           "label": "Shape and length",
-          "text": "Reference / Curvature and tilting / Shortening"
+          "text": "Normal / Curvature and tilting / Shortening"
         }
       ],
-      "transition": "Next, let’s look at graft-related complications."
+      "transition": "Next are changes in graft contour and position."
     }
   },
   {
@@ -863,11 +910,11 @@
     "rows": [],
     "foot": "Jinmo Koo · HIGHST Urology",
     "id": "graft-complications",
-    "ko": "진피 합병증",
+    "ko": "진피 합병증 · 윤곽·위치",
     "title": "Graft-related Complications",
     "section": "Complications",
     "type": "graft-complications",
-    "state": "진피 합병증",
+    "state": "진피 합병증 · 윤곽·위치",
     "figures": [
       {
         "label": "Contour step-off",
@@ -897,6 +944,40 @@
         {
           "label": "Graft contour and position",
           "text": "Contour step-off / Folding / Retraction / Rotation"
+        }
+      ],
+      "transition": "Let’s compare each change with the normal appearance."
+    }
+  },
+  {
+    "steps": [],
+    "rows": [],
+    "foot": "Jinmo Koo · HIGHST Urology",
+    "id": "graft-animation",
+    "ko": "진피 합병증 · 종합 비교",
+    "title": "Graft-related Complications",
+    "section": "Complications",
+    "type": "graft-animation",
+    "state": "진피 합병증 · 종합 비교",
+    "labels": [
+      "Curvature /\nTilting",
+      "Shortening",
+      "Contour\nstep-off",
+      "Folding",
+      "Retraction",
+      "Rotation"
+    ],
+    "asset": "complications/normal-to-graft-changes.gif",
+    "stillAsset": "complications/normal-to-graft-changes-still.png",
+    "alt": "Normal and graft-related changes: curvature or tilting, shortening, contour step-off, folding, retraction and rotation.",
+    "note": "정상 모습과 진피 관련 변화 여섯 유형의 비교.",
+    "speakerNote": "Comparison of normal appearance with curvature or tilting, shortening, contour step-off, folding, retraction and rotation.",
+    "speakerCueLine": "Normal / Curvature / Shortening / Step-off / Folding / Retraction / Rotation",
+    "speakerCues": {
+      "items": [
+        {
+          "label": "Graft-related changes",
+          "text": "Curvature / Shortening / Step-off / Folding / Retraction / Rotation"
         }
       ],
       "transition": "Next is postoperative care after a circumcision-line incision."
