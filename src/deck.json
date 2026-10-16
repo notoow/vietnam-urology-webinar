@@ -161,11 +161,11 @@
     "title": "MegaDerm & MegaFill",
     "section": "Materials",
     "type": "products",
-    "asset": "megaderm-6x12.jpg",
+    "asset": "graft-packaging.png",
     "megafillAsset": "megafill.jpg",
     "caption": "MegaDerm stock at HIGHST: 3–5 mm / 5 × 6, 5 × 8, 5 × 10, 6 × 12 cm",
-    "note": "MegaDerm 시트형 동종진피와 MegaFill. 하이스트 보유 진피 규격: 두께 3–5 mm, 크기 5 × 6, 5 × 8, 5 × 10, 6 × 12 cm. 사진: 6 × 12 cm 진피와 MegaFill 주사기.",
-    "speakerNote": "MegaDerm is a sheet acellular dermal matrix. HIGHST stocks hydrated and freeze-dried types. The stated thickness and sizes describe HIGHST's inventory. MegaFill is a micronized form of acellular dermal matrix. Photographs: 6 × 12 cm dermal graft and MegaFill syringes.",
+    "note": "MegaDerm 시트형 동종진피와 MegaFill. 하이스트 보유 진피 규격: 두께 3–5 mm, 크기 5 × 6, 5 × 8, 5 × 10, 6 × 12 cm. 사진: 진피 포장과 MegaFill 주사기.",
+    "speakerNote": "MegaDerm is a sheet acellular dermal matrix. HIGHST stocks hydrated and freeze-dried types. The stated thickness and sizes describe HIGHST's inventory. MegaFill is a micronized form of acellular dermal matrix. Photographs: dermal graft packaging and MegaFill syringes.",
     "state": "제품 소개",
     "sources": [
       "https://lncbio.co.kr/theme/basic/images/L%26CBIO_catalog.pdf"
@@ -191,7 +191,8 @@
       ],
       "transition": "Next, I’ll go through our preoperative evaluation."
     },
-    "speakerCueLine": "MegaDerm sheet / Hydrated or dry / 3–5 mm / Sizes / MegaFill"
+    "speakerCueLine": "MegaDerm sheet / Hydrated or dry / 3–5 mm / Sizes / MegaFill",
+    "productImageLabel": "MegaDerm packaging"
   },
   {
     "steps": [],
@@ -311,8 +312,8 @@
         "5 × 6 cm"
       ]
     ],
-    "profileAsset": "cases/case-01-postoperative.jpg",
-    "profileImageLabel": "Postoperative photograph",
+    "profileAsset": "cases/case-01-before.jpg",
+    "profileImageLabel": "Preoperative photograph",
     "focus": "Pubic incision / T-ring removal / Dermal graft insertion",
     "state": "증례 요약",
     "provenance": {
@@ -320,21 +321,41 @@
         "MK2_1274.MP4",
         "MK2_1297.MP4"
       ],
-      "imageSource": "MK2_1278.JPG"
+      "imageSource": "cases/case-01-before.jpg"
     },
-    "note": "Case 1. 치골절개를 통한 T링 제거 후 진피 이식. 수술 후 사진.",
+    "note": "Case 1. 치골절개를 통한 T링 제거 후 진피 이식. 수술 전 사진.",
     "speakerNote": "Case 1: T-ring removal and dermal grafting through a pubic incision.",
-    "speakerCueLine": "Case 1 / 54 years / Pubic incision / 5 × 6 cm / T-ring removal",
+    "speakerCueLine": "Case 1 / 54 years / Pubic incision / 5 × 6 cm / T-ring removal / Preoperative length / Thickness / Glans circumference",
     "speakerCues": {
       "items": [
         {
           "label": "Patient profile",
-          "text": "Age / Incision / Graft size"
+          "text": "Age / Incision / Graft size / Preoperative length / Thickness / Glans circumference"
         }
       ],
       "transition": "Let’s watch T-ring removal and graft placement through a pubic incision."
     },
-    "caseLabel": "Case 1 · Pubic incision"
+    "caseLabel": "Case 1 · Pubic incision",
+    "preoperativeMeasurements": [
+      [
+        "Penile length",
+        "—"
+      ],
+      [
+        "Penile thickness",
+        "—"
+      ],
+      [
+        "Glans circumference",
+        "—"
+      ]
+    ],
+    "profileCrop": {
+      "x": 0.2921262254901961,
+      "y": 0.3090277777777778,
+      "w": 0.5615808823529412,
+      "h": 0.4211856617647059
+    }
   },
   {
     "caseNumber": "01",
@@ -473,29 +494,49 @@
         "5 × 8 cm"
       ]
     ],
-    "profileAsset": "cases/case-02-postoperative.jpg",
-    "profileImageLabel": "Postoperative photograph",
+    "profileAsset": "cases/case-02-before.jpg",
+    "profileImageLabel": "Preoperative photograph",
     "focus": "Dermal graft placement / Fixation / Closure",
     "state": "증례 요약",
     "provenance": {
       "files": [
         "MK2_1299.MP4"
       ],
-      "imageSource": "MK2_1301.JPG"
+      "imageSource": "cases/case-02-before.jpg"
     },
-    "note": "Case 2. 진피 이식. 수술 후 사진. 절개법: 포경선 절개.",
+    "note": "Case 2. 진피 이식. 수술 전 사진. 절개법: 포경선 절개.",
     "speakerNote": "Case 2: Dermal Grafting. Incision: circumcision-line.",
-    "speakerCueLine": "Case 2 / 62 years / Circumcision-line incision / 5 × 8 cm",
+    "speakerCueLine": "Case 2 / 62 years / Circumcision-line incision / 5 × 8 cm / Preoperative length / Thickness / Glans circumference",
     "speakerCues": {
       "items": [
         {
           "label": "Patient profile",
-          "text": "Age / Incision / Graft size"
+          "text": "Age / Incision / Graft size / Preoperative length / Thickness / Glans circumference"
         }
       ],
       "transition": "Let’s watch the operative video."
     },
-    "caseLabel": "Case 2 · Circumcision-line incision"
+    "caseLabel": "Case 2 · Circumcision-line incision",
+    "preoperativeMeasurements": [
+      [
+        "Penile length",
+        "—"
+      ],
+      [
+        "Penile thickness",
+        "—"
+      ],
+      [
+        "Glans circumference",
+        "—"
+      ]
+    ],
+    "profileCrop": {
+      "x": 0.25,
+      "y": 0.39848433752997603,
+      "w": 0.5,
+      "h": 0.2109375
+    }
   },
   {
     "caseNumber": "02",
@@ -624,29 +665,49 @@
         "5 × 6 cm + 6 × 12 cm\n(2 sheets)"
       ]
     ],
-    "profileAsset": "cases/case-03-after.jpg",
-    "profileImageLabel": "Postoperative photograph",
+    "profileAsset": "cases/case-03-before.jpg",
+    "profileImageLabel": "Preoperative photograph",
     "focus": "Two dermal sheets / 5 × 6 cm + 6 × 12 cm",
     "state": "증례 요약",
     "provenance": {
       "files": [
         "MK2_1366.MP4"
       ],
-      "imageSource": "cases/case-03-after.jpg"
+      "imageSource": "cases/case-03-before.jpg"
     },
-    "note": "Case 3. 5 × 6 cm와 6 × 12 cm 진피 두 장 이식. 수술 후 사진. 절개법: 포경선 절개.",
+    "note": "Case 3. 5 × 6 cm와 6 × 12 cm 진피 두 장 이식. 수술 전 사진. 절개법: 포경선 절개.",
     "speakerNote": "Case 3: Two-sheet Dermal Grafting. Incision: circumcision-line.",
-    "speakerCueLine": "Case 3 / 31 years / Circumcision-line incision / Two sheets / 5 × 6 cm + 6 × 12 cm",
+    "speakerCueLine": "Case 3 / 31 years / Circumcision-line incision / Two sheets / 5 × 6 cm + 6 × 12 cm / Preoperative length / Thickness / Glans circumference",
     "speakerCues": {
       "items": [
         {
           "label": "Patient profile",
-          "text": "Age / Incision / Graft size"
+          "text": "Age / Incision / Graft size / Preoperative length / Thickness / Glans circumference"
         }
       ],
       "transition": "Let’s watch the operative video."
     },
-    "caseLabel": "Case 3 · Circumcision-line incision"
+    "caseLabel": "Case 3 · Circumcision-line incision",
+    "preoperativeMeasurements": [
+      [
+        "Penile length",
+        "10 cm"
+      ],
+      [
+        "Penile thickness",
+        "10 cm"
+      ],
+      [
+        "Glans circumference",
+        "8 cm"
+      ]
+    ],
+    "profileCrop": {
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 1
+    }
   },
   {
     "caseNumber": "03",
@@ -775,29 +836,49 @@
         "5 × 8 cm"
       ]
     ],
-    "profileAsset": "cases/case-04-after.jpg",
-    "profileImageLabel": "Postoperative photograph",
+    "profileAsset": "cases/case-04-before.jpg",
+    "profileImageLabel": "Preoperative photograph",
     "focus": "Circumcision / Dermal graft placement / Closure",
     "state": "증례 요약",
     "provenance": {
       "files": [
         "MK2_1429.MP4"
       ],
-      "imageSource": "cases/case-04-after.jpg"
+      "imageSource": "cases/case-04-before.jpg"
     },
-    "note": "Case 4. 포경 및 진피 이식. 수술 후 사진. 절개법: 포경선 절개.",
+    "note": "Case 4. 포경 및 진피 이식. 수술 전 사진. 절개법: 포경선 절개.",
     "speakerNote": "Case 4: Circumcision and Dermal Grafting. Incision: circumcision-line.",
-    "speakerCueLine": "Case 4 / 23 years / Circumcision-line incision / 5 × 8 cm",
+    "speakerCueLine": "Case 4 / 23 years / Circumcision-line incision / 5 × 8 cm / Preoperative length / Thickness / Glans circumference",
     "speakerCues": {
       "items": [
         {
           "label": "Patient profile",
-          "text": "Age / Incision / Graft size"
+          "text": "Age / Incision / Graft size / Preoperative length / Thickness / Glans circumference"
         }
       ],
       "transition": "Let’s watch the operative video."
     },
-    "caseLabel": "Case 4 · Circumcision-line incision"
+    "caseLabel": "Case 4 · Circumcision-line incision",
+    "preoperativeMeasurements": [
+      [
+        "Penile length",
+        "8 cm"
+      ],
+      [
+        "Penile thickness",
+        "7.5 cm"
+      ],
+      [
+        "Glans circumference",
+        "8 cm"
+      ]
+    ],
+    "profileCrop": {
+      "x": 0.32812500000000006,
+      "y": 0.2932966127098321,
+      "w": 0.5208333333333334,
+      "h": 0.39062500000000006
+    }
   },
   {
     "caseNumber": "04",

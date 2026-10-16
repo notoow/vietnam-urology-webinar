@@ -44,10 +44,10 @@ module.exports = function layoutDeck(deck) {
       text(s.rows[0].head,72,196,520,44,31,600),
       text('Acellular dermal matrix',72,252,520,38,25,400,muted),
       text('Hydrated / Freeze-dried',72,296,520,38,25,400,muted),
-      text('6 × 12 cm graft shown',72,340,520,28,18,400,gold),
+      text(s.productImageLabel||'6 × 12 cm graft shown',72,340,520,28,18,400,gold),
       text(s.rows[1].head,72,412,520,44,31,600),
       text(s.rows[1].body,72,468,535,38,24,400,muted),
-      image(s.asset,792,160,360,240,'contain','6 × 12 cm dermal graft'),
+      image(s.asset,792,160,360,240,'contain',s.productImageLabel||'6 × 12 cm dermal graft'),
       image(s.megafillAsset,792,414,360,202.5,'contain','MegaFill syringes'),
       text('MegaDerm stock at HIGHST',72,574,680,28,18,600,gold),
       text('3–5 mm thick     5 × 6, 5 × 8, 5 × 10, 6 × 12 cm',72,610,680,33,22,400,muted),
@@ -98,11 +98,15 @@ module.exports = function layoutDeck(deck) {
     else if(s.type==='case-profile') items=[
       ...caseHeader(s),
       text('Patient profile',72,173,432,34,23,600,gold),
-      table(s.profile,72,220,448,280,[155,293]),
+      table(s.profile,72,220,448,s.preoperativeMeasurements?156:280,[155,293],false,s.preoperativeMeasurements?20:21),
       text(s.profileImageLabel||'Before',568,173,640,34,23,600,gold),
-      ...photo(s.profileAsset||s.beforeAsset,s.profileImageLabel||'Preoperative photograph',568,218,640,360),
-      text('Operative focus',72,544,448,30,21,600,gold),
-      text(s.focus,72,589,1136,53,22),
+      ...photo(s.profileAsset||s.beforeAsset,s.profileImageLabel||'Preoperative photograph',568,218,640,360,s.profileCrop),
+      ...(s.preoperativeMeasurements?[
+        text('Preoperative measurements',72,397,448,30,21,600,gold),
+        table(s.preoperativeMeasurements,72,437,448,132,[290,158],false,20)
+      ]:[]),
+      text('Operative focus',72,s.preoperativeMeasurements?590:544,448,30,21,600,gold),
+      text(s.focus,72,s.preoperativeMeasurements?625:589,1136,s.preoperativeMeasurements?30:53,s.preoperativeMeasurements?20:22),
       ...footer(n)
     ];
     else if(s.type==='case-result') {

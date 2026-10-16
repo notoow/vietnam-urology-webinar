@@ -18,6 +18,7 @@ const sectionNames={"Overview":"표지","Speaker":"발표자 소개","Materials"
 let lastSection='';
 slides.forEach((s,i)=>{
  if(deck[i].section!==lastSection){lastSection=deck[i].section;const h=document.createElement('p');h.className='outline-group';h.textContent=sectionNames[lastSection];outline.append(h);}
+ if(deck[i].caseGroup&&deck[i-1]?.caseGroup&&deck[i].caseGroup!==deck[i-1].caseGroup){const divider=document.createElement('hr');divider.className='outline-case-separator';divider.setAttribute('aria-hidden','true');outline.append(divider);}
  const b=document.createElement('button');const n=document.createElement('span'),title=document.createElement('span');n.textContent=String(i+1).padStart(2,'0');title.textContent=s.dataset.title;b.append(n,title);b.onclick=()=>show(i);outline.append(b);
  const opt=document.createElement('option');opt.value=i;opt.textContent=String(i+1).padStart(2,'0')+' / '+s.dataset.title;select.append(opt);
 });
