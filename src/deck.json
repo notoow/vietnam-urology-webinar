@@ -282,7 +282,7 @@
     },
     "speakerCueLine": "Common preparation / Draping / Case 1",
     "videoAsset": "videos/draping.mp4",
-    "posterAsset": "videos/draping-poster.jpg"
+    "posterAsset": "videos/draping-poster.png"
   },
   {
     "caseNumber": "01",
@@ -370,7 +370,7 @@
     },
     "caseLabel": "Case 1 · Pubic incision",
     "videoAsset": "videos/case-01.mp4",
-    "posterAsset": "videos/case-01-poster.jpg"
+    "posterAsset": "videos/case-01-poster.png"
   },
   {
     "caseNumber": "01",
@@ -510,7 +510,7 @@
       "transition": "Let’s compare the preoperative and postoperative images."
     },
     "videoAsset": "videos/case-02.mp4",
-    "posterAsset": "videos/case-02-poster.jpg"
+    "posterAsset": "videos/case-02-poster.png"
   },
   {
     "caseNumber": "02",
@@ -659,7 +659,7 @@
       "transition": "Let’s compare the preoperative and postoperative images."
     },
     "videoAsset": "videos/case-03.mp4",
-    "posterAsset": "videos/case-03-poster.jpg"
+    "posterAsset": "videos/case-03-poster.png"
   },
   {
     "caseNumber": "03",
@@ -796,7 +796,7 @@
       "transition": "Let’s compare the preoperative and postoperative images."
     },
     "videoAsset": "videos/case-04.mp4",
-    "posterAsset": "videos/case-04-poster.jpg"
+    "posterAsset": "videos/case-04-poster.png"
   },
   {
     "caseNumber": "04",

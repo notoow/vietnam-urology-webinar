@@ -6,13 +6,13 @@ const deckCount=deck.length;
 const caseVideo=deck.find(s=>s.id==='case-01-video');
 const esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const embedded=name=>'data:'+(name.endsWith('.woff2')?'font/woff2':name.endsWith('.png')?'image/png':'image/jpeg')+';base64,'+fs.readFileSync(path.join(root,'assets',name)).toString('base64');
+const mediaUrl=name=>'assets/'+name+'?v='+crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets',name))).digest('hex').slice(0,12);
 const box=o=>`left:${o.x/12.8}%;top:${o.y/12.8}cqw;width:${o.w/12.8}%;height:${o.h/12.8}cqw;`;
 const slides=data.slides.map((s,i)=>`<article class="study-slide" id="${esc(s.id)}" aria-label="${esc(s.label)}"${i?' hidden':''}>`+s.items.map(o=>{
  if(o.kind==='image')return `<img class="item" src="${embedded(o.asset)}" alt="${esc(o.alt)}" style="${box(o)}object-fit:${o.fit}">`;
  if(o.role==='video-placeholder'&&caseVideo?.videoAsset){
-  const hash=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets',caseVideo.videoAsset))).digest('hex').slice(0,12);
-  const url='assets/'+caseVideo.videoAsset+'?v='+hash;
-  return `<video class="item" controls playsinline preload="none" aria-label="Case 1: ${esc(caseVideo.title)}" poster="${embedded(caseVideo.posterAsset)}" style="${box(o)}object-fit:contain;background:#000"><source src="${url}" type="video/mp4"><a href="${url}">Open video</a></video>`;
+  const url=mediaUrl(caseVideo.videoAsset);
+  return `<video class="item" controls playsinline preload="none" aria-label="Case 1: ${esc(caseVideo.title)}" poster="${mediaUrl(caseVideo.posterAsset)}" style="${box(o)}object-fit:contain;background:#000"><source src="${url}" type="video/mp4"><a href="${url}">Open video</a></video>`;
  }
  if(o.kind==='rect')return `<div class="item${o.role?' video-placeholder':''}"${o.role?' aria-label="Operative video"':''} style="${box(o)}background:${o.color}"></div>`;
  return `<${o.size>=42?'h2':'p'} class="item study-text" style="${box(o)}font-size:${o.size/12.8}cqw;font-weight:${o.weight};color:${o.color}">${esc(o.text)}</${o.size>=42?'h2':'p'}>`;
