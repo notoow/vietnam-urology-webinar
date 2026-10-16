@@ -128,7 +128,9 @@ module.exports = function layoutDeck(deck) {
       items[1].text=s.title;
       const frame=items.findIndex(o=>o.role==='video-placeholder');
       const {x,y,w,h}=items[frame];
-      items[frame]=s.asset
+      items[frame]=s.videoAsset
+        ? {...items[frame],kind:'video',asset:s.videoAsset,poster:s.posterAsset,label:'Postoperative care: '+s.title}
+        : s.asset
         ? image(s.asset,x,y,w,h,'contain','Postoperative care: '+s.title)
         : {...rect(x,y,w,h,'#F4F4F1'),role:'photo-placeholder',label:'Postoperative care: '+s.title};
     }

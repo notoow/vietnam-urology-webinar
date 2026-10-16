@@ -1042,7 +1042,9 @@
       "transition": "Next is postoperative care after a pubic incision."
     },
     "speakerCueLine": "Circumcision-line Incision / Postoperative care / Dressing / Follow-up",
-    "subtitle": "Postoperative Care & Dressing"
+    "subtitle": "Postoperative Care & Dressing",
+    "videoAsset": "videos/aftercare-circumcision.mp4",
+    "posterAsset": "videos/aftercare-circumcision-poster.jpg"
   },
   {
     "steps": [],
@@ -1053,20 +1055,22 @@
     "title": "Pubic Incision",
     "section": "Aftercare",
     "type": "aftercare",
-    "note": "치골절개 후관리.",
-    "speakerNote": "Postoperative care and dressing: pubic incision.",
+    "note": "치골절개 및 더마본드 사용 후 관리.",
+    "speakerNote": "Postoperative care and dressing: pubic incision with Dermabond.",
     "state": "수술 후 관리",
     "speakerCues": {
       "items": [
         {
           "label": "Aftercare",
-          "text": "Pubic Incision / Dressing / Follow-up"
+          "text": "Pubic incision / Dermabond / Dressing / Follow-up"
         }
       ],
       "transition": "Thank you for your attention. I’m happy to take your questions."
     },
-    "speakerCueLine": "Pubic Incision / Postoperative care / Dressing / Follow-up",
-    "subtitle": "Postoperative Care & Dressing"
+    "speakerCueLine": "Pubic incision / Dermabond / Postoperative care / Dressing / Follow-up",
+    "subtitle": "Postoperative Care & Dressing",
+    "videoAsset": "videos/aftercare-pubic.mp4",
+    "posterAsset": "videos/aftercare-pubic-poster.jpg"
   },
   {
     "steps": [],
