@@ -22,9 +22,17 @@ slides.forEach((s,i)=>{
  const opt=document.createElement('option');opt.value=i;opt.textContent=String(i+1).padStart(2,'0')+' / '+s.dataset.title;select.append(opt);
 });
 function show(i){
+ const outlineHadFocus=outline.contains(document.activeElement);
  current=Math.max(0,Math.min(slides.length-1,Number(i)));slides.forEach((s,j)=>s.classList.toggle('current',j===current));
  slides.forEach((s,j)=>{if(j!==current)s.querySelectorAll('video').forEach(video=>video.pause())});
- [...outline.querySelectorAll('button')].forEach((b,j)=>b.setAttribute('aria-current',j===current));select.value=current;
+ const outlineButtons=[...outline.querySelectorAll('button')];
+ outlineButtons.forEach((b,j)=>b.setAttribute('aria-current',j===current));select.value=current;
+ if(outlineHadFocus&&!document.body.classList.contains('presenting'))outlineButtons[current].focus({preventScroll:true});
+ if(outline.clientHeight){
+  const frame=outline.getBoundingClientRect(),selected=outlineButtons[current].getBoundingClientRect();
+  if(selected.top<frame.top)outline.scrollTop+=selected.top-frame.top;
+  else if(selected.bottom>frame.bottom)outline.scrollTop+=selected.bottom-frame.bottom;
+ }
  document.getElementById('slide-count').textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
  document.getElementById('slide-status').textContent=slides[current].dataset.state;document.getElementById('slide-note').textContent=notes[current];
  document.getElementById('speaker-cues').textContent=deck[current].speakerCueLine;
@@ -35,7 +43,17 @@ function switchView(view,writeHash=true){if(!['design','perioperative','program'
 document.querySelectorAll('.main-nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));document.querySelector('.brand-link').onclick=e=>{e.preventDefault();switchView('design')};window.addEventListener('hashchange',()=>switchView(location.hash.slice(1).split('&')[0],false));
 const memo=document.getElementById('speaker-notes'),notesToggle=document.getElementById('notes-toggle');notesToggle.onclick=()=>{memo.hidden=!memo.hidden;notesToggle.setAttribute('aria-expanded',String(!memo.hidden))};
 let previousScroll=0;document.getElementById('present').onclick=()=>{previousScroll=window.scrollY;document.body.classList.add('presenting');document.getElementById('exit-present').focus()};function exitPresentation(){document.body.classList.remove('presenting');window.scrollTo(0,previousScroll);document.getElementById('present').focus()}document.getElementById('exit-present').onclick=exitPresentation;
-document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if(e.key==='Escape'&&document.body.classList.contains('presenting'))exitPresentation();if(e.target.closest('video')||(e.key===' '&&e.target.closest('button,a')))return;if(activeView==='design'&&document.body.classList.contains('presenting')){if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(current+1)}if(e.key==='ArrowLeft'){e.preventDefault();show(current-1)}}});
+document.addEventListener('keydown',e=>{
+ if(e.defaultPrevented||e.isComposing||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey)return;
+ if(e.target.closest('input,textarea,select,[contenteditable]:not([contenteditable="false"]),[role="slider"]'))return;
+ const presenting=document.body.classList.contains('presenting');
+ if(e.key==='Escape'&&presenting){exitPresentation();return;}
+ if(e.target.closest('video'))return;
+ if(activeView!=='design'||document.querySelector('dialog[open]'))return;
+ const direction={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[e.key]
+  ||(e.key===' '&&presenting&&!e.target.closest('button,a')?1:0);
+ if(direction){e.preventDefault();show(current+direction);}
+});
 const eventProgram=[
 {start:900,end:915,title:'Opening',detail:'오프닝'},
 {start:915,end:955,title:'Vietnamese Physician Session',detail:'베트남 남성의학과 회장 또는 부회장 진행 예정'},

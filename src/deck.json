@@ -603,18 +603,17 @@
         "5 × 6 cm + 6 × 12 cm\n(2 sheets)"
       ]
     ],
-    "profileAsset": "cases/case-03-operative.jpg",
-    "profileImageLabel": "Operative image",
+    "profileAsset": "cases/case-03-after.jpg",
+    "profileImageLabel": "Postoperative photograph",
     "focus": "Two dermal sheets / 5 × 6 cm + 6 × 12 cm",
     "state": "증례 요약",
     "provenance": {
       "files": [
         "MK2_1366.MP4"
       ],
-      "imageSource": "MK2_1366.MP4",
-      "imageTimestampSeconds": 1877.5957199999998
+      "imageSource": "cases/case-03-after.jpg"
     },
-    "note": "Case 3. 5 × 6 cm와 6 × 12 cm 진피 두 장 이식.",
+    "note": "Case 3. 5 × 6 cm와 6 × 12 cm 진피 두 장 이식. 수술 후 사진.",
     "speakerNote": "Case 3: Two-sheet Dermal Grafting.",
     "speakerCueLine": "Case 3 / 31 years / Two sheets / 5 × 6 cm + 6 × 12 cm",
     "speakerCues": {
@@ -740,18 +739,17 @@
         "5 × 8 cm"
       ]
     ],
-    "profileAsset": "cases/case-04-operative.jpg",
-    "profileImageLabel": "Operative image",
+    "profileAsset": "cases/case-04-after.jpg",
+    "profileImageLabel": "Postoperative photograph",
     "focus": "Circumcision / Dermal graft placement / Closure",
     "state": "증례 요약",
     "provenance": {
       "files": [
         "MK2_1429.MP4"
       ],
-      "imageSource": "MK2_1429.MP4",
-      "imageTimestampSeconds": 1177.89672
+      "imageSource": "cases/case-04-after.jpg"
     },
-    "note": "Case 4. 포경 및 진피 이식. 수술 중 사진.",
+    "note": "Case 4. 포경 및 진피 이식. 수술 후 사진.",
     "speakerNote": "Case 4: Circumcision and Dermal Grafting.",
     "speakerCueLine": "Case 4 / 23 years / Circumcision / 5 × 8 cm",
     "speakerCues": {
