@@ -88,12 +88,10 @@ module.exports = function layoutDeck(deck) {
       ...header(s.title),
       text('Normal ↔ graft-related change',72,163,1136,28,18,400,muted),
       ...s.labels.flatMap((label,j)=>{
-        const x=72+j*(1136/6);
-        return [text(label,x,209,177,47,19,600),rect(x,265,177,1,gold)];
+        const column=1136/s.labels.length,x=72+j*column;
+        return [text(label,x,209,column-12,47,19,600),rect(x,265,column-12,1,gold)];
       }),
       {...image(s.asset,72,278,1136,340,'contain',s.alt),stillAsset:s.stillAsset},
-      text(s.recoveryCaption,72,625,1136,23,16,400,gold),
-      text(s.clinicalContext,72,650,1136,16,12,400,muted),
       ...footer(n)
     ];
     else if(s.type==='case-profile') items=[

@@ -3,7 +3,10 @@ const layoutDeck=require('./layout-deck.cjs');
 const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const embedded=new Map();
 function asset(name){
- if(name.endsWith('.gif'))return 'assets/'+name;
+ if(name.endsWith('.gif')){
+  const hash=require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(__dirname,'../assets',name))).digest('hex').slice(0,12);
+  return 'assets/'+name+'?v='+hash;
+ }
  if(!embedded.has(name))embedded.set(name,'data:'+(name.endsWith('.png')?'image/png':'image/jpeg')+';base64,'+fs.readFileSync(path.join(__dirname,'../assets',name)).toString('base64'));
  return embedded.get(name);
 }

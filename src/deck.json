@@ -969,34 +969,27 @@
     "type": "graft-animation",
     "state": "진피 합병증 · 종합 비교",
     "labels": [
-      "Curvature /\nTilting",
-      "Shortening",
-      "Contour\nstep-off",
+      "Surface\nstep-off",
+      "Graft\nstep-off",
       "Folding",
       "Retraction",
       "Rotation"
     ],
     "asset": "complications/normal-to-graft-changes.gif",
     "stillAsset": "complications/normal-to-graft-changes-still.png",
-    "alt": "Normal and graft-related changes: curvature or tilting, shortening, contour step-off, folding, retraction and rotation.",
-    "note": "정상 모습과 진피 관련 변화 여섯 유형의 비교. 만곡·기울어짐과 길이 감소는 수술 직후 나타날 수 있으며, 하이스트 임상 경험상 진피가 부드러워지면서 대개 회복됩니다.",
-    "speakerNote": "Compare the normal appearance with six graft-related changes. The first two, curvature or tilting and shortening, may occur immediately after surgery and usually resolve as the graft softens in our clinical experience at HIGHST.",
-    "speakerCueLine": "First two: early changes, usually resolve / Step-off / Folding / Retraction / Rotation",
+    "alt": "Normal appearance compared with surface step-off, graft step-off, folding, retraction and rotation.",
+    "note": "정상 모습과 표면 턱짐, 진피 턱짐, 접힘, 수축·후퇴, 회전의 비교.",
+    "speakerNote": "Compare normal appearance with surface step-off, graft step-off, folding, retraction and rotation.",
+    "speakerCueLine": "Surface step-off / Graft step-off / Folding / Retraction / Rotation",
     "speakerCues": {
       "items": [
         {
-          "label": "Early postoperative changes",
-          "text": "Curvature / tilting and shortening: usually resolve as the graft softens (HIGHST clinical experience)"
-        },
-        {
-          "label": "Graft-related changes",
-          "text": "Curvature / Shortening / Step-off / Folding / Retraction / Rotation"
+          "label": "Contour and position",
+          "text": "Surface step-off / Graft step-off / Folding / Retraction / Rotation"
         }
       ],
       "transition": "Next is postoperative care after a circumcision-line incision."
-    },
-    "recoveryCaption": "Early postoperative curvature / tilting and shortening usually resolve as the graft softens.",
-    "clinicalContext": "Clinical experience at HIGHST Urology"
+    }
   },
   {
     "steps": [],
