@@ -18,6 +18,8 @@
 
 /* Same 1280 × 720 geometry as the approved study and editable PPTX. */
 .slide.conference-slide{padding:0;overflow:hidden;color:#20282c}
+.download-button{display:inline-flex;align-items:center;text-decoration:none}
+#design .work-heading .actions{flex-wrap:wrap;justify-content:flex-end}
 .conference-slide .conference-item{position:absolute;display:block;margin:0;padding:0;border:0;max-width:none}
 .conference-slide .conference-text{font-family:Pretendard,sans-serif;line-height:1.2;letter-spacing:0;white-space:pre-wrap}
 .conference-slide h2.conference-text{letter-spacing:-.025em}
