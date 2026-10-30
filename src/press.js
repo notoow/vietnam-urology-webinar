@@ -8,7 +8,16 @@ window.Press=(()=>{
   const title=element('h1',data.title),subtitle=element('p',data.subtitle,'press-subtitle'),meta=element('div',null,'press-meta');
   meta.append(element('span',data.eventDate),element('span','기사 초안','press-draft'));
   const figure=element('figure'),photo=element('img');photo.src=data.photo;photo.alt=data.photoAlt;photo.width=2400;photo.height=1108;figure.append(photo,element('figcaption',data.caption));
-  const body=element('div',null,'press-body');data.paragraphs.forEach(paragraph=>body.append(element('p',paragraph)));
+  const inlineFigures=data.inlineFigures||[];
+  if(!Array.isArray(inlineFigures)||!inlineFigures.every(item=>Number.isInteger(item.afterParagraph)&&item.afterParagraph>0&&item.afterParagraph<=data.paragraphs.length&&/^data:image\/(?:png|jpeg);base64,[A-Za-z0-9+/=]+$/.test(item.image)))throw Error('Invalid inline figure');
+  const body=element('div',null,'press-body');data.paragraphs.forEach((paragraph,index)=>{
+   body.append(element('p',paragraph));
+   inlineFigures.filter(item=>item.afterParagraph===index+1).forEach(item=>{
+    const figure=element('figure',null,'press-inline-figure'),image=element('img');
+    image.src=item.image;image.alt=item.alt;image.width=item.width;image.height=item.height;
+    figure.append(image,element('figcaption',item.caption));body.append(figure);
+   });
+  });
   container.replaceChildren(title,subtitle,meta,figure,body);
   if(photoUrl)URL.revokeObjectURL(photoUrl);
   photoUrl=URL.createObjectURL(new Blob([decode(data.photo.split(',')[1])],{type:'image/jpeg'}));
@@ -38,6 +47,6 @@ window.Press=(()=>{
   finally{if(attempt===requestId){submit.disabled=false;submit.textContent='확인';}}
  });
  $('press-lock').onclick=()=>{lock();switchView('design');$('press-tab').focus();};
- $('press-copy').onclick=async()=>{if(!article)return;const text=[article.title,article.subtitle,...article.paragraphs,article.caption].join('\n\n');try{await navigator.clipboard.writeText(text);$('press-action-status').textContent='기사를 복사했습니다.';}catch{$('press-action-status').textContent='본문을 선택해 복사해 주세요.';}};
+ $('press-copy').onclick=async()=>{if(!article)return;const body=article.paragraphs.flatMap((paragraph,index)=>[paragraph,...(article.inlineFigures||[]).filter(item=>item.afterParagraph===index+1).map(item=>item.caption)]);const text=[article.title,article.subtitle,...body,article.caption].join('\n\n');try{await navigator.clipboard.writeText(text);$('press-action-status').textContent='기사를 복사했습니다.';}catch{$('press-action-status').textContent='본문을 선택해 복사해 주세요.';}};
  return {isUnlocked:()=>unlocked,requestAccess,lock};
 })();

@@ -9,6 +9,7 @@
 .press-article img{display:block;width:100%;height:auto}
 .press-article figcaption{font-size:12px;line-height:1.7;color:#7e8478;margin-top:12px}
 .press-body{width:100%;margin:0}
+.press-body .press-inline-figure{margin:32px 0}
 .press-body p{font-size:17px;line-height:1.95;letter-spacing:-.015em;margin:0 0 24px;word-break:keep-all;overflow-wrap:break-word}
 .press-action-status{font-size:12px;color:#667064;min-height:1.6em;margin:18px 0 0}
 .press-dialog{width:min(420px,calc(100vw - 32px));border:1px solid #d9dcd2;border-radius:5px;padding:28px;color:var(--ink);background:#fff;box-shadow:0 20px 90px #20221430}

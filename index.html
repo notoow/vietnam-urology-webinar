@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-h1/WPSJfIk5tF7wWJIEeZzzLnm/GimV+oJGcCuDMt6Y='; style-src 'unsafe-inline'; img-src 'self' data: https://notoow.github.io/vietnam-urology-webinar/assets/; media-src 'self'; font-src data:; connect-src 'self' https://wqymwtvktdhofzegjawn.supabase.co wss://wqymwtvktdhofzegjawn.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-jKpQ9Qvm0XlCNysBQt0arZ/X1YWOs1L1y6voXCDy6tc='; style-src 'unsafe-inline'; img-src 'self' data: https://notoow.github.io/vietnam-urology-webinar/assets/; media-src 'self'; font-src data:; connect-src 'self' https://wqymwtvktdhofzegjawn.supabase.co wss://wqymwtvktdhofzegjawn.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HIGHST · MegaDerm Webinar</title>
 <meta name="description" content="하이스트 비뇨의학과 베트남 MegaDerm 웨비나. 재료 소개, 수술 전 검사와 준비, 네 증례, 합병증 및 수술 후 관리로 구성한 발표입니다.">
 <link rel="canonical" href="https://notoow.github.io/vietnam-urology-webinar/">
@@ -99,6 +99,7 @@
 .press-article img{display:block;width:100%;height:auto}
 .press-article figcaption{font-size:12px;line-height:1.7;color:#7e8478;margin-top:12px}
 .press-body{width:100%;margin:0}
+.press-body .press-inline-figure{margin:32px 0}
 .press-body p{font-size:17px;line-height:1.95;letter-spacing:-.015em;margin:0 0 24px;word-break:keep-all;overflow-wrap:break-word}
 .press-action-status{font-size:12px;color:#667064;min-height:1.6em;margin:18px 0 0}
 .press-dialog{width:min(420px,calc(100vw - 32px));border:1px solid #d9dcd2;border-radius:5px;padding:28px;color:var(--ink);background:#fff;box-shadow:0 20px 90px #20221430}
@@ -211,7 +212,16 @@ window.Press=(()=>{
   const title=element('h1',data.title),subtitle=element('p',data.subtitle,'press-subtitle'),meta=element('div',null,'press-meta');
   meta.append(element('span',data.eventDate),element('span','기사 초안','press-draft'));
   const figure=element('figure'),photo=element('img');photo.src=data.photo;photo.alt=data.photoAlt;photo.width=2400;photo.height=1108;figure.append(photo,element('figcaption',data.caption));
-  const body=element('div',null,'press-body');data.paragraphs.forEach(paragraph=>body.append(element('p',paragraph)));
+  const inlineFigures=data.inlineFigures||[];
+  if(!Array.isArray(inlineFigures)||!inlineFigures.every(item=>Number.isInteger(item.afterParagraph)&&item.afterParagraph>0&&item.afterParagraph<=data.paragraphs.length&&/^data:image\/(?:png|jpeg);base64,[A-Za-z0-9+/=]+$/.test(item.image)))throw Error('Invalid inline figure');
+  const body=element('div',null,'press-body');data.paragraphs.forEach((paragraph,index)=>{
+   body.append(element('p',paragraph));
+   inlineFigures.filter(item=>item.afterParagraph===index+1).forEach(item=>{
+    const figure=element('figure',null,'press-inline-figure'),image=element('img');
+    image.src=item.image;image.alt=item.alt;image.width=item.width;image.height=item.height;
+    figure.append(image,element('figcaption',item.caption));body.append(figure);
+   });
+  });
   container.replaceChildren(title,subtitle,meta,figure,body);
   if(photoUrl)URL.revokeObjectURL(photoUrl);
   photoUrl=URL.createObjectURL(new Blob([decode(data.photo.split(',')[1])],{type:'image/jpeg'}));
@@ -226,7 +236,7 @@ window.Press=(()=>{
   event.preventDefault();if(submit.disabled)return;const attempt=++requestId;
   submit.disabled=true;submit.textContent='확인 중…';error.textContent='';input.removeAttribute('aria-invalid');
   let response,payload;
-  try{response=await fetch('assets/press/article.enc.json?v=d2fde8d8d3fe');if(!response.ok)throw Error('Loading failed');payload=await response.json();}
+  try{response=await fetch('assets/press/article.enc.json?v=2e2b34b8b665');if(!response.ok)throw Error('Loading failed');payload=await response.json();}
   catch{if(attempt===requestId&&dialog.open){error.textContent='자료를 불러오지 못했습니다. 다시 시도해 주세요.';submit.disabled=false;submit.textContent='확인';}return;}
   try{
    if(!crypto.subtle)throw Error('Secure context required');
@@ -241,7 +251,7 @@ window.Press=(()=>{
   finally{if(attempt===requestId){submit.disabled=false;submit.textContent='확인';}}
  });
  $('press-lock').onclick=()=>{lock();switchView('design');$('press-tab').focus();};
- $('press-copy').onclick=async()=>{if(!article)return;const text=[article.title,article.subtitle,...article.paragraphs,article.caption].join('\n\n');try{await navigator.clipboard.writeText(text);$('press-action-status').textContent='기사를 복사했습니다.';}catch{$('press-action-status').textContent='본문을 선택해 복사해 주세요.';}};
+ $('press-copy').onclick=async()=>{if(!article)return;const body=article.paragraphs.flatMap((paragraph,index)=>[paragraph,...(article.inlineFigures||[]).filter(item=>item.afterParagraph===index+1).map(item=>item.caption)]);const text=[article.title,article.subtitle,...body,article.caption].join('\n\n');try{await navigator.clipboard.writeText(text);$('press-action-status').textContent='기사를 복사했습니다.';}catch{$('press-action-status').textContent='본문을 선택해 복사해 주세요.';}};
  return {isUnlocked:()=>unlocked,requestAccess,lock};
 })();
 

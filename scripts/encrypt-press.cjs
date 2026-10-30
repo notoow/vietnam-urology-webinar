@@ -7,6 +7,14 @@ const article=JSON.parse(fs.readFileSync(sourcePath,'utf8'));
 if(!article.title||!Array.isArray(article.paragraphs)||!article.paragraphs.length)throw Error('Missing article content');
 article.photo='data:image/jpeg;base64,'+fs.readFileSync(path.resolve(path.dirname(sourcePath),article.photoPath)).toString('base64');
 delete article.photoPath;
+for(const figure of article.inlineFigures||[]){
+ if(!Number.isInteger(figure.afterParagraph)||figure.afterParagraph<1||figure.afterParagraph>article.paragraphs.length)throw Error('Invalid inline figure position');
+ const figurePath=path.resolve(path.dirname(sourcePath),figure.imagePath);
+ const mime={'.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg'}[path.extname(figurePath).toLowerCase()];
+ if(!mime)throw Error('Unsupported inline figure format');
+ figure.image='data:'+mime+';base64,'+fs.readFileSync(figurePath).toString('base64');
+ delete figure.imagePath;
+}
 const salt=crypto.randomBytes(16),iv=crypto.randomBytes(12),iterations=310000;
 const key=crypto.pbkdf2Sync(password,salt,iterations,32,'sha256');
 const cipher=crypto.createCipheriv('aes-256-gcm',key,iv);
