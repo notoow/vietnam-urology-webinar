@@ -1,0 +1,18 @@
+<section class="view" id="press" role="tabpanel" aria-labelledby="press-tab" hidden>
+  <div class="press-surface">
+    <div class="press-toolbar"><span class="press-kicker">PRESS / ARTICLE DRAFT</span><div class="actions"><button class="btn" type="button" id="press-copy">기사 복사</button><a class="btn download-button" id="press-photo-download" download>사진 다운로드</a><button class="btn" type="button" id="press-lock">잠금</button></div></div>
+    <article id="press-article" class="press-article" aria-label="신문 기사 초안"></article>
+    <p id="press-action-status" class="press-action-status" role="status"></p>
+  </div>
+</section>
+<dialog id="press-password-dialog" class="press-dialog" aria-labelledby="press-dialog-title" aria-describedby="press-dialog-description">
+  <form id="press-password-form">
+    <div class="press-dialog-heading"><span class="press-kicker">PRESS</span><button type="button" id="press-dialog-close" aria-label="비밀번호 창 닫기">×</button></div>
+    <h2 id="press-dialog-title">기사 초안 열기</h2>
+    <p id="press-dialog-description">비밀번호를 입력해 주세요.</p>
+    <label for="press-password">비밀번호</label>
+    <input id="press-password" type="password" inputmode="numeric" autocomplete="off" required maxlength="128" autofocus aria-describedby="press-password-error">
+    <p id="press-password-error" class="press-password-error" role="alert"></p>
+    <div class="press-dialog-actions"><button class="btn" type="button" id="press-dialog-cancel">취소</button><button class="btn solid" type="submit" id="press-password-submit">확인</button></div>
+  </form>
+</dialog>

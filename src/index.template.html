@@ -35,10 +35,11 @@
 
 __PERI_CSS__
 __DECK_CSS__
+__PRESS_CSS__
 </style>
 </head>
 <body>
-<header><div class="header-inner"><a class="brand-link" href="#design" aria-label="하이스트 발표 슬라이드"><img class="header-logo" src="__LOGO__" alt="하이스트 비뇨의학과 로고"></a><nav class="main-nav" role="tablist" aria-label="웨비나 자료"><button role="tab" aria-selected="true" aria-controls="design" data-view="design">발표 슬라이드</button><button role="tab" aria-selected="false" aria-controls="perioperative" data-view="perioperative">수술주기 기록</button><button role="tab" aria-selected="false" aria-controls="program" data-view="program">웨비나 일정</button><button role="tab" aria-selected="false" aria-controls="interview" data-view="interview">발표 자료</button><button role="tab" aria-selected="false" aria-controls="materials" data-view="materials">사진·로고</button></nav><div class="event-meta"><strong>VIETNAM MEGADERM WEBINAR</strong><br>21 OCT 2026 · JINMO KOO</div></div></header>
+<header><div class="header-inner"><a class="brand-link" href="#design" aria-label="하이스트 발표 슬라이드"><img class="header-logo" src="__LOGO__" alt="하이스트 비뇨의학과 로고"></a><nav class="main-nav" role="tablist" aria-label="웨비나 자료"><button role="tab" aria-selected="true" aria-controls="design" data-view="design">발표 슬라이드</button><button role="tab" aria-selected="false" aria-controls="perioperative" data-view="perioperative">수술주기 기록</button><button role="tab" aria-selected="false" aria-controls="program" data-view="program">웨비나 일정</button><button role="tab" aria-selected="false" aria-controls="interview" data-view="interview">발표 자료</button><button role="tab" aria-selected="false" aria-controls="materials" data-view="materials">사진·로고</button><button id="press-tab" role="tab" aria-selected="false" aria-controls="press" data-view="press">Press</button></nav><div class="event-meta"><strong>VIETNAM MEGADERM WEBINAR</strong><br>21 OCT 2026 · JINMO KOO</div></div></header>
 <main class="workspace">
 <section class="view" id="design" role="tabpanel">
 <div class="work-heading"><div><h1>MegaDerm 음경확대술</h1><p>증례 요약·수술 영상·전후 비교 · __DECK_COUNT__장</p></div><div class="actions">__DOWNLOAD_LINKS__<button class="btn notes-toggle" id="notes-toggle" aria-controls="speaker-notes" aria-expanded="true">발표 메모</button><button class="btn solid" id="present">발표 모드 ↗</button></div></div>
@@ -55,8 +56,10 @@ __DECK_SLIDES__
 <section class="view" id="interview" role="tabpanel" hidden><div class="support-surface"><div class="support-intro"><div class="kicker">PRESENTATION MATERIALS</div><h1>발표 주제별 메모</h1><p>발표자 소개, 검사, 증례 영상과 수술 후 관리에 관한 메모를 작성할 수 있습니다.</p></div><div id="questionnaire"></div><div class="export-row"><button class="btn solid" id="export">메모 내보내기 (.json)</button><p id="save-state" role="status">메모는 현재 브라우저에 저장됩니다.</p></div><p class="small-text">증례에 관한 메모에는 환자 식별정보 대신 증례 코드를 사용하세요.</p></div></section>
 <section class="view" id="materials" role="tabpanel" hidden><div class="support-surface"><div class="support-intro"><div class="kicker">HIGHST MATERIALS</div><h1>재료 사진과 로고</h1><p>MegaDerm, MegaFill 및 하이스트 비뇨의학과 로고.</p></div><div class="asset-list"><figure class="asset-item"><div class="asset-photo"><img src="__DERMIS1__" alt="시트형 동종진피 사진 1"></div><figcaption><h2>동종진피 01</h2><p>시트형 동종진피.</p><div class="asset-kind">DERMAL GRAFT</div></figcaption></figure><figure class="asset-item"><div class="asset-photo"><img src="__DERMIS2__" alt="시트형 동종진피 사진 2"></div><figcaption><h2>동종진피 02</h2><p>시트형 동종진피.</p><div class="asset-kind">DERMAL GRAFT</div></figcaption></figure><figure class="asset-item"><div class="asset-photo"><img src="__PACKAGING__" alt="포장 상태의 동종진피"></div><figcaption><h2>진피 포장</h2><p>포장 상태의 시트형 동종진피.</p><div class="asset-kind">DERMAL GRAFT</div></figcaption></figure><figure class="asset-item"><div class="asset-photo"><img src="__DERMIS6X12__" alt="6 × 12 cm 동종진피"></div><figcaption><h2>6 × 12 cm 진피</h2><p>6 × 12 cm 규격의 동종진피.</p><div class="asset-kind">DERMAL GRAFT</div></figcaption></figure><figure class="asset-item"><div class="asset-photo"><img src="__MEGAFILL__" alt="MegaFill 주사기"></div><figcaption><h2>MegaFill</h2><p>미세화된 동종진피.</p><div class="asset-kind">MEGAFILL</div></figcaption></figure><figure class="asset-item"><div class="asset-photo" style="background:white"><img src="__LOGO__" alt="하이스트 비뇨의학과 로고"></div><figcaption><h2>하이스트 비뇨의학과</h2><p>HIGHST Urology Clinic.</p><div class="asset-kind">HIGHST UROLOGY</div></figcaption></figure></div><div class="source-links">자료: 하이스트 비뇨의학과 · 구진모 원장</div></div></section>
 __PERI_HTML__
+__PRESS_HTML__
 </main><div class="toast" id="toast" role="status"></div>
 <script>
+__PRESS_JS__
 __REUSED_DATA__
 __PERI_JS__
 __PERI_CLOUD__

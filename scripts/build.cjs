@@ -1,4 +1,4 @@
-const fs=require('node:fs'),path=require('node:path');
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
 let html=read('src/index.template.html');
 const deck=JSON.parse(read('src/deck.json'));
@@ -12,7 +12,8 @@ const downloadLinks=[['png','PNG','전체 슬라이드 PNG '+downloads.slides+'�
  return '<a class="btn download-button" href="'+escapeAttribute(url.href)+'" download="'+escapeAttribute(asset.filename)+'" title="'+escapeAttribute(detail)+'" aria-label="'+escapeAttribute(description+' 다운로드')+'">'+label+' ▼</a>';
 }).join('');
 html=html.replace('__DOWNLOAD_LINKS__',()=>downloadLinks);
-const parts={DECK_SLIDES:require('./render-deck.cjs')(deck),DECK_CSS:read('src/deck.css'),REUSED_DATA:read('src/base.js').replace('__DECK_DATA__',()=>JSON.stringify(deck).replaceAll('<','\\u003c')),PERI_CSS:read('src/perioperative.css'),PERI_HTML:read('src/perioperative.html'),PERI_JS:read('src/perioperative.js'),PERI_CLOUD:read('node_modules/@supabase/supabase-js/dist/umd/supabase.js')+'\n'+read('src/perioperative-cloud.js')};
+const pressVersion=crypto.createHash('sha256').update(read('assets/press/article.enc.json')).digest('hex').slice(0,12);
+const parts={DECK_SLIDES:require('./render-deck.cjs')(deck),DECK_CSS:read('src/deck.css'),PRESS_CSS:read('src/press.css'),PRESS_HTML:read('src/press.html'),PRESS_JS:read('src/press.js').replace('__PRESS_PAYLOAD_URL__','assets/press/article.enc.json?v='+pressVersion),REUSED_DATA:read('src/base.js').replace('__DECK_DATA__',()=>JSON.stringify(deck).replaceAll('<','\\u003c')),PERI_CSS:read('src/perioperative.css'),PERI_HTML:read('src/perioperative.html'),PERI_JS:read('src/perioperative.js'),PERI_CLOUD:read('node_modules/@supabase/supabase-js/dist/umd/supabase.js')+'\n'+read('src/perioperative-cloud.js')};
 for(const [token,value] of Object.entries(parts))html=html.replaceAll('__'+token+'__',()=>value);
 const source=JSON.parse(read('src/filming-source.json'));
 let sourceLink='<button class="btn" type="button" disabled>촬영 자료 미등록</button>';
@@ -24,11 +25,10 @@ if(source.url){
 }
 html=html.replace('__SOURCE_LINK__',()=>sourceLink);
 for(const [token,name,mime] of [['LOGO','highst-logo.png','image/png'],['DERMIS1','dermis-01.png','image/png'],['DERMIS2','dermis-02.png','image/png'],['PACKAGING','graft-packaging.png','image/png'],['DERMIS6X12','megaderm-6x12.jpg','image/jpeg'],['MEGAFILL','megafill.jpg','image/jpeg'],['FONT','PretendardVariable.woff2','font/woff2']])html=html.replaceAll('__'+token+'__','data:'+mime+';base64,'+fs.readFileSync(path.join(root,'assets',name)).toString('base64'));
-if(/__(?:REUSED_DATA|DOWNLOAD_LINKS|DECK_\w+|PERI_\w+|LOGO|DERMIS[12]|DERMIS6X12|MEGAFILL|PACKAGING|FONT)__/.test(html))throw Error('Unresolved build token');
-const crypto=require('node:crypto');
+if(/__(?:REUSED_DATA|DOWNLOAD_LINKS|DECK_\w+|PERI_\w+|PRESS_\w+|LOGO|DERMIS[12]|DERMIS6X12|MEGAFILL|PACKAGING|FONT)__/.test(html))throw Error('Unresolved build token');
 html=html.replace(/\r\n?/g,'\n');
 const hashes=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>"'sha256-"+crypto.createHash('sha256').update(m[1]).digest('base64')+"'");
-const csp="default-src 'none'; script-src "+hashes.join(' ')+"; style-src 'unsafe-inline'; img-src 'self' data: https://notoow.github.io/vietnam-urology-webinar/assets/; media-src 'self'; font-src data:; connect-src https://wqymwtvktdhofzegjawn.supabase.co wss://wqymwtvktdhofzegjawn.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'";
+const csp="default-src 'none'; script-src "+hashes.join(' ')+"; style-src 'unsafe-inline'; img-src 'self' data: https://notoow.github.io/vietnam-urology-webinar/assets/; media-src 'self'; font-src data:; connect-src 'self' https://wqymwtvktdhofzegjawn.supabase.co wss://wqymwtvktdhofzegjawn.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'";
 html=html.replace('<meta charset="utf-8">','<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="'+csp+'"><meta name="referrer" content="no-referrer">');
 fs.writeFileSync(path.join(root,'highst-review.html'),html);
 fs.writeFileSync(path.join(root,'index.html'),html);
